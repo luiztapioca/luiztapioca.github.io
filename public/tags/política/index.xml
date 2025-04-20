@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Política on A minimal Hugo website</title>
+    <link>http://localhost:1313/tags/pol%C3%ADtica/</link>
+    <description>Recent content in Política on A minimal Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pol%C3%ADtica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cultura &amp; Capitalismo</title>
+      <link>http://localhost:1313/post/2025/03/15/cultura-capitalismo/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2025/03/15/cultura-capitalismo/</guid>
+      <description>Prólogo Nos últimos dias andei tendo muito contato com o passado histórico de muitas culturas e subculturas que habitaram na Inglaterra, em vista disso, me senti mais á vontade para traçar um raciocínio que relaciona o declínio enorme em diversas subculturas que tínhamos no passado, com as cíclicas crises do sistema capitalista.&#xA;Introdução Para melhor contextualização, a Inglaterra passava por um período de efervescência cultural, com os anos 60 sendo um dos anos mais significativos; com o fim da Segunda Guerra Mundial a Inglaterra precisava de mão de obra para reconstrução da nação, assim criando a Geração &amp;ldquo;Windrush&amp;rdquo;(nome dado pelo navio responsável por trazer a primeira leva de imigrantes para a Inglaterra); pelo Caribe ainda fazer parte da aliança Britânica na época, essas pessoas eram consideradas cidadãs dentro dos respectivos países do Reino Unido - esses imigrantes obviamente foram muito explorados, eram pagos salários muito abaixo da média.</description>
+    </item>
+  </channel>
+</rss>

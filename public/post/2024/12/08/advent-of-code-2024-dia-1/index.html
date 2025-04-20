@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Advent of Code 2024 | Dia 1 | Café &amp; Tapioca</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Advent of Code 2024 | Dia 1</span></h1>
+
+<h2 class="date">2024/12/08</h2>
+</div>
+
+<main>
+<h1 id="prólogo">Prólogo:</h1>
+<ul>
+<li>Há alguns dias venho olhando o novo <a href="https://adventofcode.com/2024">&ldquo;Advent of Code&rdquo;</a> deste ano. O &ldquo;Advent of Code&rdquo; basicamente consiste em uma série de desafios com temática de natal e uma história por trás, desafios esses que consistem em problemas de lógica usando inputs e outputs; eu decidi aproveitar a minha vontade de aprender Rust para experimentar a minha capacidade de resolver problemas em uma linguagem nova para mim, e experimentar junto disso esse evento, que já ocorre fazem 9 anos(2015).</li>
+</ul>
+<h1 id="desafio-1-dia-1">Desafio 1 (dia 1):</h1>
+<p>&mdash; Day 1: Historian Hysteria &mdash;</p>
+<p>The Chief Historian is always present for the big Christmas sleigh launch, but nobody has seen him in months! Last anyone heard, he was visiting locations that are historically significant to the North Pole; a group of Senior Historians has asked you to accompany them as they check the places they think he was most likely to visit.</p>
+<p>As each location is checked, they will mark it on their list with a star. They figure the Chief Historian must be in one of the first fifty places they&rsquo;ll look, so in order to save Christmas, you need to help them get fifty stars on their list before Santa takes off on December 25th.</p>
+<p>Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!</p>
+<p>You haven&rsquo;t even left yet and the group of Elvish Senior Historians has already hit a problem: their list of locations to check is currently empty. Eventually, someone decides that the best place to check first would be the Chief Historian&rsquo;s office.</p>
+<p>Upon pouring into the office, everyone confirms that the Chief Historian is indeed nowhere to be found. Instead, the Elves discover an assortment of notes and lists of historically significant locations! This seems to be the planning the Chief Historian was doing before he left. Perhaps these notes can be used to determine which locations to search?</p>
+<p>Throughout the Chief&rsquo;s office, the historically significant locations are listed not by name but by a unique number called the location ID. To make sure they don&rsquo;t miss anything, The Historians split into two groups, each searching the office and trying to create their own complete list of location IDs.</p>
+<p>There&rsquo;s just one problem: by holding the two lists up side by side (your puzzle input), it quickly becomes clear that the lists aren&rsquo;t very similar. Maybe you can help The Historians reconcile their lists?</p>
+<p>For example:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Maybe the lists are only off by a small amount! To find out, pair up the numbers and measure how far apart they are. Pair up the smallest number in the left list with the smallest number in the right list, then the second-smallest left number with the second-smallest right number, and so on.</p>
+<p>Within each pair, figure out how far apart the two numbers are; you&rsquo;ll need to add up all of those distances. For example, if you pair up a 3 from the left list with a 7 from the right list, the distance apart is 4; if you pair up a 9 with a 3, the distance apart is 6.</p>
+<p>In the example list above, the pairs and distances would be as follows:</p>
+<p>The smallest number in the left list is <code>1</code>, and the smallest number in the right list is <code>3</code>. The distance between them is <code>2</code>.
+The second-smallest number in the left list is 2, and the second-smallest number in the right list is another <code>3</code>. The distance between them is <code>1</code>.
+The third-smallest number in both lists is <code>3</code>, so the distance between them is <code>0</code>.
+The next numbers to pair up are <code>3</code> and <code>4</code>, a distance of <code>1</code>.
+The fifth-smallest numbers in each list are <code>3</code> and <code>5</code>, a distance of <code>2</code>.
+Finally, the largest number in the left list is <code>4</code>, while the largest number in the right list is <code>9</code>; these are a distance <code>5</code> apart.
+To find the total distance between the left list and the right list, add up the distances between all of the pairs you found. In the example above, this is <code>2 + 1 + 0 + 1 + 2 + 5</code>, a total distance of <code>11</code>!</p>
+<p>Your actual left and right lists contain many location IDs. What is the total distance between your lists?</p>
+<h1 id="desafio-2-dia-1">Desafio 2 (dia 1):</h1>
+<p>&mdash; Part Two &mdash;</p>
+<p>Your analysis only confirmed what everyone feared: the two lists of location IDs are indeed very different.</p>
+<p>Or are they?</p>
+<p>The Historians can&rsquo;t agree on which group made the mistakes or how to read most of the Chief&rsquo;s handwriting, but in the commotion you notice an interesting detail: a lot of location IDs appear in both lists! Maybe the other numbers aren&rsquo;t location IDs at all but rather misinterpreted handwriting.</p>
+<p>This time, you&rsquo;ll need to figure out exactly how often each number from the left list appears in the right list. Calculate a total similarity score by adding up each number in the left list after multiplying it by the number of times that number appears in the right list.</p>
+<p>Here are the same example lists again:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>For these example lists, here is the process of finding the similarity score:</p>
+<p>The first number in the left list is <code>3</code>. It appears in the right list three times, so the similarity score increases by <code>3 * 3 = 9</code>.
+The second number in the left list is <code>4</code>. It appears in the right list once, so the similarity score increases by <code>4 * 1 = 4</code>.
+The third number in the left list is <code>2</code>. It does not appear in the right list, so the similarity score does not increase <code>(2 * 0 = 0)</code>.
+The fourth number, <code>1</code>, also does not appear in the right list.
+The fifth number, <code>3</code>, appears in the right list three times; the similarity score increases by <code>9</code>.
+The last number, <code>3</code>, appears in the right list three times; the similarity score again increases by <code>9</code>.
+So, for these example lists, the similarity score at the end of this process is <code>31 (9 + 4 + 0 + 0 + 9 + 9)</code>.</p>
+<p>Once again consider your left and right lists. What is their similarity score?</p>
+<h2 id="minha-solução">Minha solução:</h2>
+<ul>
+<li>Optei por programar esse problema em Rust por estar querendo me habituar e aprender a linguagem para futuros projetos em low-level nos quais tenho interesse.</li>
+</ul>
+<pre><code class="language-rust">use std::fs;
+use std::io;
+use std::env;
+
+fn main() -&gt; std::io::Result&lt;()&gt; {
+    let _args: Vec&lt;String&gt; = env::args().collect();
+    let file_path = &amp;_args[1];
+
+    let result = read_file(&amp;file_path).unwrap();
+
+    let similarity = find_similarity(&amp;result).unwrap();
+    let distance = find_distance(result).unwrap();
+
+    println!(&quot;The similarity is: {similarity}&quot;);
+    println!(&quot;The distance is: {distance}&quot;);
+    Ok(())
+}
+
+fn find_distance(mut arr: [Vec&lt;i32&gt;; 2]) -&gt; Result&lt;i32, io::Error&gt; {
+    let mut distance: i32 = 0;
+    while !arr[1].is_empty() {
+        let min_left: &amp;i32 = arr[0].iter().min().unwrap();
+        let min_right: &amp;i32 = arr[1].iter().min().unwrap();
+
+        let diff: i32 = match min_left &gt; min_right {
+            true =&gt; min_left - min_right,
+            false =&gt; min_right - min_left,
+        };    
+        distance += diff;
+
+        let index_left: usize = arr[0].iter().position(|num| num == min_left).unwrap();
+        let index_right: usize = arr[1].iter().position(|num| num == min_right).unwrap();
+
+        arr[0].remove(index_left);
+        arr[1].remove(index_right);
+    }
+
+    Ok(distance)
+}
+
+fn read_file(filename: &amp;str) -&gt; Result&lt;[Vec&lt;i32&gt;; 2], io::Error&gt; {
+    let mut result: [Vec&lt;i32&gt;; 2] = [Vec::new(), Vec::new()];
+    for line in fs::read_to_string(filename).unwrap().lines() {
+        result[0].push(line[..5].parse::&lt;i32&gt;().unwrap());
+        result[1].push(line[8..].parse::&lt;i32&gt;().unwrap());
+    }
+    Ok(result)
+}
+
+fn find_similarity(arr: &amp;[Vec&lt;i32&gt;; 2]) -&gt; Result&lt;i32, io::Error&gt; {
+    let mut similarity: i32 = 0;
+    for i in &amp;arr[0] {
+        let mut count = 0;
+        for j in &amp;arr[1] {
+            if i == j {
+                count+=1;
+            }
+        }
+        similarity += i * count;
+    }
+    Ok(similarity)
+}
+</code></pre>
+<ul>
+<li>
+<p>Não acho que essa seja a forma mais optimizada em Rust para a resolução desse problema, porém foi a forma na qual eu pensei e consegui elaborar a solução á ser resolvida.</p>
+</li>
+<li>
+<p>O usuário pela própria linha de comando pré-execução do programa detalha o arquivo de input contendo os números disponibilizados pelo site, logo após isso são feitos todos os processos de tratamento de dados, e cálculo das respostas.</p>
+</li>
+<li>
+<p>Me senti muito feliz quando tudo deu certo, e acho que estou tendo um bom aprendizado, considerando o curto tempo que tive pra aprender até agora.</p>
+</li>
+</ul>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+  
+  <hr/>
+  © Luiz G. 2024 &ndash; 2025 | <a href="https://github.com/1917dc">Github</a> | <a href="https://last.fm/user/gfxnx">Lastfm</a> | <a href="https://letterboxd.com/yyounevershould/">Letterboxd</a> | <a href="https://www.instagram.com/1917.dc">Instagram</a>
+  
+  </footer>
+  </body>
+</html>
+

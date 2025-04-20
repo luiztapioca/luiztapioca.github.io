@@ -1,0 +1,14 @@
+---
+title: 'Sobre'
+author: 
+---
+
+## Resumo
+
+Este blog tem o intuito de armazenar e organizar muitos dos meus pensamentos, sejam eles anotações sobre conteúdos nos quais ando estudando ou pequenas dissertações sobre coisas aleatórias que estou consumindo.
+
+Atualmente (2025) atuo como pesquisador, focado na análise de dados em redes sociais para combate e mitigação de fake news dentro do Brasil, através da análise de linguagem natural por meio de modelos de LLM.
+
+## Porquê "Café & Tapioca"?
+
+Na filosofia "café e tapioca" , o café personifica o fervor inquieto da alma, uma febre de emoções que oscilam entre a raiva e a angústia amarga, refletindo o conflito em nosso ser. Por outro lado, a tapioca surge como fonte vital, delicada e pura, simbolizando a aceitação serena da vida em meio ao caos; oferecendo alegria e prazer na jornada da existência.

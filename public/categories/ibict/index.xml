@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IBICT on Café &amp; Tapioca</title>
+    <link>http://localhost:1313/categories/ibict/</link>
+    <description>Recent content in IBICT on Café &amp; Tapioca</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ibict/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projeto Baobá: Revisando conceitos de fake news</title>
+      <link>http://localhost:1313/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</link>
+      <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</guid>
+      <description>Prefácio Recentemente comecei um projeto de pesquisa científica na área de análise de dados, com isso pegamos um projeto chamado &amp;ldquo;Baobá&amp;rdquo; - dentro do IBICT. Nesse projeto estamos sendo respnosáveis por prosseguir no desenvolvimento do modelo de LLM deles, chamado de &amp;ldquo;Nice&amp;rdquo;.&#xA;O objetivo do projeto é promover o combate de fake news através do uso de análise de linguagem natural (NLP - Natural Language Processing). Temos uma enorme base de dados, que consomem api&amp;rsquo;s de redes sociais (ex: Twitter).</description>
+    </item>
+  </channel>
+</rss>

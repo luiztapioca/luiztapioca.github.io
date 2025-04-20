@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Advent of Code 2024 | Dia 3 | Café &amp; Tapioca</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Advent of Code 2024 | Dia 3</span></h1>
+
+<h2 class="date">2024/12/23</h2>
+</div>
+
+<main>
+<h1 id="prólogo">Prólogo:</h1>
+<ul>
+<li>Hoje completei o terceiro dia do <a href="https://adventofcode.com/">Advent of Code</a> (2024) em Rust, e existem várias coisas nas quais eu gostaria de pontuar, questões essas relacionadas á minha curva de aprendizado em Rust e meu objetivo com essa linguagem.</li>
+</ul>
+<h1 id="desafio-1-dia-3">Desafio 1 (dia 3):</h1>
+<h2 id="contexto">Contexto:</h2>
+<ul>
+<li>
+<p>Foi entregue um input de arquivo de texto (como sempre), porém dessa vez era um arquivo populado com diversos caracteres aleatórios, dentro disso haviam instruções de multiplicação escondidas dentro do arquivo; o objetivo do desafio era juntar todas essas instruções <code>mul(X,Y)</code>, sendo <code>X,Y</code> números inteiros com <code>1-3</code> dígitos cada.</p>
+</li>
+<li>
+<p>Procurando formas de resolver essa etapa eu conheci o <a href="https://en.wikipedia.org/wiki/Regular_expression"><code>Regex</code></a>, uma linguagem que utiliza um algoritmo de busca de strings por meio de reconhecimento de padrões, determinados por um código.</p>
+</li>
+</ul>
+<ul>
+<li>String de exemplo:
+<code>xmul(2,4)%&amp;mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))</code></li>
+</ul>
+<ul>
+<li>Os números válidos serão apenas:</li>
+</ul>
+<ol>
+<li><code>mul(2,4)</code></li>
+<li><code>mul(5,5)</code></li>
+<li><code>mul(11,8)</code></li>
+<li><code>mul(8,5)</code></li>
+</ol>
+<ul>
+<li>Usando essa explicação, e com os números filtrados, eu terei de multiplicar os números <code>X,Y</code> e somar o resultado da multiplicação desses pares em um resoltado total.</li>
+</ul>
+<h2 id="código">Código:</h2>
+<pre><code class="language-rust">fn p1(f: &amp;str) -&gt; Result&lt;u32, Error&gt; {
+    let re = Regex::new(r&quot;mul\((?&lt;num1&gt;[0-9]{1,3}),(?&lt;num2&gt;([0-9]{1,3}))\)&quot;).unwrap();
+    let mut result: u32 = 0;
+    for caps in re.captures_iter(&amp;fs::read_to_string(f)?) {
+        if let (Some(num1), Some(num2)) = (caps.name(&quot;num1&quot;), caps.name(&quot;num2&quot;)) {
+            let num1 = num1.as_str().parse::&lt;u32&gt;().unwrap();
+            let num2 = num2.as_str().parse::&lt;u32&gt;().unwrap();
+            result += num1 * num2;
+        }
+    }
+    Ok(result)
+}
+</code></pre>
+<h2 id="explicação">Explicação:</h2>
+<ul>
+<li>O <code>regex</code> usado para filtragem das strings foi: <code>mul\((?&lt;num1&gt;[0-9]{1,3}),(?&lt;num2&gt;([0-9]{1,3}))\)</code></li>
+<li>Dentro da sintaxe posso usar <code>(?&lt;var&gt;(foobar))</code> , <strong>sendo o <code>?&lt;var&gt;()</code> um identificador de variáveis dentro do padrão da string</strong>. No meu caso o regex usado determinou uma variável com números que podem ir de <code>0-9</code>, com esses números podendo conter de <code>1-3</code> dígitos.</li>
+</ul>
+<hr>
+<h1 id="desafio-2-dia-3">Desafio 2 (dia 3):</h1>
+<h2 id="contexto-1">Contexto:</h2>
+<ul>
+<li>Nessa segunda etapa, que completa a primeira, agora tenho que complexificar um pouco o código feito anteriormente. Dessa vez tenho que seguir instruções para &ldquo;ativar&rdquo; ou &ldquo;desativar&rdquo; as instruções de multiplicaço dentro da string.</li>
+</ul>
+<h3 id="exemplo">Exemplo:</h3>
+<p><code>xmul(2,4)&amp;mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))</code></p>
+<ul>
+<li>O <code>don't()</code> desativa as operações;</li>
+<li>O <code>do()</code> ativa as operações;</li>
+<li>No começo as operações são ligadas por padrão;</li>
+</ul>
+<h2 id="código-1">Código:</h2>
+<pre><code class="language-rust">fn p2(f: &amp;str) -&gt; Result&lt;u32, Error&gt; {
+    let re = Regex::new(
+        r&quot;(?&lt;cmd_do&gt;do\(\))|(?&lt;cmd_dont&gt;don't\(\))|mul\((?&lt;num1&gt;[0-9]{1,3}),(?&lt;num2&gt;[0-9]{1,3})\)&quot;,
+    )
+    .unwrap();
+    let content = fs::read_to_string(f)?;
+    let mut enabled = true;
+    let mut result: u32 = 0;
+    for cap in re.captures_iter(&amp;content) {
+        if cap.name(&quot;cmd_do&quot;).is_some() {
+            enabled = true;
+        } else if cap.name(&quot;cmd_dont&quot;).is_some() {
+            enabled = false;
+        } else if let (Some(num1), Some(num2)) = (cap.name(&quot;num1&quot;), cap.name(&quot;num2&quot;)) {
+            if enabled {
+                let num1 = num1.as_str().parse::&lt;u32&gt;().unwrap();
+                let num2 = num2.as_str().parse::&lt;u32&gt;().unwrap();
+                result += num1 * num2;
+            }
+        }
+    }
+    Ok(result)
+}
+</code></pre>
+<h2 id="explicação-1">Explicação:</h2>
+<ul>
+<li>Para conseguir identificar tudo o que era necessário tive que complexificar um pouco o <code>regex</code>, ainda usando a identificação de variáveis, porém agora usando operadores lógicos (<code>|</code> operador <strong>ou</strong>) para conseguir identificar os <strong>3 tipos possíveis de operação</strong> (<code>do, don't e mul(X,Y)</code>).</li>
+<li>O <code>regex</code> foi dividido em 3 partes, sendo elas:</li>
+</ul>
+<ol>
+<li><code>(?&lt;cmd_do&gt;do\(\))</code> - usado para ativar as operações;</li>
+<li><code>(?&lt;cmd_dont&gt;don't\(\))</code> - usado para desativar as instruções;</li>
+<li><code>mul\((?&lt;num1&gt;[0-9]{1,3}),(?&lt;num2&gt;[0-9]{1,3})\)</code> - usado para identificar as instruções de multiplicação;</li>
+</ol>
+<h1 id="considerações-finais">Considerações finais:</h1>
+<ul>
+<li>Foi um desafio que envolveu um nível de complexidade maior do que o anterior, e eu acredito que eu consegui aprender bastante com isso, ademais eu sinto que a curva de aprendizado da linguagem é bem alta e envolve <strong>muita prática</strong>, para conseguir a competência necessária para desenvolver projetos pessoais de forma efetiva.</li>
+</ul>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+  
+  <hr/>
+  © Luiz G. 2024 &ndash; 2025 | <a href="https://github.com/1917dc">Github</a> | <a href="https://last.fm/user/gfxnx">Lastfm</a> | <a href="https://letterboxd.com/yyounevershould/">Letterboxd</a> | <a href="https://www.instagram.com/1917.dc">Instagram</a>
+  
+  </footer>
+  </body>
+</html>
+

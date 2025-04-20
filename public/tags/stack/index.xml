@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stack on Café &amp; Tapioca</title>
+    <link>http://localhost:1313/tags/stack/</link>
+    <description>Recent content in Stack on Café &amp; Tapioca</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust Ownership</title>
+      <link>http://localhost:1313/post/2024/12/03/rust-ownership/</link>
+      <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/12/03/rust-ownership/</guid>
+      <description>Ao invés de depender de garbage collection, que existem em linguagem de alto nível como Java e Python, ou de depender de alocação de memória explícita como C; o Rust executa isso de uma forma diferente: usando &amp;ldquo;ownership&amp;rdquo; que são checadas em tempo de compilação, caso alguma regra seja quebrada nesse sentido o programa não vai compilar.&#xA;Heap &amp;amp; Stack The heap is less organized: when you put data on the heap, you request a certain amount of space.</description>
+    </item>
+  </channel>
+</rss>

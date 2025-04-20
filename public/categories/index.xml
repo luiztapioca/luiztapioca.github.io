@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Café &amp; Tapioca</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Café &amp; Tapioca</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Filosofia</title>
+      <link>http://localhost:1313/categories/filosofia/</link>
+      <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/filosofia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IBICT</title>
+      <link>http://localhost:1313/categories/ibict/</link>
+      <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/ibict/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Estudo</title>
+      <link>http://localhost:1313/categories/estudo/</link>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/estudo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Advent of Code</title>
+      <link>http://localhost:1313/categories/advent-of-code/</link>
+      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/advent-of-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Organização</title>
+      <link>http://localhost:1313/categories/organiza%C3%A7%C3%A3o/</link>
+      <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/organiza%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>http://localhost:1313/categories/rust/</link>
+      <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/rust/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
