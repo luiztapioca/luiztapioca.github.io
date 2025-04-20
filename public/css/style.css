@@ -1,3 +1,4 @@
+
 body {
   max-width: 800px;
   margin: auto;
@@ -10,7 +11,7 @@ body {
 .menu li { display: inline-block; }
 .article-meta, .menu a {
   text-decoration: none;
-  background: #fff;
+  background: transparent;
   padding: 5px;
   border-radius: 5px;
 }
@@ -20,6 +21,23 @@ footer a { text-decoration: none; }
 hr {
   border-style: dashed;
   color: #ddd;
+}
+
+.header_title { 
+  font-weigth: bold;
+  margin: 0; 
+  display: inline-block; 
+  white-space: nowrap; 
+  font-size: 1.2rem 
+}
+
+.navbar_container {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;      /* alinha verticalmente */
+  flex-wrap: wrap;          /* permite quebra em telas menores */
+  gap: 1rem;
+  text-align: center;
 }
 
 /* code */

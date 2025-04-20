@@ -23,9 +23,23 @@ hr {
   color: #ddd;
 }
 
-.logo { display: flex; justify-content: center; }
-.header_title { margin-right: 1rem; }
-.navbar_container { display: flex; }
+.header_title { 
+  font-weigth: bold;
+  margin: 0; 
+  display: inline-block; 
+  white-space: nowrap; 
+  font-size: 1.2rem 
+}
+
+.navbar_container {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;      /* alinha verticalmente */
+  flex-wrap: wrap;          /* permite quebra em telas menores */
+  gap: 1rem;
+  text-align: center;
+}
+
 /* code */
 pre {
   border: 1px solid #ddd;

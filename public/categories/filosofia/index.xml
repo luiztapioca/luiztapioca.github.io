@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Filosofia on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/categories/filosofia/</link>
+    <link>http://localhost:1313/categories/filosofia/</link>
     <description>Recent content in Filosofia on Café &amp; Tapioca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 12 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/categories/filosofia/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/filosofia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>O dilema do esclarescimento — Kant &amp; Sociedade dos Poetas Mortos</title>
-      <link>https://1917dc.github.io/post/2025/04/12/o-dilema-do-esclarescimento-kant-sociedade-dos-poetas-mortos/</link>
+      <link>http://localhost:1313/post/2025/04/12/o-dilema-do-esclarescimento-kant-sociedade-dos-poetas-mortos/</link>
       <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/post/2025/04/12/o-dilema-do-esclarescimento-kant-sociedade-dos-poetas-mortos/</guid>
+      <guid>http://localhost:1313/post/2025/04/12/o-dilema-do-esclarescimento-kant-sociedade-dos-poetas-mortos/</guid>
       <description>Você se sente medíocre? Eu também! Eu constantemente me sinto medíocre, seja pela minha incapacidade as vezes de aprender algum tópico, ou por sentir que meu conhecimento é em sua totalidade raso - e creio que a maioria dos universitários se sentem assim também. Isso em certo nível é bom e saudável, o estudante precisa ter brio, você precisa abaixar seu ego. Aquele que por algum motivo acha que sabe de tudo, não sabe praticamente nada sobre a totalidade daquilo que estuda, porém precisamos ser justos com o &amp;ldquo;eu&amp;rdquo;.</description>
     </item>
   </channel>

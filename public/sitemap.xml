@@ -2,102 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://1917dc.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/categories/filosofia/</loc>
+    <loc>http://localhost:1313/categories/filosofia/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/instrospec%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/tags/instrospec%C3%A7%C3%A3o/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/2025/04/12/o-dilema-do-esclarescimento-kant-sociedade-dos-poetas-mortos/</loc>
+    <loc>http://localhost:1313/post/2025/04/12/o-dilema-do-esclarescimento-kant-sociedade-dos-poetas-mortos/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/an%C3%A1lise/</loc>
+    <loc>http://localhost:1313/tags/an%C3%A1lise/</loc>
     <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/artigo/</loc>
+    <loc>http://localhost:1313/tags/artigo/</loc>
     <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/estudo/</loc>
+    <loc>http://localhost:1313/tags/estudo/</loc>
     <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/ia/</loc>
+    <loc>http://localhost:1313/tags/ia/</loc>
     <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/categories/ibict/</loc>
+    <loc>http://localhost:1313/categories/ibict/</loc>
     <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</loc>
+    <loc>http://localhost:1313/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</loc>
     <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/2025/03/28/anota%C3%A7%C3%B5es-spring-boot/</loc>
+    <loc>http://localhost:1313/post/2025/03/28/anota%C3%A7%C3%B5es-spring-boot/</loc>
     <lastmod>2025-03-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/categories/estudo/</loc>
+    <loc>http://localhost:1313/categories/estudo/</loc>
     <lastmod>2025-03-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/java/</loc>
+    <loc>http://localhost:1313/tags/java/</loc>
     <lastmod>2025-03-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/springboot/</loc>
+    <loc>http://localhost:1313/tags/springboot/</loc>
     <lastmod>2025-03-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/categories/advent-of-code/</loc>
+    <loc>http://localhost:1313/categories/advent-of-code/</loc>
     <lastmod>2024-12-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/2024/12/23/advent-of-code-2024-dia-3/</loc>
+    <loc>http://localhost:1313/post/2024/12/23/advent-of-code-2024-dia-3/</loc>
     <lastmod>2024-12-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/adventofcode/</loc>
+    <loc>http://localhost:1313/tags/adventofcode/</loc>
     <lastmod>2024-12-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/adventofcode2024/</loc>
+    <loc>http://localhost:1313/tags/adventofcode2024/</loc>
     <lastmod>2024-12-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/rust/</loc>
+    <loc>http://localhost:1313/tags/rust/</loc>
     <lastmod>2024-12-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/2024/12/19/advent-of-code-2024-dia-2/</loc>
+    <loc>http://localhost:1313/post/2024/12/19/advent-of-code-2024-dia-2/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/2024/12/08/advent-of-code-2024-dia-1/</loc>
+    <loc>http://localhost:1313/post/2024/12/08/advent-of-code-2024-dia-1/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/obsidian/</loc>
+    <loc>http://localhost:1313/tags/obsidian/</loc>
     <lastmod>2024-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/2024/12/07/obsidian-sync/</loc>
+    <loc>http://localhost:1313/post/2024/12/07/obsidian-sync/</loc>
     <lastmod>2024-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/categories/organiza%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/categories/organiza%C3%A7%C3%A3o/</loc>
     <lastmod>2024-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/heap/</loc>
+    <loc>http://localhost:1313/tags/heap/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/categories/rust/</loc>
+    <loc>http://localhost:1313/categories/rust/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/2024/12/03/rust-ownership/</loc>
+    <loc>http://localhost:1313/post/2024/12/03/rust-ownership/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/tags/stack/</loc>
+    <loc>http://localhost:1313/tags/stack/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/post/2024/12/02/first-steps-into-rust/</loc>
+    <loc>http://localhost:1313/post/2024/12/02/first-steps-into-rust/</loc>
     <lastmod>2024-12-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://1917dc.github.io/sobre/</loc>
+    <loc>http://localhost:1313/sobre/</loc>
   </url>
 </urlset>
