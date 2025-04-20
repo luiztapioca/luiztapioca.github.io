@@ -1,11 +1,7 @@
 baseurl: "https://1917dc.github.io/"  # please update this to your actual URL
 languageCode: "en-us"
 title: "Café & Tapioca"
-theme: "hugo-xmin"
-googleAnalytics: ""
-disqusShortname: ""
-ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
-footnotereturnlinkcontents: "↩"
+theme: "hugo-itamaraty"
 
 permalinks:
   note: "/note/:year/:month/:day/:slug/"
@@ -13,11 +9,11 @@ permalinks:
 
 menu:
   main:
-    - name: Home
+    - name: Inicio 
       url: ""
       weight: 1
     - name: Sobre
-      url: "about/"
+      url: "sobre/"
       weight: 2
     - name: Categorias
       url: "categories/"
