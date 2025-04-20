@@ -16,7 +16,18 @@ body {
   border-radius: 5px;
 }
 .menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
+
+.title { 
+  font-size: 1.1em; 
+  display: inline-block;
+  text-align: left;
+}
+
+.author, .date {
+  text-align: left;
+  font-size: 1em; 
+}
+
 footer a { text-decoration: none; }
 hr {
   border-style: dashed;
@@ -33,9 +44,9 @@ hr {
 
 .navbar_container {
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center;      /* alinha verticalmente */
-  flex-wrap: wrap;          /* permite quebra em telas menores */
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap; 
   gap: 1rem;
   text-align: center;
 }
