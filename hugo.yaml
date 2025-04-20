@@ -9,7 +9,7 @@ permalinks:
 
 menu:
   main:
-    - name: Inicio 
+    - name: Home
       url: ""
       weight: 1
     - name: Sobre

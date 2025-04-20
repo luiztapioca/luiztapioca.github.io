@@ -4,8 +4,8 @@
     <title>Análise on Café &amp; Tapioca</title>
     <link>http://localhost:1313/tags/an%C3%A1lise/</link>
     <description>Recent content in Análise on Café &amp; Tapioca</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
     <lastBuildDate>Sun, 06 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/an%C3%A1lise/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,7 +13,7 @@
       <link>http://localhost:1313/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</guid>
-      <description>Prefácio Recentemente comecei um projeto de pesquisa científica na área de análise de dados, com isso pegamos um projeto chamado &amp;ldquo;Baobá&amp;rdquo; - dentro do IBICT. Nesse projeto estamos sendo respnosáveis por prosseguir no desenvolvimento do modelo de LLM deles, chamado de &amp;ldquo;Nice&amp;rdquo;.&#xA;O objetivo do projeto é promover o combate de fake news através do uso de análise de linguagem natural (NLP - Natural Language Processing). Temos uma enorme base de dados, que consomem api&amp;rsquo;s de redes sociais (ex: Twitter).</description>
+      <description>&lt;h1 id=&#34;prefácio&#34;&gt;Prefácio&lt;/h1&gt;&#xA;&lt;p&gt;Recentemente comecei um projeto de pesquisa científica na área de análise de dados, com isso pegamos um projeto chamado &amp;ldquo;Baobá&amp;rdquo; - dentro do IBICT. Nesse projeto estamos sendo respnosáveis por prosseguir no desenvolvimento do modelo de LLM deles, chamado de &amp;ldquo;Nice&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;O objetivo do projeto é promover o combate de &lt;em&gt;fake news&lt;/em&gt; através do uso de análise de linguagem natural (NLP - Natural Language Processing). Temos uma enorme base de dados, que consomem api&amp;rsquo;s de redes sociais (ex: Twitter).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
