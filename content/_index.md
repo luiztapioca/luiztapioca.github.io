@@ -2,4 +2,4 @@
 title: Home
 ---
 
-# Inicio
+# Posts
