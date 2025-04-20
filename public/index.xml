@@ -73,9 +73,9 @@
     </item>
     <item>
       <title>Sobre</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://localhost:1313/sobre/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://localhost:1313/sobre/</guid>
       <description>Resumo Este blog tem o intuito de armazenar e organizar muitos dos meus pensamentos, sejam eles anotações sobre conteúdos nos quais ando estudando ou pequenas dissertações sobre coisas aleatórias que estou consumindo.&#xA;Atualmente (2025) atuo como pesquisador, focado na análise de dados em redes sociais para combate e mitigação de fake news dentro do Brasil, através da análise de linguagem natural por meio de modelos de LLM.&#xA;Porquê &amp;ldquo;Café &amp;amp; Tapioca&amp;rdquo;?</description>
     </item>
   </channel>

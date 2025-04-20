@@ -16,16 +16,16 @@ menu:
     - name: Home
       url: ""
       weight: 1
-    - name: About
+    - name: Sobre
       url: "about/"
       weight: 2
-    - name: Categories
+    - name: Categorias
       url: "categories/"
       weight: 3
     - name: Tags
       url: "tags/"
       weight: 4
-    - name: Subscribe
+    - name: RSS
       url: "index.xml"
 
 params:
