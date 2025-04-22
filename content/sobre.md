@@ -17,4 +17,4 @@ Na filosofia "café e tapioca" , o café personifica o fervor inquieto da alma, 
 
 ## UI/UX
 
-O atual tema do site foi feito por mim. O [Hugo Rubik](https://github.com/1917dc/hugo-rubik) é um tema **muito** minimalista para o framework [Hugo](https://gohugo.io/), que foca apenas em exibir os conteúdos necessários para um blog ser funcional e agradável esteticamente.
+O atual tema do site foi feito por mim. O [Hugo Rubik](https://github.com/1917dc/hugo-rubik) é um tema **muito** minimalista para o framework [Hugo](https://gohugo.io/). O tema foca em exibir os conteúdos necessários para um blog ser funcional e agradável esteticamente, porém mantendo a simplicidade.
