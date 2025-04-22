@@ -1,7 +1,7 @@
 baseurl: "https://1917dc.github.io/"  # please update this to your actual URL
 languageCode: "pt-br"
 title: "Café & Tapioca"
-theme: "hugo-itamaraty"
+theme: "hugo-rubik"
 
 permalinks:
   note: "/note/:year/:month/:day/:slug/"

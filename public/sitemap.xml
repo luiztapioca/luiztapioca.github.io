@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/absurdismo/</loc>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/anotacoes/</loc>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/filosofia/</loc>
-    <lastmod>2025-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/instrospec%C3%A7%C3%A3o/</loc>
-    <lastmod>2025-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2025/04/12/o-dilema-do-esclarescimento-kant-sociedade-dos-poetas-mortos/</loc>
-    <lastmod>2025-04-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2025-04-12T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/anotacoes/20250420/</loc>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/anotacoes/20250412/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/an%C3%A1lise/</loc>
@@ -38,10 +44,13 @@
     <loc>http://localhost:1313/categories/ibict/</loc>
     <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</loc>
     <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2025/03/28/anota%C3%A7%C3%B5es-spring-boot/</loc>
+    <loc>http://localhost:1313/anotacoes/20250328/</loc>
     <lastmod>2025-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/estudo/</loc>
@@ -89,7 +98,7 @@
     <loc>http://localhost:1313/categories/rust/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2024/12/03/rust-ownership/</loc>
+    <loc>http://localhost:1313/anotacoes/20241203/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/stack/</loc>

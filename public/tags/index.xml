@@ -4,14 +4,21 @@
     <title>Tags on Café &amp; Tapioca</title>
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Café &amp; Tapioca</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 12 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Absurdismo</title>
+      <link>http://localhost:1313/tags/absurdismo/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/absurdismo/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Instrospecção</title>
       <link>http://localhost:1313/tags/instrospec%C3%A7%C3%A3o/</link>
-      <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/instrospec%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
