@@ -11,7 +11,7 @@ Geralmente coloco aqui as minhas anotações pessoais que eu considere minimamen
 
 ## Sobre mim
 
-Atualmente atuo como pesquisador no **IBICT** no projeto **Nice**. Estudo análise de dados em redes sociais para combate e mitigação de fake news dentro do Brasil, através da análise de linguagem natural, por meio de LLM's.
+Atualmente atuo como pesquisador no **IBICT** no projeto **NICE** – o nome, não a palavra. Estudo análise de dados em redes sociais para combate e mitigação de fake news dentro do Brasil, através da análise de linguagem natural, por meio de LLM's.
 
 ## Porquê "Café & Tapioca"?
 
