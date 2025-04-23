@@ -17,4 +17,4 @@ Na filosofia "café e tapioca" , o café personifica o fervor inquieto da alma, 
 
 ## UI/UX
 
-O [Hugo Rubik](https://github.com/1917dc/hugo-rubik) é um tema **muito** minimalista para o framework [Hugo](https://gohugo.io/) feito por mim.
+O [Hugo Rubik](https://github.com/1917dc/hugo-rubik) é um tema **muito** minimalista para o framework [Hugo](https://gohugo.io/), feito por mim.
