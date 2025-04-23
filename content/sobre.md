@@ -7,6 +7,10 @@ author:
 
 Este blog tem o intuito de armazenar e organizar muitos dos meus pensamentos, sejam eles anotações sobre conteúdos nos quais ando estudando ou pequenas dissertações sobre coisas aleatórias que estou consumindo.
 
+Geralmente coloco aqui as minhas anotações pessoais que eu considere minimamente interessantes de se ler.
+
+## Sobre mim
+
 Atualmente atuo como pesquisador no IBICT. Estudo análise de dados em redes sociais para combate e mitigação de fake news dentro do Brasil através da análise de linguagem natural, por meio de modelos de LLM.
 
 ## Porquê "Café & Tapioca"?
