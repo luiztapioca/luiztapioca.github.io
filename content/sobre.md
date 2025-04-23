@@ -3,7 +3,7 @@ title: 'Sobre'
 author: 
 ---
 
-## Resumo
+## Contexto
 
 Este blog tem o intuito de armazenar e organizar muitos dos meus pensamentos, sejam eles anotações sobre conteúdos nos quais ando estudando ou pequenas dissertações sobre coisas aleatórias que estou consumindo.
 
