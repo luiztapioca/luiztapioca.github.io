@@ -6,8 +6,22 @@
     <description>Recent content in Home on Café &amp; Tapioca</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 20 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobre a minha mudança de mentalidade diante do consumo de música</title>
+      <link>http://localhost:1313/post/2025/05/19/sobre-a-minha-mudan%C3%A7a-de-mentalidade-diante-do-consumo-de-m%C3%BAsica/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2025/05/19/sobre-a-minha-mudan%C3%A7a-de-mentalidade-diante-do-consumo-de-m%C3%BAsica/</guid>
+      <description>&lt;h1 id=&#34;amadurecimento-&#34;&gt;Amadurecimento (?)&lt;/h1&gt;&#xA;&lt;p&gt;De uns tempos para cá venho notado uma mudança drástica na forma como consumo música, mudança essa que eu considero para melhor e que veio para ficar. Gosto de brincar dizendo que agora consumo música tal qual um velho consumia nos anos 80.&lt;/p&gt;&#xA;&lt;p&gt;Sempre fui uma pessoa que fazia playlists para tudo, para todo artista, gênero ou sentimento eu tinha uma playlist na ponta da língua para ouvir — e não me leve a mal, eu não quero entrar no mérito de uma forma ser melhor ou pior que a outra, até porquê a música é algo totalmente subjetivo, assim como a forma que a consumimos —.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Clusterização - Filtragem não supervisionada</title>
+      <link>http://localhost:1313/anotacoes/20250423/</link>
+      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/anotacoes/20250423/</guid>
+      <description>&lt;h1 id=&#34;prefácio&#34;&gt;Prefácio&lt;/h1&gt;&#xA;&lt;p&gt;Filtrar &amp;amp; organizar dados manualmente pode ser uma tarefa complicada, principalmente quando lidamos com grandes volumes de dados. Esse não é um problema recente, se originou por meados de 1932 dentro da antropologia – o foco do pesquisador era dividir uma amostra de pacientes com esquizofrenia em grupos que compartilhavam características semelhantes entre si, ajudando assim no desenvolvimento de tratamentos específicos –. Dentro disso temos subdivisões de métodos de clusterização, um deles é o &lt;code&gt;k-means&lt;/code&gt;, que utiliza de “centroides” para definição de grupos – e é esse que eu estava estudando sobre.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Mini resenha: Camus – O Absurdo no Cotidiano.</title>
       <link>http://localhost:1313/anotacoes/20250420/</link>
@@ -83,7 +97,7 @@
       <link>http://localhost:1313/sobre/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/sobre/</guid>
-      <description>&lt;h2 id=&#34;resumo&#34;&gt;Resumo&lt;/h2&gt;&#xA;&lt;p&gt;Este blog tem o intuito de armazenar e organizar muitos dos meus pensamentos, sejam eles anotações sobre conteúdos nos quais ando estudando ou pequenas dissertações sobre coisas aleatórias que estou consumindo.&lt;/p&gt;&#xA;&lt;p&gt;Atualmente (2025) atuo como pesquisador no IBICT. Estudo análise de dados em redes sociais para combate e mitigação de fake news dentro do Brasil através da análise de linguagem natural, por meio de modelos de LLM.&lt;/p&gt;&#xA;&lt;h2 id=&#34;porquê-café--tapioca&#34;&gt;Porquê &amp;ldquo;Café &amp;amp; Tapioca&amp;rdquo;?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/cafe_tapioca.png&#34; alt=&#34;café-tapioca.png&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;contexto&#34;&gt;Contexto&lt;/h2&gt;&#xA;&lt;p&gt;Este blog tem o intuito de armazenar e organizar muitos dos meus pensamentos, sejam eles anotações sobre conteúdos nos quais ando estudando ou pequenas dissertações sobre coisas aleatórias que estou consumindo.&lt;/p&gt;&#xA;&lt;p&gt;Geralmente coloco aqui as minhas anotações pessoais que eu considere minimamente interessantes de se ler.&lt;/p&gt;&#xA;&lt;h2 id=&#34;sobre-mim&#34;&gt;Sobre mim&lt;/h2&gt;&#xA;&lt;p&gt;Atualmente atuo como pesquisador no &lt;strong&gt;IBICT&lt;/strong&gt;, dentro do projeto &lt;strong&gt;Baobá&lt;/strong&gt;. Estudo análise de dados em redes sociais para combate e mitigação de fake news dentro do Brasil, através da análise de linguagem natural, por meio de LLM&amp;rsquo;s.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
