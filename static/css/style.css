@@ -1,9 +1,14 @@
-
-body {
+body  {
   max-width: 800px;
   margin: auto;
   padding: 1em;
   line-height: 1.5;
+  color: #e0e0e0;
+  background: #101010;
+}
+
+blockquote {
+  background-color: #202020 !important;
 }
 
 /* header and footer areas */
@@ -28,7 +33,9 @@ body {
   font-size: 1em; 
 }
 
-footer a { text-decoration: none; }
+footer a { text-decoration: none; color: #FFB6C1;}
+a:link, a:visited { color: #FFB6C1; }
+
 hr {
   border-style: dashed;
   color: #ddd;

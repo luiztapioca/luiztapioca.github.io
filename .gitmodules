@@ -1,9 +1,6 @@
 [submodule "themes/hugo-xmin"]
 	path = themes/hugo-xmin
 	url = https://github.com/yihui/hugo-xmin.git
-[submodule "themes/hugo-itamaraty"]
-	path = themes/hugo-itamaraty
-	url = https://github.com/1917dc/hugo-itamaraty.git
 [submodule "themes/hugo-rubik"]
 	path = themes/hugo-rubik
 	url = https://github.com/1917dc/hugo-rubik.git
