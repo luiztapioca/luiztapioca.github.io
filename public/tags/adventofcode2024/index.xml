@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adventofcode2024 on Café &amp; Tapioca</title>
-    <link>http://localhost:1313/tags/adventofcode2024/</link>
+    <link>https://1917dc.github.io/tags/adventofcode2024/</link>
     <description>Recent content in Adventofcode2024 on Café &amp; Tapioca</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/adventofcode2024/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://1917dc.github.io/tags/adventofcode2024/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Advent of Code 2024 | Dia 3</title>
-      <link>http://localhost:1313/post/2024/12/23/advent-of-code-2024-dia-3/</link>
+      <link>https://1917dc.github.io/post/2024/12/23/advent-of-code-2024-dia-3/</link>
       <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2024/12/23/advent-of-code-2024-dia-3/</guid>
+      <guid>https://1917dc.github.io/post/2024/12/23/advent-of-code-2024-dia-3/</guid>
       <description>&lt;h1 id=&#34;prólogo&#34;&gt;Prólogo:&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hoje completei o terceiro dia do &lt;a href=&#34;https://adventofcode.com/&#34;&gt;Advent of Code&lt;/a&gt; (2024) em Rust, e existem várias coisas nas quais eu gostaria de pontuar, questões essas relacionadas á minha curva de aprendizado em Rust e meu objetivo com essa linguagem.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;desafio-1-dia-3&#34;&gt;Desafio 1 (dia 3):&lt;/h1&gt;&#xA;&lt;h2 id=&#34;contexto&#34;&gt;Contexto:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Foi entregue um input de arquivo de texto (como sempre), porém dessa vez era um arquivo populado com diversos caracteres aleatórios, dentro disso haviam instruções de multiplicação escondidas dentro do arquivo; o objetivo do desafio era juntar todas essas instruções &lt;code&gt;mul(X,Y)&lt;/code&gt;, sendo &lt;code&gt;X,Y&lt;/code&gt; números inteiros com &lt;code&gt;1-3&lt;/code&gt; dígitos cada.&lt;/p&gt;</description>
     </item>
   </channel>

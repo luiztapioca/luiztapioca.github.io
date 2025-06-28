@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Café &amp; Tapioca</title>
-    <link>http://localhost:1313/tags/java/</link>
+    <link>https://1917dc.github.io/tags/java/</link>
     <description>Recent content in Java on Café &amp; Tapioca</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://1917dc.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Anotações: Spring Boot</title>
-      <link>http://localhost:1313/anotacoes/20250328/</link>
+      <link>https://1917dc.github.io/anotacoes/20250328/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/anotacoes/20250328/</guid>
+      <guid>https://1917dc.github.io/anotacoes/20250328/</guid>
       <description>&lt;h1 id=&#34;prefácio&#34;&gt;Prefácio&lt;/h1&gt;&#xA;&lt;p&gt;Antes de tudo: estudar &lt;em&gt;Spring Boot&lt;/em&gt; parece uma bagunça sem fim, e você não está errado. Estudar &lt;em&gt;Spring Boot&lt;/em&gt; é uma bagunça!&lt;/p&gt;&#xA;&lt;p&gt;Porém, mesmo com minhas dificuldades eu dei meu jeito. Trago aqui todas as minhas anotações relacionadas ao framework que me ajudaram na compreensão dos conceitos menos intuitivos que o framework necessita que o programador saiba para construir uma API de qualidade.&lt;/p&gt;&#xA;&lt;p&gt;Não achei a documentação do framework tão boa para aprender como dizem, então tive que fuçar internet á fora para achar conteúdos que me ajudassem de fato a compreender os conceitos que fundamentam a estrutura de uma aplicação de &lt;em&gt;API RESTful&lt;/em&gt; em &lt;em&gt;Spring Boot + Spring Security&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

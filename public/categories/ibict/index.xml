@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IBICT on Café &amp; Tapioca</title>
-    <link>http://localhost:1313/categories/ibict/</link>
+    <link>https://1917dc.github.io/categories/ibict/</link>
     <description>Recent content in IBICT on Café &amp; Tapioca</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 23 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/ibict/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://1917dc.github.io/categories/ibict/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clusterização - Filtragem não supervisionada</title>
-      <link>http://localhost:1313/anotacoes/20250423/</link>
+      <link>https://1917dc.github.io/anotacoes/20250423/</link>
       <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/anotacoes/20250423/</guid>
+      <guid>https://1917dc.github.io/anotacoes/20250423/</guid>
       <description>&lt;h1 id=&#34;prefácio&#34;&gt;Prefácio&lt;/h1&gt;&#xA;&lt;p&gt;Filtrar &amp;amp; organizar dados manualmente pode ser uma tarefa complicada, principalmente quando lidamos com grandes volumes de dados. Esse não é um problema recente, se originou por meados de 1932 dentro da antropologia – o foco do pesquisador era dividir uma amostra de pacientes com esquizofrenia em grupos que compartilhavam características semelhantes entre si, ajudando assim no desenvolvimento de tratamentos específicos –. Dentro disso temos subdivisões de métodos de clusterização, um deles é o &lt;code&gt;k-means&lt;/code&gt;, que utiliza de “centroides” para definição de grupos – e é esse que eu estava estudando sobre.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Projeto Baobá: Revisando conceitos de fake news</title>
-      <link>http://localhost:1313/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</link>
+      <link>https://1917dc.github.io/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</guid>
+      <guid>https://1917dc.github.io/post/2025/04/06/projeto-baob%C3%A1-revisando-conceitos-de-fake-news/</guid>
       <description>&lt;h1 id=&#34;prefácio&#34;&gt;Prefácio&lt;/h1&gt;&#xA;&lt;p&gt;Recentemente comecei um projeto de pesquisa científica na área de análise de dados, com isso pegamos um projeto chamado &amp;ldquo;Baobá&amp;rdquo; - dentro do IBICT. Nesse projeto estamos sendo respnosáveis por prosseguir no desenvolvimento do modelo de LLM deles, chamado de &amp;ldquo;Nice&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;O objetivo do projeto é promover o combate de &lt;em&gt;fake news&lt;/em&gt; através do uso de análise de linguagem natural (NLP - Natural Language Processing). Temos uma enorme base de dados, que consomem api&amp;rsquo;s de redes sociais (ex: Twitter).&lt;/p&gt;</description>
     </item>
   </channel>
