@@ -4,7 +4,7 @@
     <title>Heap on Café &amp; Tapioca</title>
     <link>https://1917dc.github.io/tags/heap/</link>
     <description>Recent content in Heap on Café &amp; Tapioca</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 03 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://1917dc.github.io/tags/heap/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://1917dc.github.io/anotacoes/20241203/</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://1917dc.github.io/anotacoes/20241203/</guid>
-      <description>&lt;p&gt;Ao invés de depender de garbage collection, que existem em linguagem de alto nível como Java e Python, ou de depender de alocação de memória explícita como C; o Rust executa isso de uma forma diferente: usando &amp;ldquo;ownership&amp;rdquo; que são checadas em tempo de compilação, caso alguma regra seja quebrada nesse sentido o programa não vai compilar.&lt;/p&gt;&#xA;&lt;h2 id=&#34;heap--stack&#34;&gt;Heap &amp;amp; Stack&lt;/h2&gt;&#xA;&lt;p&gt;The heap is less organized: when you put data on the heap, you request a certain amount of space. The memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a &lt;em&gt;pointer&lt;/em&gt;, which is the address of that location. This process is called &lt;em&gt;allocating on the heap&lt;/em&gt; and is sometimes abbreviated as just &lt;em&gt;allocating&lt;/em&gt; (pushing values onto the stack is not considered allocating). Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer. Think of being seated at a restaurant. When you enter, you state the number of people in your group, and the host finds an empty table that fits everyone and leads you there. If someone in your group comes late, they can ask where you’ve been seated to find you.&lt;/p&gt;</description>
+      <description>Ao invés de depender de garbage collection, que existem em linguagem de alto nível como Java e Python, ou de depender de alocação de memória explícita como C; o Rust executa isso de uma forma diferente: usando &amp;ldquo;ownership&amp;rdquo; que são checadas em tempo de compilação, caso alguma regra seja quebrada nesse sentido o programa não vai compilar.&#xA;Heap &amp;amp; Stack The heap is less organized: when you put data on the heap, you request a certain amount of space.</description>
     </item>
   </channel>
 </rss>

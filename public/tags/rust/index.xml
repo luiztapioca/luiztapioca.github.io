@@ -4,7 +4,7 @@
     <title>Rust on Café &amp; Tapioca</title>
     <link>https://1917dc.github.io/tags/rust/</link>
     <description>Recent content in Rust on Café &amp; Tapioca</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://1917dc.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
@@ -13,35 +13,35 @@
       <link>https://1917dc.github.io/post/2024/12/23/advent-of-code-2024-dia-3/</link>
       <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://1917dc.github.io/post/2024/12/23/advent-of-code-2024-dia-3/</guid>
-      <description>&lt;h1 id=&#34;prólogo&#34;&gt;Prólogo:&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hoje completei o terceiro dia do &lt;a href=&#34;https://adventofcode.com/&#34;&gt;Advent of Code&lt;/a&gt; (2024) em Rust, e existem várias coisas nas quais eu gostaria de pontuar, questões essas relacionadas á minha curva de aprendizado em Rust e meu objetivo com essa linguagem.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;desafio-1-dia-3&#34;&gt;Desafio 1 (dia 3):&lt;/h1&gt;&#xA;&lt;h2 id=&#34;contexto&#34;&gt;Contexto:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Foi entregue um input de arquivo de texto (como sempre), porém dessa vez era um arquivo populado com diversos caracteres aleatórios, dentro disso haviam instruções de multiplicação escondidas dentro do arquivo; o objetivo do desafio era juntar todas essas instruções &lt;code&gt;mul(X,Y)&lt;/code&gt;, sendo &lt;code&gt;X,Y&lt;/code&gt; números inteiros com &lt;code&gt;1-3&lt;/code&gt; dígitos cada.&lt;/p&gt;</description>
+      <description>Prólogo: Hoje completei o terceiro dia do Advent of Code (2024) em Rust, e existem várias coisas nas quais eu gostaria de pontuar, questões essas relacionadas á minha curva de aprendizado em Rust e meu objetivo com essa linguagem. Desafio 1 (dia 3): Contexto: Foi entregue um input de arquivo de texto (como sempre), porém dessa vez era um arquivo populado com diversos caracteres aleatórios, dentro disso haviam instruções de multiplicação escondidas dentro do arquivo; o objetivo do desafio era juntar todas essas instruções mul(X,Y), sendo X,Y números inteiros com 1-3 dígitos cada.</description>
     </item>
     <item>
       <title>Advent of Code 2024 | Dia 2</title>
       <link>https://1917dc.github.io/post/2024/12/19/advent-of-code-2024-dia-2/</link>
       <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://1917dc.github.io/post/2024/12/19/advent-of-code-2024-dia-2/</guid>
-      <description>&lt;h1 id=&#34;prólogo&#34;&gt;Prólogo:&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nesses últimos dias andei estudando algumas coisas fora do escopo da programação, portanto não fui atrás até ontem de voltar a praticar Rust usando o &lt;a href=&#34;https://adventofcode.com/&#34;&gt;Advent of Code&lt;/a&gt; (2024).&lt;/li&gt;&#xA;&lt;li&gt;Esse segundo dia aparentava ser muito mais complexo do que o primeiro, porém me faltava um pouco de conhecimento com a sintaxe da linguagem para executar a resolução dos problemas de forma correta e incisiva; então esse problema serviu muito bem para me ensinar conceitos específicos de sorting evolvendo arrays usando sinatxes específicas da linguagem, como será visto no tópico seguinte.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;desafio-1-dia-2&#34;&gt;Desafio 1 (dia 2):&lt;/h1&gt;&#xA;&lt;p&gt;&amp;mdash; Day 2: Red-Nosed Reports &amp;mdash;&lt;/p&gt;</description>
+      <description>Prólogo: Nesses últimos dias andei estudando algumas coisas fora do escopo da programação, portanto não fui atrás até ontem de voltar a praticar Rust usando o Advent of Code (2024). Esse segundo dia aparentava ser muito mais complexo do que o primeiro, porém me faltava um pouco de conhecimento com a sintaxe da linguagem para executar a resolução dos problemas de forma correta e incisiva; então esse problema serviu muito bem para me ensinar conceitos específicos de sorting evolvendo arrays usando sinatxes específicas da linguagem, como será visto no tópico seguinte.</description>
     </item>
     <item>
       <title>Advent of Code 2024 | Dia 1</title>
       <link>https://1917dc.github.io/post/2024/12/08/advent-of-code-2024-dia-1/</link>
       <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://1917dc.github.io/post/2024/12/08/advent-of-code-2024-dia-1/</guid>
-      <description>&lt;h1 id=&#34;prólogo&#34;&gt;Prólogo:&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Há alguns dias venho olhando o novo &lt;a href=&#34;https://adventofcode.com/2024&#34;&gt;&amp;ldquo;Advent of Code&amp;rdquo;&lt;/a&gt; deste ano. O &amp;ldquo;Advent of Code&amp;rdquo; basicamente consiste em uma série de desafios com temática de natal e uma história por trás, desafios esses que consistem em problemas de lógica usando inputs e outputs; eu decidi aproveitar a minha vontade de aprender Rust para experimentar a minha capacidade de resolver problemas em uma linguagem nova para mim, e experimentar junto disso esse evento, que já ocorre fazem 9 anos(2015).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;desafio-1-dia-1&#34;&gt;Desafio 1 (dia 1):&lt;/h1&gt;&#xA;&lt;p&gt;&amp;mdash; Day 1: Historian Hysteria &amp;mdash;&lt;/p&gt;</description>
+      <description>Prólogo: Há alguns dias venho olhando o novo &amp;ldquo;Advent of Code&amp;rdquo; deste ano. O &amp;ldquo;Advent of Code&amp;rdquo; basicamente consiste em uma série de desafios com temática de natal e uma história por trás, desafios esses que consistem em problemas de lógica usando inputs e outputs; eu decidi aproveitar a minha vontade de aprender Rust para experimentar a minha capacidade de resolver problemas em uma linguagem nova para mim, e experimentar junto disso esse evento, que já ocorre fazem 9 anos(2015).</description>
     </item>
     <item>
       <title>Rust Ownership</title>
       <link>https://1917dc.github.io/anotacoes/20241203/</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://1917dc.github.io/anotacoes/20241203/</guid>
-      <description>&lt;p&gt;Ao invés de depender de garbage collection, que existem em linguagem de alto nível como Java e Python, ou de depender de alocação de memória explícita como C; o Rust executa isso de uma forma diferente: usando &amp;ldquo;ownership&amp;rdquo; que são checadas em tempo de compilação, caso alguma regra seja quebrada nesse sentido o programa não vai compilar.&lt;/p&gt;&#xA;&lt;h2 id=&#34;heap--stack&#34;&gt;Heap &amp;amp; Stack&lt;/h2&gt;&#xA;&lt;p&gt;The heap is less organized: when you put data on the heap, you request a certain amount of space. The memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a &lt;em&gt;pointer&lt;/em&gt;, which is the address of that location. This process is called &lt;em&gt;allocating on the heap&lt;/em&gt; and is sometimes abbreviated as just &lt;em&gt;allocating&lt;/em&gt; (pushing values onto the stack is not considered allocating). Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer. Think of being seated at a restaurant. When you enter, you state the number of people in your group, and the host finds an empty table that fits everyone and leads you there. If someone in your group comes late, they can ask where you’ve been seated to find you.&lt;/p&gt;</description>
+      <description>Ao invés de depender de garbage collection, que existem em linguagem de alto nível como Java e Python, ou de depender de alocação de memória explícita como C; o Rust executa isso de uma forma diferente: usando &amp;ldquo;ownership&amp;rdquo; que são checadas em tempo de compilação, caso alguma regra seja quebrada nesse sentido o programa não vai compilar.&#xA;Heap &amp;amp; Stack The heap is less organized: when you put data on the heap, you request a certain amount of space.</description>
     </item>
     <item>
       <title>First steps into Rust</title>
       <link>https://1917dc.github.io/post/2024/12/02/first-steps-into-rust/</link>
       <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://1917dc.github.io/post/2024/12/02/first-steps-into-rust/</guid>
-      <description>&lt;h1 id=&#34;why-im-learning-rust&#34;&gt;Why I&amp;rsquo;m learning Rust?&lt;/h1&gt;&#xA;&lt;p&gt;Basically, I was planning on studying compilers, interpreters and how programming languages work on the low level part.&lt;/p&gt;&#xA;&lt;p&gt;I tought that Rust was a good choice because it has large and active open source community, and it&amp;rsquo;s simpler than C and C++. I had sometime in last year learning C, was a pain in the ass, but I recognize the impact that it had in my understanding of how a computer memory works on the low level.&lt;/p&gt;</description>
+      <description>Why I&amp;rsquo;m learning Rust? Basically, I was planning on studying compilers, interpreters and how programming languages work on the low level part.&#xA;I tought that Rust was a good choice because it has large and active open source community, and it&amp;rsquo;s simpler than C and C++. I had sometime in last year learning C, was a pain in the ass, but I recognize the impact that it had in my understanding of how a computer memory works on the low level.</description>
     </item>
   </channel>
 </rss>

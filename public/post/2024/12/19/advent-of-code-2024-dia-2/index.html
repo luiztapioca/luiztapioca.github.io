@@ -48,31 +48,31 @@
 <h1 id="desafio-1-dia-2">Desafio 1 (dia 2):</h1>
 <p>&mdash; Day 2: Red-Nosed Reports &mdash;</p>
 <table>
-  <thead>
-      <tr>
-          <th>Sequence</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>7 6 4 2 1</td>
-      </tr>
-      <tr>
-          <td>1 2 7 8 9</td>
-      </tr>
-      <tr>
-          <td>9 7 6 2 1</td>
-      </tr>
-      <tr>
-          <td>1 3 2 4 5</td>
-      </tr>
-      <tr>
-          <td>8 6 4 4 1</td>
-      </tr>
-      <tr>
-          <td>1 3 6 7 9</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Sequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 6 4 2 1</td>
+</tr>
+<tr>
+<td>1 2 7 8 9</td>
+</tr>
+<tr>
+<td>9 7 6 2 1</td>
+</tr>
+<tr>
+<td>1 3 2 4 5</td>
+</tr>
+<tr>
+<td>8 6 4 4 1</td>
+</tr>
+<tr>
+<td>1 3 6 7 9</td>
+</tr>
+</tbody>
 </table>
 <ul>
 <li>
@@ -81,54 +81,56 @@
 <li>
 <p>The engineers are trying to figure out which reports are safe. The Red-Nosed reactor safety systems can only tolerate levels that are either gradually increasing or gradually decreasing. So, a report only counts as safe if both of the following are true:</p>
 <blockquote>
-<p>The levels are either all increasing or all decreasing.</p></blockquote>
+<p>The levels are either all increasing or all decreasing.</p>
+</blockquote>
 <blockquote>
-<p>Any two adjacent levels differ by at least one and at most three.</p></blockquote>
+<p>Any two adjacent levels differ by at least one and at most three.</p>
+</blockquote>
 </li>
 <li>
 <p>In the example above, the reports can be found safe or unsafe by checking those rules:</p>
 </li>
 </ul>
 <table>
-  <thead>
-      <tr>
-          <th>Sequence</th>
-          <th>Status</th>
-          <th>Reason</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>7 6 4 2 1</td>
-          <td>Safe</td>
-          <td>The levels are all decreasing by 1 or 2.</td>
-      </tr>
-      <tr>
-          <td>1 2 7 8 9</td>
-          <td>Unsafe</td>
-          <td>2 7 is an increase of 5.</td>
-      </tr>
-      <tr>
-          <td>9 7 6 2 1</td>
-          <td>Unsafe</td>
-          <td>6 2 is a decrease of 4.</td>
-      </tr>
-      <tr>
-          <td>1 3 2 4 5</td>
-          <td>Unsafe</td>
-          <td>1 3 is increasing but 3 2 is decreasing.</td>
-      </tr>
-      <tr>
-          <td>8 6 4 4 1</td>
-          <td>Unsafe</td>
-          <td>4 4 is neither an increase or a decrease.</td>
-      </tr>
-      <tr>
-          <td>1 3 6 7 9</td>
-          <td>Safe</td>
-          <td>The levels are all increasing by 1, 2, or 3.</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Sequence</th>
+<th>Status</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 6 4 2 1</td>
+<td>Safe</td>
+<td>The levels are all decreasing by 1 or 2.</td>
+</tr>
+<tr>
+<td>1 2 7 8 9</td>
+<td>Unsafe</td>
+<td>2 7 is an increase of 5.</td>
+</tr>
+<tr>
+<td>9 7 6 2 1</td>
+<td>Unsafe</td>
+<td>6 2 is a decrease of 4.</td>
+</tr>
+<tr>
+<td>1 3 2 4 5</td>
+<td>Unsafe</td>
+<td>1 3 is increasing but 3 2 is decreasing.</td>
+</tr>
+<tr>
+<td>8 6 4 4 1</td>
+<td>Unsafe</td>
+<td>4 4 is neither an increase or a decrease.</td>
+</tr>
+<tr>
+<td>1 3 6 7 9</td>
+<td>Safe</td>
+<td>The levels are all increasing by 1, 2, or 3.</td>
+</tr>
+</tbody>
 </table>
 <ul>
 <li>
@@ -168,7 +170,8 @@
 <ul>
 <li>Existe uma observação na qual eu gostaria de fazer:
 <blockquote>
-<p>O código está bem legível, porém qualquer outra linguagem é capaz de fazer da forma na qual eu fiz, então qual o intuito de usar o Rust se eu não conheço as peculiaridades da linguagem?</p></blockquote>
+<p>O código está bem legível, porém qualquer outra linguagem é capaz de fazer da forma na qual eu fiz, então qual o intuito de usar o Rust se eu não conheço as peculiaridades da linguagem?</p>
+</blockquote>
 </li>
 </ul>
 <ul>
@@ -202,45 +205,45 @@
 <li>Agora preciso deixar passar apenas um erro contido em cada report dentro do input, no exemplo temos:</li>
 </ul>
 <table>
-  <thead>
-      <tr>
-          <th>Sequence</th>
-          <th>Status</th>
-          <th>Reason</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>7 6 4 2 1</td>
-          <td>Safe</td>
-          <td>Safe without removing any level.</td>
-      </tr>
-      <tr>
-          <td>1 2 7 8 9</td>
-          <td>Unsafe</td>
-          <td>Unsafe regardless of which level is removed.</td>
-      </tr>
-      <tr>
-          <td>9 7 6 2 1</td>
-          <td>Unsafe</td>
-          <td>Unsafe regardless of which level is removed.</td>
-      </tr>
-      <tr>
-          <td>1 3 2 4 5</td>
-          <td>Safe</td>
-          <td>Safe by removing the second level, 3.</td>
-      </tr>
-      <tr>
-          <td>8 6 4 4 1</td>
-          <td>Safe</td>
-          <td>Safe by removing the third level, 4.</td>
-      </tr>
-      <tr>
-          <td>1 3 6 7 9</td>
-          <td>Safe</td>
-          <td>Safe without removing any level.</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Sequence</th>
+<th>Status</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 6 4 2 1</td>
+<td>Safe</td>
+<td>Safe without removing any level.</td>
+</tr>
+<tr>
+<td>1 2 7 8 9</td>
+<td>Unsafe</td>
+<td>Unsafe regardless of which level is removed.</td>
+</tr>
+<tr>
+<td>9 7 6 2 1</td>
+<td>Unsafe</td>
+<td>Unsafe regardless of which level is removed.</td>
+</tr>
+<tr>
+<td>1 3 2 4 5</td>
+<td>Safe</td>
+<td>Safe by removing the second level, 3.</td>
+</tr>
+<tr>
+<td>8 6 4 4 1</td>
+<td>Safe</td>
+<td>Safe by removing the third level, 4.</td>
+</tr>
+<tr>
+<td>1 3 6 7 9</td>
+<td>Safe</td>
+<td>Safe without removing any level.</td>
+</tr>
+</tbody>
 </table>
 <ul>
 <li><strong>Esse problema é um problema clássico de fila</strong>, onde vamos removendo o primeiro elemento, e re-validando o array á cada remoção, repetindo o processo caso se confirme inválido novamente.</li>

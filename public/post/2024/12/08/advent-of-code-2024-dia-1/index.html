@@ -55,38 +55,38 @@
 <p>There&rsquo;s just one problem: by holding the two lists up side by side (your puzzle input), it quickly becomes clear that the lists aren&rsquo;t very similar. Maybe you can help The Historians reconcile their lists?</p>
 <p>For example:</p>
 <table>
-  <thead>
-      <tr>
-          <th></th>
-          <th></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>3</td>
-          <td>4</td>
-      </tr>
-      <tr>
-          <td>4</td>
-          <td>3</td>
-      </tr>
-      <tr>
-          <td>2</td>
-          <td>5</td>
-      </tr>
-      <tr>
-          <td>1</td>
-          <td>3</td>
-      </tr>
-      <tr>
-          <td>3</td>
-          <td>9</td>
-      </tr>
-      <tr>
-          <td>3</td>
-          <td>3</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
 </table>
 <p>Maybe the lists are only off by a small amount! To find out, pair up the numbers and measure how far apart they are. Pair up the smallest number in the left list with the smallest number in the right list, then the second-smallest left number with the second-smallest right number, and so on.</p>
 <p>Within each pair, figure out how far apart the two numbers are; you&rsquo;ll need to add up all of those distances. For example, if you pair up a 3 from the left list with a 7 from the right list, the distance apart is 4; if you pair up a 9 with a 3, the distance apart is 6.</p>
@@ -107,38 +107,38 @@ To find the total distance between the left list and the right list, add up the 
 <p>This time, you&rsquo;ll need to figure out exactly how often each number from the left list appears in the right list. Calculate a total similarity score by adding up each number in the left list after multiplying it by the number of times that number appears in the right list.</p>
 <p>Here are the same example lists again:</p>
 <table>
-  <thead>
-      <tr>
-          <th></th>
-          <th></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>3</td>
-          <td>4</td>
-      </tr>
-      <tr>
-          <td>4</td>
-          <td>3</td>
-      </tr>
-      <tr>
-          <td>2</td>
-          <td>5</td>
-      </tr>
-      <tr>
-          <td>1</td>
-          <td>3</td>
-      </tr>
-      <tr>
-          <td>3</td>
-          <td>9</td>
-      </tr>
-      <tr>
-          <td>3</td>
-          <td>3</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
 </table>
 <p>For these example lists, here is the process of finding the similarity score:</p>
 <p>The first number in the left list is <code>3</code>. It appears in the right list three times, so the similarity score increases by <code>3 * 3 = 9</code>.
