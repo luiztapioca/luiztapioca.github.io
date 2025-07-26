@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rust on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/categories/rust/</link>
+    <link>http://localhost:1313/categories/rust/</link>
     <description>Recent content in Rust on Café &amp; Tapioca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 03 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rust Ownership</title>
-      <link>https://1917dc.github.io/anotacoes/20241203/</link>
+      <link>http://localhost:1313/anotacoes/20241203/</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/anotacoes/20241203/</guid>
+      <guid>http://localhost:1313/anotacoes/20241203/</guid>
       <description>Ao invés de depender de garbage collection, que existem em linguagem de alto nível como Java e Python, ou de depender de alocação de memória explícita como C; o Rust executa isso de uma forma diferente: usando &amp;ldquo;ownership&amp;rdquo; que são checadas em tempo de compilação, caso alguma regra seja quebrada nesse sentido o programa não vai compilar.&#xA;Heap &amp;amp; Stack The heap is less organized: when you put data on the heap, you request a certain amount of space.</description>
     </item>
     <item>
       <title>First steps into Rust</title>
-      <link>https://1917dc.github.io/post/2024/12/02/first-steps-into-rust/</link>
+      <link>http://localhost:1313/post/2024/12/02/first-steps-into-rust/</link>
       <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/post/2024/12/02/first-steps-into-rust/</guid>
+      <guid>http://localhost:1313/post/2024/12/02/first-steps-into-rust/</guid>
       <description>Why I&amp;rsquo;m learning Rust? Basically, I was planning on studying compilers, interpreters and how programming languages work on the low level part.&#xA;I tought that Rust was a good choice because it has large and active open source community, and it&amp;rsquo;s simpler than C and C++. I had sometime in last year learning C, was a pain in the ass, but I recognize the impact that it had in my understanding of how a computer memory works on the low level.</description>
     </item>
   </channel>

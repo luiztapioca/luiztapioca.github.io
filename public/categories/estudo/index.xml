@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Estudo on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/categories/estudo/</link>
+    <link>http://localhost:1313/categories/estudo/</link>
     <description>Recent content in Estudo on Café &amp; Tapioca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/categories/estudo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/estudo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Anotações: Spring Boot</title>
-      <link>https://1917dc.github.io/anotacoes/20250328/</link>
+      <link>http://localhost:1313/anotacoes/20250328/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/anotacoes/20250328/</guid>
+      <guid>http://localhost:1313/anotacoes/20250328/</guid>
       <description>Prefácio Antes de tudo: estudar Spring Boot parece uma bagunça sem fim, e você não está errado. Estudar Spring Boot é uma bagunça!&#xA;Porém, mesmo com minhas dificuldades eu dei meu jeito. Trago aqui todas as minhas anotações relacionadas ao framework que me ajudaram na compreensão dos conceitos menos intuitivos que o framework necessita que o programador saiba para construir uma API de qualidade.&#xA;Não achei a documentação do framework tão boa para aprender como dizem, então tive que fuçar internet á fora para achar conteúdos que me ajudassem de fato a compreender os conceitos que fundamentam a estrutura de uma aplicação de API RESTful em Spring Boot + Spring Security.</description>
     </item>
   </channel>

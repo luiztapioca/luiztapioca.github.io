@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Obsidian on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/tags/obsidian/</link>
+    <link>http://localhost:1313/tags/obsidian/</link>
     <description>Recent content in Obsidian on Café &amp; Tapioca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 07 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Obsidian Sync</title>
-      <link>https://1917dc.github.io/post/2024/12/07/obsidian-sync/</link>
+      <link>http://localhost:1313/post/2024/12/07/obsidian-sync/</link>
       <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/post/2024/12/07/obsidian-sync/</guid>
+      <guid>http://localhost:1313/post/2024/12/07/obsidian-sync/</guid>
       <description>Qual a utilidade? Ao ter todas as minhas anotações sincronizadas dentro de um único repositório dentro do Github, eu não preciso me preocupar com questões de sincronização entre dispositivos, ou de ter que fazer uma pasta específica apenas para guardar as anotações dentro do meu celular, eu simplesmente posso anotar algo nele e posteriormente conferir no meu computador o que foi anotado. Por quê não usar o Notion? Pelo Notion ser um programa se código fechado e totalmente proprietário, sou impedido de ter acesso ao arquivo das minhas anotações, apenas no caso de exportar como PDF eu posso realmente ter acesso ao arquivo, o que não é nada efetivo, pois o PDF é menos prático para edição do que um arquivo MD(Mark Down), que é usado por aplicações como o Obsidian.</description>
     </item>
   </channel>

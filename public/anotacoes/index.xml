@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anotacoes on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/anotacoes/</link>
+    <link>http://localhost:1313/anotacoes/</link>
     <description>Recent content in Anotacoes on Café &amp; Tapioca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 23 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/anotacoes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/anotacoes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clusterização - Filtragem não supervisionada</title>
-      <link>https://1917dc.github.io/anotacoes/20250423/</link>
+      <link>http://localhost:1313/anotacoes/20250423/</link>
       <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/anotacoes/20250423/</guid>
+      <guid>http://localhost:1313/anotacoes/20250423/</guid>
       <description>Prefácio Filtrar &amp;amp; organizar dados manualmente pode ser uma tarefa complicada, principalmente quando lidamos com grandes volumes de dados. Esse não é um problema recente, se originou por meados de 1932 dentro da antropologia – o foco do pesquisador era dividir uma amostra de pacientes com esquizofrenia em grupos que compartilhavam características semelhantes entre si, ajudando assim no desenvolvimento de tratamentos específicos –. Dentro disso temos subdivisões de métodos de clusterização, um deles é o k-means, que utiliza de “centroides” para definição de grupos – e é esse que eu estava estudando sobre.</description>
     </item>
     <item>
       <title>Mini resenha: Camus – O Absurdo no Cotidiano.</title>
-      <link>https://1917dc.github.io/anotacoes/20250420/</link>
+      <link>http://localhost:1313/anotacoes/20250420/</link>
       <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/anotacoes/20250420/</guid>
+      <guid>http://localhost:1313/anotacoes/20250420/</guid>
       <description>Sobre o &amp;ldquo;Absurdo&amp;rdquo; O absurdo não é uma palavra: é um conceito. O universo, claramente, é um lugar irracional. Em toda a sua jornada de existência a raça humana sempre tentou responder uma única questão: “Qual o sentido da existência?”.&#xA;Mas será que essa existência realmente tem um sentido? Ou seria apenas uma questão irrelevante diante de todas as outras questões a serem respondidas?&#xA;A constante guerra contra essa irracionalidade do universo é a luta travada há séculos pelo &amp;ldquo;ser&amp;rdquo;, esse desejo insaciável por clareza que ecoa no coração humano é o que define o absurdo.</description>
     </item>
     <item>
       <title>O dilema do esclarescimento — Kant &amp; Sociedade dos Poetas Mortos</title>
-      <link>https://1917dc.github.io/anotacoes/20250412/</link>
+      <link>http://localhost:1313/anotacoes/20250412/</link>
       <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/anotacoes/20250412/</guid>
+      <guid>http://localhost:1313/anotacoes/20250412/</guid>
       <description>Você se sente medíocre? Eu também! Eu constantemente me sinto medíocre, seja pela minha incapacidade as vezes de aprender algum tópico, ou por sentir que meu conhecimento é em sua totalidade raso - e creio que a maioria dos universitários se sentem assim também. Isso em certo nível é bom e saudável, o estudante precisa ter brio, você precisa abaixar seu ego. Aquele que por algum motivo acha que sabe de tudo, não sabe praticamente nada sobre a totalidade daquilo que estuda, porém precisamos ser justos com o &amp;ldquo;eu&amp;rdquo;.</description>
     </item>
     <item>
       <title>Anotações: Spring Boot</title>
-      <link>https://1917dc.github.io/anotacoes/20250328/</link>
+      <link>http://localhost:1313/anotacoes/20250328/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/anotacoes/20250328/</guid>
+      <guid>http://localhost:1313/anotacoes/20250328/</guid>
       <description>Prefácio Antes de tudo: estudar Spring Boot parece uma bagunça sem fim, e você não está errado. Estudar Spring Boot é uma bagunça!&#xA;Porém, mesmo com minhas dificuldades eu dei meu jeito. Trago aqui todas as minhas anotações relacionadas ao framework que me ajudaram na compreensão dos conceitos menos intuitivos que o framework necessita que o programador saiba para construir uma API de qualidade.&#xA;Não achei a documentação do framework tão boa para aprender como dizem, então tive que fuçar internet á fora para achar conteúdos que me ajudassem de fato a compreender os conceitos que fundamentam a estrutura de uma aplicação de API RESTful em Spring Boot + Spring Security.</description>
     </item>
     <item>
       <title>Rust Ownership</title>
-      <link>https://1917dc.github.io/anotacoes/20241203/</link>
+      <link>http://localhost:1313/anotacoes/20241203/</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/anotacoes/20241203/</guid>
+      <guid>http://localhost:1313/anotacoes/20241203/</guid>
       <description>Ao invés de depender de garbage collection, que existem em linguagem de alto nível como Java e Python, ou de depender de alocação de memória explícita como C; o Rust executa isso de uma forma diferente: usando &amp;ldquo;ownership&amp;rdquo; que são checadas em tempo de compilação, caso alguma regra seja quebrada nesse sentido o programa não vai compilar.&#xA;Heap &amp;amp; Stack The heap is less organized: when you put data on the heap, you request a certain amount of space.</description>
     </item>
   </channel>

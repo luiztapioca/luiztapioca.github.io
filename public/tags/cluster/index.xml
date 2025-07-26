@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/tags/cluster/</link>
+    <link>http://localhost:1313/tags/cluster/</link>
     <description>Recent content in Cluster on Café &amp; Tapioca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 23 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/tags/cluster/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cluster/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clusterização - Filtragem não supervisionada</title>
-      <link>https://1917dc.github.io/anotacoes/20250423/</link>
+      <link>http://localhost:1313/anotacoes/20250423/</link>
       <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/anotacoes/20250423/</guid>
+      <guid>http://localhost:1313/anotacoes/20250423/</guid>
       <description>Prefácio Filtrar &amp;amp; organizar dados manualmente pode ser uma tarefa complicada, principalmente quando lidamos com grandes volumes de dados. Esse não é um problema recente, se originou por meados de 1932 dentro da antropologia – o foco do pesquisador era dividir uma amostra de pacientes com esquizofrenia em grupos que compartilhavam características semelhantes entre si, ajudando assim no desenvolvimento de tratamentos específicos –. Dentro disso temos subdivisões de métodos de clusterização, um deles é o k-means, que utiliza de “centroides” para definição de grupos – e é esse que eu estava estudando sobre.</description>
     </item>
   </channel>
