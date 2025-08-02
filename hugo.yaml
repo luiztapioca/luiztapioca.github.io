@@ -1,0 +1,74 @@
+baseURL: "https://1917dc.github.io/blog/"
+languageCode: "pt-br"
+title: "Café & Tapioca"
+theme: "hugo-sputnik"
+
+permalinks:
+  note: "/note/:year/:month/:day/:slug/"
+  post: "/post/:year/:month/:day/:slug/"
+
+menus:
+  main:
+    - name: "Home"
+      pageRef: "/"
+      weight: 10
+    - name: "About"
+      pageRef: "/about"
+      weight: 20
+    - name: "Contact"
+      pageRef: "/contact"
+      weight: 30
+    - name: "Tags"
+      pageRef: "/tags"
+      weight: 40
+
+taxonomies:
+  tag: "tags"
+
+module:
+  hugoVersion:
+    extended: false
+    min: "0.116.0"
+
+params:
+  bio:
+    name: "Author Name"
+    theme: "Hugo Sputnik"
+    startYear: "2024"
+  
+  social:
+    github: "https://github.com/1917dc"
+    lastfm: "https://www.last.fm/user/gfxnx"
+    letterboxd: "https://letterboxd.com/yyounevershould/"
+    instagram: "https://www.instagram.com/1917.dc/"
+
+  contact:
+    email: "mailto:19051997@gmail.com"
+
+  logo:
+    image: "https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/logo.png"
+  
+  favicon:
+    icon: "https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/favicon.ico"
+
+caches:
+  images:
+    dir: ":cacheDir/images"
+
+markup:
+  highlight:
+    codeFences: false
+  
+  goldmark:
+    renderer:
+      unsafe: true
+    
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ["\\[", "\\]"]
+            - ["$$", "$$"]
+          inline:
+            - ["\\(", "\\)"]
