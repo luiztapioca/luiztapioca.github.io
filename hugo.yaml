@@ -33,7 +33,7 @@ module:
 
 params:
   bio:
-    name: "Author Name"
+    name: "Luiz G."
     theme: "Hugo Sputnik"
     startYear: "2024"
   
