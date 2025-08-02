@@ -16,6 +16,10 @@ body {
     color: var(--text-color);
 }
 
+main { hyphens: auto; }
+
+pre code { background: none; }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', 'Fira Sans', sans-serif;
     color: var(--h-color);
@@ -26,11 +30,18 @@ table {
   width: 100%;
 }
 
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
+}
+
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
 
-img {
+img, video, iframe {
     display: block;
     margin: 0 auto;
     max-width: 100%;
