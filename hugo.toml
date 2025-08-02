@@ -1,4 +1,4 @@
-baseURL = "https://1917dc.github.io/"  # please update this to your actual URL
+baseURL = "https://1917dc.github.io/blog/"
 languageCode = "pt-br"
 title = "Café & Tapioca"
 theme = "hugo-sputnik"
