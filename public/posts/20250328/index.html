@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Anotações: Spring Boot | Café &amp; Tapioca</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/css/main.css">
+<script src="/js/main.js"></script>
+
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+</head>
+<body>
+  <header>
+    <div class="header">
+    <div class="logo-container">
+        <img class="logo" src="/logo.png" alt="Café &amp; Tapioca">
+        <h1>Café &amp; Tapioca</h1>
+    </div>
+    
+  <nav>
+    <ul class="menu">
+    <li class="menu">
+      <a href="/">Home</a>
+    </li>
+    <li class="menu">
+      <a href="/about/">About</a>
+    </li>
+    <li class="menu">
+      <a href="/contact/">Contact</a>
+    </li>
+    <li class="menu">
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+</div>
+  </header>
+  <div class="divider"></div>
+  <main>
+    
+  <div class="post-header">
+    <h1 class="post-header-title">Anotações: Spring Boot</h1>
+      
+      <p class="post-date">
+        <i class="fas fa-clock"></i>
+        
+        <time datetime="2025.03.28">2025.03.28</time>
+      </p>
+  </div>
+  
+  <div class="terms">
+    <div>
+      Tags:
+    </div>
+        <p><a href="/tags/java/">Java</a></p>
+        <p><a href="/tags/springboot/">Springboot</a></p>
+        <p><a href="/tags/estudo/">Estudo</a></p>
+  </div>
+
+
+  <h1 id="prefácio">Prefácio</h1>
+<p>Antes de tudo: estudar <em>Spring Boot</em> parece uma bagunça sem fim, e você não está errado. Estudar <em>Spring Boot</em> é uma bagunça!</p>
+<p>Porém, mesmo com minhas dificuldades eu dei meu jeito. Trago aqui todas as minhas anotações relacionadas ao framework que me ajudaram na compreensão dos conceitos menos intuitivos que o framework necessita que o programador saiba para construir uma API de qualidade.</p>
+<p>Não achei a documentação do framework tão boa para aprender como dizem, então tive que fuçar internet á fora para achar conteúdos que me ajudassem de fato a compreender os conceitos que fundamentam a estrutura de uma aplicação de <em>API RESTful</em> em <em>Spring Boot + Spring Security</em>.</p>
+<p>Pode soar meio confuso de começo entender a estrutura correta para se seguir dentro do framework ao construir aplicações web com <em>API&rsquo;s RESTful</em> - e realmente, é um pouco confuso.</p>
+<h1 id="porquê">Porquê</h1>
+<p>Estou desenvolvendo um projeto mobile, e nele preciso montar um backend robusto com <strong>muitas</strong> regras de negócio, o <em>Java</em> com <em>Spring</em> é a alternativa mais simples para implementação das ideias.</p>
+<p>O projeto consiste em um &ldquo;gerenciador&rdquo; de imóveis, onde donos de imóveis &amp; pessoas que alugam imóveis são capazes de registrar essas propriedades; o aplicativo deve ser capaz de devolver todos os impostos a serem pagos pelo usuário de acordo com as cláusulas de contrato, juntamente com os reajustes anuais.</p>
+<h1 id="conceitos-iniciais">Conceitos iniciais</h1>
+<p>Nesse projeto achei mais pertinente programar tudo usando a arquitetura de <strong>Web Services</strong>, que pode ser explicada da seguinte forma:</p>
+<img src="https://i.imgur.com/Srsn4jK.png" alt="Arq. Web Services" style="width: 100%; height: auto;">
+<h2 id="princípios">Princípios</h2>
+<p>O uso dessa arquitetura tem o intuito de encapsular melhor as responsabilidades de cada componente do projeto.</p>
+<p>Nessa arquitetura temos um alta coesão e baixo acoplamento; utilizamos bastante de arquitetura em camadas, injeção de dependências e princípios do <strong>SOLID</strong> - onde são definidos princípios de design para criação de códigos mais manunteníveis, flexíveis e escaláveis.</p>
+<ul>
+<li><strong>Controller</strong>: serve como um proxy que comunica o cliente com a aplicação. Ele intercepta a comunicação e identifica se o request é ou não válido antes de passar para as outras camadas da aplicação. Nessa aplicação estamos usando um intermediário para comunicação de dados, chamado de <strong>DTO</strong> - <em>Data Transfer Object</em>.</li>
+<li><strong>Service</strong>: opera como armazenador das regras de negócio da aplicação, aqui operamos e tratamos os dados que o cliente enviou na requisição <em>HTTP</em>.</li>
+<li><strong>Repository</strong>: é responsável por comunicar o service com o banco de dados da aplicação, por estar usando o <strong>Spring Data JPA</strong> todas as operações <em>SQL</em> são feitas por debaixo dos panos.</li>
+</ul>
+<p>A visão de arquitetura é importante para definir o caminho á ser trilhado pelo programador, não ter essas visões pode deixar toda a compreensão do framework muito confusa.</p>
+<p><strong>Posteriormente vou colocar exemplos de código de cada classe para exemplificação de como um projeto Spring Boot é montado.</strong></p>
+<h1 id="organização">Organização</h1>
+<pre><code>📦 com.example.demo
+├─ DemoApplication
+├─ model/
+│  └─ UserModel
+├─ controller/
+│  └─ AuthenticationController
+├─ service/
+│  └─ UserService
+├─ repository/
+│  └─ UserRepository
+└─ config/
+   └─ SecurityConfig
+</code></pre>
+<p>©generated by <a href="https://woochanleee.github.io/project-tree-generator">Project Tree Generator</a></p>
+<h2 id="model">Model</h2>
+<p>No <em>package</em> model colocamos todas as classes de entidades do projeto.</p>
+<p>O <em>Spring Boot</em> utiliza de <em>&ldquo;annotations&rdquo;</em> para avisar ao framework as responsabilidades das classes que o programador cria.
+No exemplo abaixo utilizei as anotações de <em>@Entity</em> e <em>@Table</em> na classe em si para avisar que ela é uma entidade, e uma tabela no banco de dados.</p>
+<pre><code class="language-java">@Entity
+@Table(name = &quot;tb_users&quot;)
+public class UserModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+
+    @Column(nullable = false, unique = true)
+    private String username;
+
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(nullable = false)
+    private String password;
+}
+</code></pre>
+<h2 id="repository">Repository</h2>
+<p>O <em>repository</em> serve como um comunicador, que leva e trás informações de um ponto A até um ponto B - <strong>pense que ele age como um carteiro</strong>.</p>
+<p>Na aplicação em desenvolvimento estou usando o <em>Spring Data JPA</em>, então não preciso escrever <em>SQL</em> nas transações, só sendo necessário instanciar a interface e os métodos customizados, caso o programa necessite.</p>
+<pre><code class="language-java">public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+    Optional&lt;User&gt; findByEmail(String email);
+}
+</code></pre>
+<h2 id="service">Service</h2>
+<p>Os <em>services</em> atuam como um intermediário dentro do <em>controller</em> e do <em>repository</em>, dentro dele colocamos toda a burocracia da aplicação, ou seja, as regras de negócio.</p>
+<pre><code class="language-java">public class UserService {
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
+
+    public Optional&lt;User&gt; getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    public User createUser(RegisterDto registerDto) {
+        var user = new User();
+
+        user.setUsername(registerDto.username());
+        user.setEmail(registerDto.email());
+        user.setPassword(passwordEncoder.encode(registerDto.password()));
+
+        return userRepository.save(user);
+    }
+}
+</code></pre>
+<h2 id="controller">Controller</h2>
+<p>Dentro da <em>controller</em> colocamos todas as operações que vão ocorrer por intermédio de usuário e serviço, servindo como um <em>proxy</em> nessas interações.</p>
+<pre><code class="language-java">@RestController
+@RequestMapping(&quot;/auth&quot;) // anotação para mapeamento de rota
+public class AuthenticationController {
+    private final AuthenticationService authenticationService;
+    private final UserService userService;
+
+    //injeção de dependências
+    public AuthenticationController(AuthenticationService authenticationService, UserService userService) {
+        this.authenticationService = authenticationService;
+        this.userService = userService;
+    }
+
+    @PostMapping(&quot;/register&quot;)
+    public ResponseEntity&lt;String&gt; register(@RequestBody RegisterDto user) {
+        try {
+            if(userService.getUserByEmail(user.email()).isPresent()) {
+                return ResponseEntity.status(HttpStatus.CONFLICT).body(&quot;Email já cadastrado!&quot;);
+            }
+            userService.createUser(user);
+            return ResponseEntity.status(HttpStatus.CREATED).body(&quot;Usuário cadastrado com sucesso!&quot;);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body(&quot;Erro ao cadastrar usuário.&quot;);
+        }
+
+    }
+
+    @PostMapping(&quot;/login&quot;)
+    public ResponseEntity&lt;String&gt; login(@RequestBody LoginDto user) {
+        return null;
+    }
+}
+</code></pre>
+<h1 id="conclusão">Conclusão</h1>
+<p>Tendo tudo o que foi falado como base já conseguimos desenvolver uma aplicação em <em>Java Spring Boot</em>; porém ainda temos de pensar na questão da segurança da aplicação. Futuramente vou escrever outro artigo falando sobre segurança em aplicações <em>Spring Boot</em> usando <em>Spring Security</em> de forma mais prática.</p>
+<p>Você obviamente deve saber os conceitos teóricos envolvendo todo o código, assim como foi embasado nas explicações acima, isso acaba que por gerar uma compreensão enorme do código que está sendo escrito. Pelo fato do Java ser uma linguagem <strong>muito</strong> verbosa, pode ser difícil decorar o código e aprender apenas através de exemplos, portanto o melhor dos dois mundos é ter embasamento teórico e prático.</p>
+
+
+  </main>
+  <div class="divider"></div>
+  <footer>
+    <div class="footer">
+    <p>Copyright &copy; Author Name 2024 - 2025.</p>
+</div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  </footer>
+</body>
+</html>

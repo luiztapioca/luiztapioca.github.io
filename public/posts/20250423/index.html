@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Clusterização - Filtragem não supervisionada | Café &amp; Tapioca</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/css/main.css">
+<script src="/js/main.js"></script>
+
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+</head>
+<body>
+  <header>
+    <div class="header">
+    <div class="logo-container">
+        <img class="logo" src="/logo.png" alt="Café &amp; Tapioca">
+        <h1>Café &amp; Tapioca</h1>
+    </div>
+    
+  <nav>
+    <ul class="menu">
+    <li class="menu">
+      <a href="/">Home</a>
+    </li>
+    <li class="menu">
+      <a href="/about/">About</a>
+    </li>
+    <li class="menu">
+      <a href="/contact/">Contact</a>
+    </li>
+    <li class="menu">
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+</div>
+  </header>
+  <div class="divider"></div>
+  <main>
+    
+  <div class="post-header">
+    <h1 class="post-header-title">Clusterização - Filtragem não supervisionada</h1>
+      
+      <p class="post-date">
+        <i class="fas fa-clock"></i>
+        
+        <time datetime="2025.04.23">2025.04.23</time>
+      </p>
+  </div>
+  
+  <div class="terms">
+    <div>
+      Tags:
+    </div>
+        <p><a href="/tags/cluster/">Cluster</a></p>
+        <p><a href="/tags/k-means/">K-Means</a></p>
+  </div>
+
+
+  <h1 id="prefácio">Prefácio</h1>
+<p>Filtrar &amp; organizar dados manualmente pode ser uma tarefa complicada, principalmente quando lidamos com grandes volumes de dados. Esse não é um problema recente, se originou por meados de 1932 dentro da antropologia – o foco do pesquisador era dividir uma amostra de pacientes com esquizofrenia em grupos que compartilhavam características semelhantes entre si, ajudando assim no desenvolvimento de tratamentos específicos –. Dentro disso temos subdivisões de métodos de clusterização, um deles é o <code>k-means</code>, que utiliza de “centroides” para definição de grupos – e é esse que eu estava estudando sobre.</p>
+<h1 id="aplicação">Aplicação</h1>
+<p>O objetivo de aplicar clusterização na pesquisa é o de dividir de forma clara os nossos dados – <em>tweets</em> – dentro de um critério específico. A análise ainda será feita, para identificar a melhor forma de dividir esses dados. <strong>ex: dividir em grupos de sentimentos, assuntos específicos, etc.</strong></p>
+<p>Então a princípio, se torna muito útil um cluster que filtra <em>tweets</em> para futuras tomadas de decisão. Podemos ser capazes de identificar publicações de discurso de ódio apenas sabendo a bolha que o usuário frequenta, o assunto da publicação e o tom da mesma.</p>
+<h1 id="k-means">K-means</h1>
+<p><code>K-means</code> é um método de quantificação vetorial – o foco é agrupar dados semelhantes em grupos densos e comprimidos, com cada grupo tendo o seu centroide – o <code>k-means</code> tem o intuito de dividir <code>n</code> dados em <code>k</code> grupos – clusters –, tal que cada observação específica  pertence ao cluster com a maior média dentre todos, de certa forma servindo como um protótipo.</p>
+<p>Então, dado um conjunto de observações <code>n</code>, temos de dividir esses grupos em <code>k</code> grupos. Resumindo: </p>
+$$k(≤n)$$
+<p> em conjuntos </p>
+$$S= \{S_1,S_2,S_3,…,S_k\}$$
+<h2 id="k-means-desvantagens"><code>k-means</code> desvantagens</h2>
+<ul>
+<li>K-means precisa de um grupo definido “a-priori” de clusters.</li>
+<li>Dependendo da dimensionalidade do problema provavelmente teremos de rodar o algoritmo centenas de vezes.</li>
+<li>K-means não funciona bem quando os dados não podem ser bem divididos.</li>
+<li>K-means também não funciona bem quando levamos em consideração diversas variáveis dentro de um mesmo cálculo.</li>
+</ul>
+<h1 id="conclusão">Conclusão</h1>
+<p>Isso é apenas uma breve introdução sobre o que eu já li sobre clusterização, ainda quero me aprofundar muito no tema, porém ainda preciso dominar a base de estatística para compreender os pontos específicos de cada algoritmo – ser um papagaio não vai me levar à lugar algum –.</p>
+<p>Referências:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cluster_analysis">Clustering Analysis - Wikipedia</a></li>
+<li><a href="https://sci-hub.se/https://doi.org/10.1016/j.patrec.2009.09.011">Data clustering: 50 years beyond k-means</a></li>
+<li><a href="https://sci-hub.se/10.1016/B978-0-12-815739-8.00013-4">Clustering Analysis - Chapter 13</a></li>
+</ul>
+
+
+  </main>
+  <div class="divider"></div>
+  <footer>
+    <div class="footer">
+    <p>Copyright &copy; Author Name 2024 - 2025.</p>
+</div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  </footer>
+</body>
+</html>

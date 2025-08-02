@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <div class="post-summary">
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <p class="post-excerpt"> — </p>
+      <p class="post-date">
+        <i class="fas fa-clock"></i>
+        {{ .Date.Format "01.02.2006" }}
+      </p>
+    </div>
+    {{ .Summary }}
+  {{ end }}
+{{ end }}

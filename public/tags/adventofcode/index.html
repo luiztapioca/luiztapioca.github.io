@@ -1,80 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Adventofcode | Café &amp; Tapioca</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    
-  </head>
+<html lang="pt-br" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Adventofcode | Café &amp; Tapioca</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/css/main.css">
+<script src="/js/main.js"></script>
 
-  <body>
-    <div class="navbar_container">
-    <h3 class="menu title header_title">[Café &amp; Tapioca]</h3>
-    <nav>
-    <ul class="menu">
-      <span>[</span>
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/sobre/">Sobre</a></li>
-      
-      <li><a href="/categories/">Categorias</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">RSS</a></li>
-      
-      <span>]</span>
-    </ul>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+</head>
+<body>
+  <header>
+    <div class="header">
+    <div class="logo-container">
+        <img class="logo" src="/logo.png" alt="Café &amp; Tapioca">
+        <h1>Café &amp; Tapioca</h1>
     </div>
-    <hr/>
-    </nav>
+    
+  <nav>
+    <ul class="menu">
+    <li class="menu">
+      <a href="/">Home</a>
+    </li>
+    <li class="menu">
+      <a href="/about/">About</a>
+    </li>
+    <li class="menu">
+      <a href="/contact/">Contact</a>
+    </li>
+    <li class="menu">
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
 
-
-
-<h1>Adventofcode</h1>
-
-
-
-
-<ul>
+</div>
+  </header>
+  <div class="divider"></div>
+  <main>
+    
+  <h1>Adventofcode</h1>
   
   
+      <div class="post-summary">
+        <h2><a href="/posts/20241223/">Advent of Code 2024 | Dia 3</a></h2>
+        <p class="post-excerpt"> — </p>
+        <p class="post-date">
+          <i class="fas fa-clock"></i>
+          2024.12.23
+        </p>
+      </div>
+      <p>Prólogo: Hoje completei o terceiro dia do Advent of Code (2024) em Rust, e existem várias coisas nas quais eu gostaria de pontuar, questões essas relacionadas á minha curva de aprendizado em Rust e meu objetivo com essa linguagem. Desafio 1 (dia 3): Contexto: Foi entregue um input de arquivo de texto (como sempre), porém dessa vez era um arquivo populado com diversos caracteres aleatórios, dentro disso haviam instruções de multiplicação escondidas dentro do arquivo; o objetivo do desafio era juntar todas essas instruções mul(X,Y), sendo X,Y números inteiros com 1-3 dígitos cada.</p>
   
-  <li>
-    <span class="date">12/23/2024</span>
-    <a href="/post/2024/12/23/advent-of-code-2024-dia-3/">Advent of Code 2024 | Dia 3</a>
-  </li>
+      <div class="post-summary">
+        <h2><a href="/posts/20241219/">Advent of Code 2024 | Dia 2</a></h2>
+        <p class="post-excerpt"> — </p>
+        <p class="post-date">
+          <i class="fas fa-clock"></i>
+          2024.12.19
+        </p>
+      </div>
+      <p>Prólogo: Nesses últimos dias andei estudando algumas coisas fora do escopo da programação, portanto não fui atrás até ontem de voltar a praticar Rust usando o Advent of Code (2024). Esse segundo dia aparentava ser muito mais complexo do que o primeiro, porém me faltava um pouco de conhecimento com a sintaxe da linguagem para executar a resolução dos problemas de forma correta e incisiva; então esse problema serviu muito bem para me ensinar conceitos específicos de sorting evolvendo arrays usando sinatxes específicas da linguagem, como será visto no tópico seguinte.</p>
   
-  <li>
-    <span class="date">12/19/2024</span>
-    <a href="/post/2024/12/19/advent-of-code-2024-dia-2/">Advent of Code 2024 | Dia 2</a>
-  </li>
+      <div class="post-summary">
+        <h2><a href="/posts/20241208/">Advent of Code 2024 | Dia 1</a></h2>
+        <p class="post-excerpt"> — </p>
+        <p class="post-date">
+          <i class="fas fa-clock"></i>
+          2024.12.08
+        </p>
+      </div>
+      <p>Prólogo: Há alguns dias venho olhando o novo &ldquo;Advent of Code&rdquo; deste ano. O &ldquo;Advent of Code&rdquo; basicamente consiste em uma série de desafios com temática de natal e uma história por trás, desafios esses que consistem em problemas de lógica usando inputs e outputs; eu decidi aproveitar a minha vontade de aprender Rust para experimentar a minha capacidade de resolver problemas em uma linguagem nova para mim, e experimentar junto disso esse evento, que já ocorre fazem 9 anos(2015).</p>
   
-  <li>
-    <span class="date">12/08/2024</span>
-    <a href="/post/2024/12/08/advent-of-code-2024-dia-1/">Advent of Code 2024 | Dia 1</a>
-  </li>
-  
-</ul>
 
+  </main>
+  <div class="divider"></div>
   <footer>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+    <div class="footer">
+    <p>Copyright &copy; Author Name 2024 - 2025.</p>
+</div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
-<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
-
-  
-  <hr/>
-  © Luiz G. 2024 &ndash; 2025 | <a href="https://github.com/1917dc">Github</a> | <a href="https://last.fm/user/gfxnx">Lastfm</a> | <a href="https://letterboxd.com/yyounevershould/">Letterboxd</a> | <a href="https://www.instagram.com/1917.dc">Instagram</a>
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
   </footer>
-  </body>
+</body>
 </html>
-
