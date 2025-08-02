@@ -53,10 +53,10 @@ weight = 40
     email = 'mailto:19051997@gmail.com'
 
   [params.logo]
-    image = '/logo.png'
+    image = 'https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/logo.png'
   
   [params.favicon]
-    icon = '/favicon.ico'
+    icon = 'https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/favicon.ico'
 
 [caches]
   [caches.images]
