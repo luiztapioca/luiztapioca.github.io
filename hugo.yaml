@@ -10,13 +10,13 @@ permalinks:
 
 menus:
   main:
-    - name: "Home"
+    - name: "Homepage"
       pageRef: "/"
       weight: 10
-    - name: "About"
+    - name: "Sobre"
       pageRef: "/about"
       weight: 20
-    - name: "Contact"
+    - name: "Contato"
       pageRef: "/contact"
       weight: 30
     - name: "Tags"
