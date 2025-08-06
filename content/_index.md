@@ -2,4 +2,6 @@
 title: Home
 ---
 
-# Posts
+## Postagens
+
+Seja bem vindo(a) ao "Café & Tapioca"!
