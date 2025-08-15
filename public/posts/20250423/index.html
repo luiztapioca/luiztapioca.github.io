@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Clusterização - Filtragem não supervisionada | Café &amp; Tapioca</title>
-<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/favicon.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="/css/main.css">
-<script src="/js/main.js"></script>
+<link rel="stylesheet" href="/blog/css/main.css">
+<script src="/blog/js/main.js"></script>
 
 
 <script type="text/javascript" id="MathJax-script" async
@@ -18,23 +18,23 @@
   <header>
     <div class="header">
     <div class="logo-container">
-        <img class="logo" src="/logo.png" alt="Café &amp; Tapioca">
+        <img class="logo" src="https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/logo.png" alt="Café &amp; Tapioca">
         <h1>Café &amp; Tapioca</h1>
     </div>
     
   <nav>
     <ul class="menu">
     <li class="menu">
-      <a href="/">Home</a>
+      <a href="/blog/">Homepage</a>
     </li>
     <li class="menu">
-      <a href="/about/">About</a>
+      <a href="/blog/about/">Sobre</a>
     </li>
     <li class="menu">
-      <a href="/contact/">Contact</a>
+      <a href="/blog/contact/">Contato</a>
     </li>
     <li class="menu">
-      <a href="/tags/">Tags</a>
+      <a href="/blog/tags/">Tags</a>
     </li>
     </ul>
   </nav>
@@ -58,8 +58,8 @@
     <div>
       Tags:
     </div>
-        <p><a href="/tags/cluster/">Cluster</a></p>
-        <p><a href="/tags/k-means/">K-Means</a></p>
+        <p><a href="/blog/tags/cluster/">Cluster</a></p>
+        <p><a href="/blog/tags/k-means/">K-Means</a></p>
   </div>
 
 
@@ -71,10 +71,8 @@
 <h1 id="k-means">K-means</h1>
 <p><code>K-means</code> é um método de quantificação vetorial – o foco é agrupar dados semelhantes em grupos densos e comprimidos, com cada grupo tendo o seu centroide – o <code>k-means</code> tem o intuito de dividir <code>n</code> dados em <code>k</code> grupos – clusters –, tal que cada observação específica  pertence ao cluster com a maior média dentre todos, de certa forma servindo como um protótipo.</p>
 <p>Então, dado um conjunto de observações <code>n</code>, temos de dividir esses grupos em <code>k</code> grupos. Resumindo: </p>
-$$k(≤n)$$
-<p> em conjuntos </p>
-$$S= \{S_1,S_2,S_3,…,S_k\}$$
-<h2 id="k-means-desvantagens"><code>k-means</code> desvantagens</h2>
+$$k(≤n)$$<p> em conjuntos </p>
+$$S= \{S_1,S_2,S_3,…,S_k\}$$<h2 id="k-means-desvantagens"><code>k-means</code> desvantagens</h2>
 <ul>
 <li>K-means precisa de um grupo definido “a-priori” de clusters.</li>
 <li>Dependendo da dimensionalidade do problema provavelmente teremos de rodar o algoritmo centenas de vezes.</li>
@@ -95,7 +93,7 @@ $$S= \{S_1,S_2,S_3,…,S_k\}$$
   <div class="divider"></div>
   <footer>
     <div class="footer">
-    <p>Copyright &copy; Author Name 2024 - 2025.</p>
+    <p>Copyright &copy; Luiz G. 2024 - 2025.</p>
 </div>
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>

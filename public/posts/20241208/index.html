@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Advent of Code 2024 | Dia 1 | Café &amp; Tapioca</title>
-<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/favicon.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="/css/main.css">
-<script src="/js/main.js"></script>
+<link rel="stylesheet" href="/blog/css/main.css">
+<script src="/blog/js/main.js"></script>
 
 
 <script type="text/javascript" id="MathJax-script" async
@@ -18,23 +18,23 @@
   <header>
     <div class="header">
     <div class="logo-container">
-        <img class="logo" src="/logo.png" alt="Café &amp; Tapioca">
+        <img class="logo" src="https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/logo.png" alt="Café &amp; Tapioca">
         <h1>Café &amp; Tapioca</h1>
     </div>
     
   <nav>
     <ul class="menu">
     <li class="menu">
-      <a href="/">Home</a>
+      <a href="/blog/">Homepage</a>
     </li>
     <li class="menu">
-      <a href="/about/">About</a>
+      <a href="/blog/about/">Sobre</a>
     </li>
     <li class="menu">
-      <a href="/contact/">Contact</a>
+      <a href="/blog/contact/">Contato</a>
     </li>
     <li class="menu">
-      <a href="/tags/">Tags</a>
+      <a href="/blog/tags/">Tags</a>
     </li>
     </ul>
   </nav>
@@ -58,8 +58,8 @@
     <div>
       Tags:
     </div>
-        <p><a href="/tags/adventofcode/">Adventofcode</a></p>
-        <p><a href="/tags/rust/">Rust</a></p>
+        <p><a href="/blog/tags/adventofcode/">Adventofcode</a></p>
+        <p><a href="/blog/tags/rust/">Rust</a></p>
   </div>
 
 
@@ -78,38 +78,38 @@
 <p>There&rsquo;s just one problem: by holding the two lists up side by side (your puzzle input), it quickly becomes clear that the lists aren&rsquo;t very similar. Maybe you can help The Historians reconcile their lists?</p>
 <p>For example:</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td>4</td>
-<td>3</td>
-</tr>
-<tr>
-<td>2</td>
-<td>5</td>
-</tr>
-<tr>
-<td>1</td>
-<td>3</td>
-</tr>
-<tr>
-<td>3</td>
-<td>9</td>
-</tr>
-<tr>
-<td>3</td>
-<td>3</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>3</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>3</td>
+      </tr>
+  </tbody>
 </table>
 <p>Maybe the lists are only off by a small amount! To find out, pair up the numbers and measure how far apart they are. Pair up the smallest number in the left list with the smallest number in the right list, then the second-smallest left number with the second-smallest right number, and so on.</p>
 <p>Within each pair, figure out how far apart the two numbers are; you&rsquo;ll need to add up all of those distances. For example, if you pair up a 3 from the left list with a 7 from the right list, the distance apart is 4; if you pair up a 9 with a 3, the distance apart is 6.</p>
@@ -130,38 +130,38 @@ To find the total distance between the left list and the right list, add up the 
 <p>This time, you&rsquo;ll need to figure out exactly how often each number from the left list appears in the right list. Calculate a total similarity score by adding up each number in the left list after multiplying it by the number of times that number appears in the right list.</p>
 <p>Here are the same example lists again:</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td>4</td>
-<td>3</td>
-</tr>
-<tr>
-<td>2</td>
-<td>5</td>
-</tr>
-<tr>
-<td>1</td>
-<td>3</td>
-</tr>
-<tr>
-<td>3</td>
-<td>9</td>
-</tr>
-<tr>
-<td>3</td>
-<td>3</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>3</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>3</td>
+      </tr>
+  </tbody>
 </table>
 <p>For these example lists, here is the process of finding the similarity score:</p>
 <p>The first number in the left list is <code>3</code>. It appears in the right list three times, so the similarity score increases by <code>3 * 3 = 9</code>.
@@ -256,7 +256,7 @@ fn find_similarity(arr: &amp;[Vec&lt;i32&gt;; 2]) -&gt; Result&lt;i32, io::Error
   <div class="divider"></div>
   <footer>
     <div class="footer">
-    <p>Copyright &copy; Author Name 2024 - 2025.</p>
+    <p>Copyright &copy; Luiz G. 2024 - 2025.</p>
 </div>
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>

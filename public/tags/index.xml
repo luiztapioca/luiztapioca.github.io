@@ -2,143 +2,150 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Café &amp; Tapioca</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:1313/blog/tags/</link>
     <description>Recent content in Tags on Café &amp; Tapioca</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 26 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acadêmico</title>
+      <link>http://localhost:1313/blog/tags/acad%C3%AAmico/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/acad%C3%AAmico/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Opinião</title>
-      <link>http://localhost:1313/tags/opini%C3%A3o/</link>
+      <link>http://localhost:1313/blog/tags/opini%C3%A3o/</link>
       <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/opini%C3%A3o/</guid>
+      <guid>http://localhost:1313/blog/tags/opini%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>Meridiano De Sangue</title>
-      <link>http://localhost:1313/tags/meridiano-de-sangue/</link>
+      <link>http://localhost:1313/blog/tags/meridiano-de-sangue/</link>
       <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/meridiano-de-sangue/</guid>
+      <guid>http://localhost:1313/blog/tags/meridiano-de-sangue/</guid>
       <description></description>
     </item>
     <item>
       <title>Música</title>
-      <link>http://localhost:1313/tags/m%C3%BAsica/</link>
+      <link>http://localhost:1313/blog/tags/m%C3%BAsica/</link>
       <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/m%C3%BAsica/</guid>
+      <guid>http://localhost:1313/blog/tags/m%C3%BAsica/</guid>
       <description></description>
     </item>
     <item>
       <title>Cluster</title>
-      <link>http://localhost:1313/tags/cluster/</link>
+      <link>http://localhost:1313/blog/tags/cluster/</link>
       <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cluster/</guid>
+      <guid>http://localhost:1313/blog/tags/cluster/</guid>
       <description></description>
     </item>
     <item>
       <title>K-Means</title>
-      <link>http://localhost:1313/tags/k-means/</link>
+      <link>http://localhost:1313/blog/tags/k-means/</link>
       <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/k-means/</guid>
+      <guid>http://localhost:1313/blog/tags/k-means/</guid>
       <description></description>
     </item>
     <item>
       <title>Absurdismo</title>
-      <link>http://localhost:1313/tags/absurdismo/</link>
+      <link>http://localhost:1313/blog/tags/absurdismo/</link>
       <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/absurdismo/</guid>
+      <guid>http://localhost:1313/blog/tags/absurdismo/</guid>
       <description></description>
     </item>
     <item>
       <title>Instrospecção</title>
-      <link>http://localhost:1313/tags/instrospec%C3%A7%C3%A3o/</link>
+      <link>http://localhost:1313/blog/tags/instrospec%C3%A7%C3%A3o/</link>
       <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/instrospec%C3%A7%C3%A3o/</guid>
+      <guid>http://localhost:1313/blog/tags/instrospec%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>Análise</title>
-      <link>http://localhost:1313/tags/an%C3%A1lise/</link>
+      <link>http://localhost:1313/blog/tags/an%C3%A1lise/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/an%C3%A1lise/</guid>
+      <guid>http://localhost:1313/blog/tags/an%C3%A1lise/</guid>
       <description></description>
     </item>
     <item>
       <title>Artigo</title>
-      <link>http://localhost:1313/tags/artigo/</link>
+      <link>http://localhost:1313/blog/tags/artigo/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/artigo/</guid>
+      <guid>http://localhost:1313/blog/tags/artigo/</guid>
       <description></description>
     </item>
     <item>
       <title>Estudo</title>
-      <link>http://localhost:1313/tags/estudo/</link>
+      <link>http://localhost:1313/blog/tags/estudo/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/estudo/</guid>
+      <guid>http://localhost:1313/blog/tags/estudo/</guid>
       <description></description>
     </item>
     <item>
       <title>IA</title>
-      <link>http://localhost:1313/tags/ia/</link>
+      <link>http://localhost:1313/blog/tags/ia/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ia/</guid>
+      <guid>http://localhost:1313/blog/tags/ia/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>http://localhost:1313/tags/java/</link>
+      <link>http://localhost:1313/blog/tags/java/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/java/</guid>
+      <guid>http://localhost:1313/blog/tags/java/</guid>
       <description></description>
     </item>
     <item>
       <title>Springboot</title>
-      <link>http://localhost:1313/tags/springboot/</link>
+      <link>http://localhost:1313/blog/tags/springboot/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/springboot/</guid>
+      <guid>http://localhost:1313/blog/tags/springboot/</guid>
       <description></description>
     </item>
     <item>
       <title>Adventofcode</title>
-      <link>http://localhost:1313/tags/adventofcode/</link>
+      <link>http://localhost:1313/blog/tags/adventofcode/</link>
       <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/adventofcode/</guid>
+      <guid>http://localhost:1313/blog/tags/adventofcode/</guid>
       <description></description>
     </item>
     <item>
       <title>Adventofcode2024</title>
-      <link>http://localhost:1313/tags/adventofcode2024/</link>
+      <link>http://localhost:1313/blog/tags/adventofcode2024/</link>
       <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/adventofcode2024/</guid>
+      <guid>http://localhost:1313/blog/tags/adventofcode2024/</guid>
       <description></description>
     </item>
     <item>
       <title>Rust</title>
-      <link>http://localhost:1313/tags/rust/</link>
+      <link>http://localhost:1313/blog/tags/rust/</link>
       <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rust/</guid>
+      <guid>http://localhost:1313/blog/tags/rust/</guid>
       <description></description>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>http://localhost:1313/tags/obsidian/</link>
+      <link>http://localhost:1313/blog/tags/obsidian/</link>
       <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/obsidian/</guid>
+      <guid>http://localhost:1313/blog/tags/obsidian/</guid>
       <description></description>
     </item>
     <item>
       <title>Heap</title>
-      <link>http://localhost:1313/tags/heap/</link>
+      <link>http://localhost:1313/blog/tags/heap/</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/heap/</guid>
+      <guid>http://localhost:1313/blog/tags/heap/</guid>
       <description></description>
     </item>
     <item>
       <title>Stack</title>
-      <link>http://localhost:1313/tags/stack/</link>
+      <link>http://localhost:1313/blog/tags/stack/</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/stack/</guid>
+      <guid>http://localhost:1313/blog/tags/stack/</guid>
       <description></description>
     </item>
   </channel>

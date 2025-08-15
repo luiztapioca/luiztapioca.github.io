@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on Café &amp; Tapioca</title>
+    <link>http://localhost:1313/blog/tags/spring/</link>
+    <description>Recent content in Spring on Café &amp; Tapioca</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 15 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring: IoC &amp; Beans</title>
+      <link>http://localhost:1313/blog/posts/20250815/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/20250815/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Inversion of Control&amp;rdquo; ou &amp;ldquo;IoC&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
