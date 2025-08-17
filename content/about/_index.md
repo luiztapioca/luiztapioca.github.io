@@ -3,15 +3,11 @@ title: 'Sobre'
 author: 
 ---
 
-## Contexto
+## [The Eternal Enemy: Complexity](https://grugbrain.dev/#grug-on-complexity)
 
-Este blog tem o intuito de armazenar e organizar muitos dos meus pensamentos, sejam eles anotações sobre conteúdos nos quais ando estudando ou pequenas dissertações sobre coisas aleatórias que estou consumindo.
+## Never Give Up!
 
-Geralmente coloco aqui as minhas anotações pessoais que eu considere minimamente interessantes de se ler.
-
-## Sobre mim
-
-Atualmente atuo como estagiário em **análise de dados** dentro do **Banco do Brasil**; também sou pesquisador dentro do **IBICT**, atuando no combate de fake-news por meio da programação.
+![Never Give up!](https://www.youtube.com/watch?v=KxGRhd_iWuE)
 
 ## Porquê "Café & Tapioca"?
 
@@ -19,6 +15,6 @@ Atualmente atuo como estagiário em **análise de dados** dentro do **Banco do B
 
 Na filosofia "Café e Tapioca", o café personifica o fervor inquieto da alma, uma febre de emoções que oscilam entre a raiva e a angústia amarga, refletindo o conflito em nosso ser. Por outro lado, a tapioca surge como fonte vital, delicada e pura, simbolizando a aceitação serena da vida em meio ao caos; oferecendo alegria e prazer na jornada da existência.
 
-## Estética
+## Tema
 
 O [Sputnik](https://github.com/1917dc/hugo-sputnik) é um tema **muito** minimalista para o framework [Hugo](https://gohugo.io/), feito por mim.
