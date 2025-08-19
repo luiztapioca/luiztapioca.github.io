@@ -9,7 +9,7 @@ Vídeos ou páginas da internet que eu considero parte de mim.
 
 {{< youtube KxGRhd_iWuE >}}
 
-{{< youtube VHWDHUQKFyA&t >}}
+{{< youtube VHWDHUQKFyA >}}
 
 {{< youtube 5prbhGhLMCU >}}
 
