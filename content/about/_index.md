@@ -3,12 +3,6 @@ title: 'Sobre'
 author: 
 ---
 
-## [The Eternal Enemy: Complexity](https://grugbrain.dev/#grug-on-complexity)
-
-## Never Give Up!
-
-{{< youtube KxGRhd_iWuE >}}
-
 ## Porquê "Café & Tapioca"?
 
 ![café-tapioca.png](https://raw.githubusercontent.com/1917dc/blog/refs/heads/main/static/logo.png)
