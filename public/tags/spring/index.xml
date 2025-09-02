@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spring on Café &amp; Tapioca</title>
-    <link>http://localhost:1313/blog/tags/spring/</link>
+    <link>https://1917dc.github.io/blog/tags/spring/</link>
     <description>Recent content in Spring on Café &amp; Tapioca</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Fri, 15 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://1917dc.github.io/blog/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Spring: IoC &amp; Beans</title>
-      <link>http://localhost:1313/blog/posts/20250815/</link>
+      <title>Spring: IoC, DI &amp; Beans</title>
+      <link>https://1917dc.github.io/blog/posts/20250815/</link>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/20250815/</guid>
-      <description>&lt;p&gt;&amp;ldquo;Inversion of Control&amp;rdquo; ou &amp;ldquo;IoC&amp;rdquo;&lt;/p&gt;</description>
+      <guid>https://1917dc.github.io/blog/posts/20250815/</guid>
+      <description>IoC &amp;ldquo;Inversion of Control&amp;rdquo; ou &amp;ldquo;IoC&amp;rdquo; é um princípio dentro da engenharia de software que visa estabelecer um menor acoplamento, esse baixo acoplamento diz respeito a um código mais abstrato e genérico que cobre a maioria dos casos de uso, mas que ainda assim dá liberdade ao programador para extender essas funcionalidades dentro dos seus casos de uso específicos.&#xA;As vantagens desse tipo de arquitetura são:&#xA;tirar o papel de execução da implementação feita pelo programador; torna mais fácil a refatoração para algum tipo de implementação diferente; maior mudolaridade do código; torna mais fácil o uso de testes com dependências &amp;ldquo;mockadas&amp;rdquo; pelo programador; DI &amp;ldquo;Dependency Injection&amp;rdquo; ou &amp;ldquo;DI&amp;rdquo; é uma das formas de se aplicar o princípio de IoC, dentro desse padrão jogamos a responsabilidade de injetar as dependências para o programador, e não para a interface desse código.</description>
     </item>
   </channel>
 </rss>
