@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meridiano De Sangue on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/blog/tags/meridiano-de-sangue/</link>
+    <link>http://localhost:1313/blog/tags/meridiano-de-sangue/</link>
     <description>Recent content in Meridiano De Sangue on Café &amp; Tapioca</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 22 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/blog/tags/meridiano-de-sangue/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/meridiano-de-sangue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Resenha: &#34;Meridiano de Sangue&#34;</title>
-      <link>https://1917dc.github.io/blog/posts/20250716/</link>
+      <link>http://localhost:1313/blog/posts/20250716/</link>
       <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/blog/posts/20250716/</guid>
-      <description>Apresentação &amp;ldquo;Meridiano de Sangue&amp;rdquo; é um livro que vai de contramão contra tudo o que estava sendo produzido na época sobre faroeste. Enquanto a maioria dos autores tinham uma visão muito romântica e idealizada sobre a época no gênero &amp;ldquo;Western&amp;rdquo;, Comarc McCarthy pensa o completo oposto disso, sendo um dos protagonistas no gênero &amp;ldquo;Anti-Western&amp;rdquo;.&#xA;Experiência A experiência de leitura em si é muito surpreendente, principalmente para pessoas, que como eu, não são acostumadas com a escrita do autor.</description>
+      <guid>http://localhost:1313/blog/posts/20250716/</guid>
+      <description>&lt;h1 id=&#34;apresentação&#34;&gt;Apresentação&lt;/h1&gt;&#xA;&lt;p&gt;&amp;ldquo;Meridiano de Sangue&amp;rdquo; é um livro que vai de contramão contra tudo o que estava sendo produzido na época sobre faroeste. Enquanto a maioria dos autores tinham uma visão muito romântica e idealizada sobre a época no gênero &lt;em&gt;&amp;ldquo;Western&amp;rdquo;&lt;/em&gt;, Comarc McCarthy pensa o completo oposto disso, sendo um dos protagonistas no gênero &lt;em&gt;&amp;ldquo;Anti-Western&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;h1 id=&#34;experiência&#34;&gt;Experiência&lt;/h1&gt;&#xA;&lt;p&gt;A experiência de leitura em si é muito surpreendente, principalmente para pessoas, que como eu, não são acostumadas com a escrita do autor.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* ==========================================================================
+   IMPORTS AND FONTS
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* ==========================================================================
+   CSS VARIABLES
+   ========================================================================== */
 
 :root {
     --h-color: #303030;
@@ -8,22 +16,29 @@
     --menu-link-color: #1E90FF;
 }
 
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
     margin: auto;
     max-width: 800px;
-    padding: 1rem;
-    color: var(--text-color);
     padding: 1em;
+    color: var(--text-color);
     line-height: 1.5;
 }
 
-main { hyphens: auto; }
+main { 
+    hyphens: auto; 
+}
 
-pre code { background: none; }
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', 'Fira Sans', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
     color: var(--h-color);
 }
 
@@ -47,30 +62,9 @@ h4, h5, h6 {
     margin-bottom: 0.5em;
 }
 
-table {
-  margin: auto;
-  width: 100%;
-}
-
-
-blockquote {
-  background: #f9f9f9;
-  border-left: 5px solid #ccc;
-  padding: 3px 1em 3px;
-}
-
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #eee; }
-
-img, video, iframe {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
 
 a {
     text-decoration: none;
@@ -81,32 +75,283 @@ a:hover {
     text-decoration: underline;
 }
 
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
+/* ==========================================================================
+   CODE AND SYNTAX HIGHLIGHTING
+   ========================================================================== */
+
+/* Inline code */
+code:not([class*="language-"]) {
+    background: #f4f4f4;
+    color: #24292e;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', 'Courier New', monospace;
+    font-weight: 400;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+    font-variant-ligatures: common-ligatures;
+}
+
+/* General code styling */
+code {
+    font-family: 'Fira Code', 'Monaco', 'Consolas', 'Courier New', monospace;
+    font-variant-ligatures: common-ligatures;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Pre elements general styling */
+pre {
+    font-family: 'Fira Code', 'Monaco', 'Consolas', 'Courier New', monospace;
+    font-variant-ligatures: common-ligatures;
+    white-space: pre;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+pre code { 
+    background: none;
+    font-family: inherit;
+}
+
+/* Code blocks styling */
+pre[class*="language-"] {
+    position: relative;
+    padding: 1.2em;
+    margin: 1.5em 0;
+    overflow: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: 'Fira Code', 'Monaco', 'Consolas', 'Courier New', monospace;
+    font-size: 0.85em;
+    line-height: 1.6;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    tab-size: 4;
+    hyphens: none;
+}
+
+pre[class*="language-"] code {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-variant-ligatures: inherit;
+    white-space: inherit;
+    word-spacing: inherit;
+    word-break: inherit;
+    word-wrap: inherit;
+    tab-size: inherit;
+    hyphens: inherit;
+}
+
+/* Correção para numeração de linhas do Prism */
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 4em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+/* Container dos números de linha */
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -4em;
+    width: 3em;
+    letter-spacing: -1px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    user-select: none;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', 'Courier New', monospace;
+    background: transparent;
+}
+
+.line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+    pointer-events: none;
+}
+
+.line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: rgba(255, 255, 255, 0.4);
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+    pointer-events: none;
+}
+
+/* Correção para evitar seleção dos números */
+.line-numbers-rows {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Garantir que apenas o código seja selecionável */
+pre[class*="language-"].line-numbers code {
+    position: relative;
+    z-index: 1;
+}
+
+/* Melhoria para quebra de linha em tokens específicos quando necessário */
+.token.string,
+.token.url,
+.token.attr-value {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* Highlighted lines styling */
+.highlight .hl {
+    background-color: rgba(255, 255, 204, 0.3);
+    display: block;
+    width: 100%;
+    margin: 0 -1.2em;
+    padding: 0 1.2em;
+}
+
+/* Estilo melhorado para código sem syntax highlighting */
+pre:not([class*="language-"]) {
+    background: #f8f8f8;
+    color: #333;
+    padding: 1.2em;
+    border-radius: 6px;
+    overflow-x: auto;
+    border-left: 4px solid #e1e4e8;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', 'Courier New', monospace;
+    font-size: 0.85em;
+    line-height: 1.6;
+    font-variant-ligatures: common-ligatures;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+pre:not([class*="language-"]) code {
+    background: none;
+    color: inherit;
     padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-variant-ligatures: inherit;
 }
 
-.menu li {
-    margin: 0.5rem 0;
+/* Melhorias para responsividade */
+@media (max-width: 768px) {
+    pre[class*="language-"],
+    pre:not([class*="language-"]) {
+        font-size: 0.8em;
+        padding: 1em;
+        margin: 1em -1em;
+        border-radius: 0;
+    }
+    
+    pre[class*="language-"].line-numbers {
+        padding-left: 3.5em;
+    }
+    
+    .line-numbers .line-numbers-rows {
+        left: -3.5em;
+        width: 2.8em;
+    }
+
 }
 
-.menu a {
-    font-size: small;
-    text-decoration: none;
-    color: var(--menu-link-color);
-    padding: 0.5rem;
+/* Suporte para diferentes variantes da Fira Code */
+@supports (font-variation-settings: normal) {
+    code,
+    pre,
+    pre[class*="language-"] {
+        font-family: 'Fira Code Variable', 'Fira Code', 'Monaco', 'Consolas', 'Courier New', monospace;
+    }
 }
 
-.menu a:hover {
-    color: var(--h-color);
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+table {
+    margin: auto;
+    width: 100%;
 }
 
-.tags-item {
-    font-size: 1.1em;
-    margin-bottom: 1rem;
+table thead th { 
+    border-bottom: 1px solid #ddd; 
 }
+
+th, td { 
+    padding: 5px; 
+}
+
+thead, tfoot, tr:nth-child(even) { 
+    background: #eee; 
+}
+
+/* ==========================================================================
+   BLOCKQUOTES
+   ========================================================================== */
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 5px solid #ccc;
+    padding: 3px 1em 3px;
+}
+
+/* ==========================================================================
+   MEDIA ELEMENTS
+   ========================================================================== */
+
+img, video, iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   LAYOUT COMPONENTS
+   ========================================================================== */
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    padding: 1rem;
+    max-width: 20%;
+    max-height: fit-content;
+}
+
+.divider {
+    height: 1px;
+    background: #000;
+    margin: 1rem 0;
+}
+
+/* ==========================================================================
+   HEADER AND NAVIGATION
+   ========================================================================== */
 
 .header {
     padding: 0;
@@ -136,36 +381,43 @@ a:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.0);
 }
 
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0.5rem 0;
+}
+
+.menu a {
+    font-size: small;
+    text-decoration: none;
+    color: var(--menu-link-color);
+}
+
+.menu a:hover {
+    color: var(--h-color);
+}
+
+/* ==========================================================================
+   POST COMPONENTS
+   ========================================================================== */
+
 .post-summary {
     display: flex;
     flex-direction: row;
-    padding: 0;
     margin: 1rem 0;
-    align-items: center;
     gap: 1rem;
-}
-
-.divider {
-    width: 100%;
-    height: 1px;
-    margin: 1.5rem 0;
-    border: none;
-    background-color: #000;
-}
-
-.footer {
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.875rem;
-}
-
-.terms {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem 0;
-    margin-top: 0;
     align-items: center;
+}
+
+.post-title {
+    flex: 1;
+    line-height: 1.4;
+    margin: 0;
 }
 
 .post-date {
@@ -182,20 +434,6 @@ a:hover {
     margin-right: 0.5rem;
 }
 
-.post-summary {
-    display: flex;
-    flex-direction: row;
-    margin: 1rem 0;
-    gap: 1rem;
-    align-items: center;
-}
-
-.post-title {
-    flex: 1;
-    line-height: 1.4;
-    margin: 0;
-}
-
 .post-header {
     align-items: center;
     gap: 2rem;
@@ -207,76 +445,27 @@ a:hover {
     font-size: 1.5em;
 }
 
-/* Math equations styling */
-.MathJax {
-  font-size: 1.1em !important;
+/* ==========================================================================
+   TAGS AND TERMS
+   ========================================================================== */
+
+.tags-item {
+    font-size: 1.1em;
+    margin-bottom: 1rem;
 }
 
-/* Code blocks styling */
-pre[class*="language-"] {
-    position: relative;
-    padding: 1em;
-    margin: 1.5em 0;
-    overflow: auto;
-    border-radius: 1px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem 0;
+    margin-top: 0;
+    align-items: center;
 }
 
-
-/* Line numbers styling */
-pre.line-numbers {
-    position: relative;
-    padding-left: 3.8em;
-    counter-reset: linenumber;
-}
-
-pre.line-numbers > code {
-    position: relative;
-    white-space: inherit;
-}
-
-.line-numbers .line-numbers-rows {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    font-size: 100%;
-    left: -3.8em;
-    width: 3em;
-    letter-spacing: -1px;
-    border-right: 1px solid #999;
-    user-select: none;
-}
-
-.line-numbers-rows > span {
-    display: block;
-    counter-increment: linenumber;
-}
-
-.line-numbers-rows > span:before {
-    content: counter(linenumber);
-    color: #999;
-    display: block;
-    padding-right: 0.8em;
-    text-align: right;
-}
-
-/* Inline code */
-code:not([class*="language-"]) {
-    background: #f4f4f4;
-    color: #24292e;
-    padding: 0.2em 0.4em;
-    border-radius: 3px;
-    font-size: 0.9em;
-}
-
-/* Highlighted lines styling */
-.highlight .hl {
-    background-color: #ffffcc;
-    display: block;
-    width: 100%;
-}
-
-
+/* ==========================================================================
+   CONTACT PAGE
+   ========================================================================== */
 
 .contact-methods {
     margin-top: 2rem;
@@ -303,6 +492,10 @@ code:not([class*="language-"]) {
     text-decoration: underline;
 }
 
+/* ==========================================================================
+   SOCIAL LINKS
+   ========================================================================== */
+
 .social-links {
     margin-top: 2rem;
 }
@@ -324,7 +517,6 @@ code:not([class*="language-"]) {
 .social-item {
     padding: 1rem;
 }
-
 
 .social-item a {
     display: flex;
@@ -350,3 +542,29 @@ code:not([class*="language-"]) {
 .social-item a[href*="instagram.com"]:hover { color: #e4405f; }
 .social-item a[href*="last.fm"]:hover { color: #d51007; }
 .social-item a[href*="letterboxd.com"]:hover { color: #00d735; }
+
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+
+.divider {
+    width: 100%;
+    height: 1px;
+    margin: 1.5rem 0;
+    border: none;
+    background-color: #000;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   MATH EQUATIONS
+   ========================================================================== */
+
+.MathJax {
+    font-size: 1.1em !important;
+}

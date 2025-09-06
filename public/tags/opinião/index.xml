@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opinião on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/blog/tags/opini%C3%A3o/</link>
+    <link>http://localhost:1313/blog/tags/opini%C3%A3o/</link>
     <description>Recent content in Opinião on Café &amp; Tapioca</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 26 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/blog/tags/opini%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/opini%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sobre: Idealização de metas acadêmicas</title>
-      <link>https://1917dc.github.io/blog/posts/20250726/</link>
+      <link>http://localhost:1313/blog/posts/20250726/</link>
       <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/blog/posts/20250726/</guid>
-      <description>Sou alguém que tende a idealizar demais certos aspectos da minha vida como uma forma de alimentar a minha motivação, tenho TDAH então é muito mais difícil para mim fazer as coisas apenas por &amp;ldquo;disciplina&amp;rdquo;. Nesse vai e vem, são poucas as coisas que eu realmente continuo praticando após o fim da minha motivação &amp;mdash; algumas pessoas tendem a chamar isso de &amp;ldquo;hiperfoco&amp;rdquo;, mas no meu caso são raras as coisas nas quais eu realmente tenho um hiperfoco.</description>
+      <guid>http://localhost:1313/blog/posts/20250726/</guid>
+      <description>&lt;p&gt;Sou alguém que tende a idealizar demais certos aspectos da minha vida como uma forma de alimentar a minha motivação, tenho TDAH então é muito mais difícil para mim fazer as coisas apenas por &amp;ldquo;disciplina&amp;rdquo;. Nesse vai e vem, são poucas as coisas que eu realmente continuo praticando após o fim da minha motivação &amp;mdash; algumas pessoas tendem a chamar isso de &amp;ldquo;hiperfoco&amp;rdquo;, mas no meu caso são raras as coisas nas quais eu realmente tenho um hiperfoco.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

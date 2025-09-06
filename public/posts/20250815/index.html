@@ -36,33 +36,25 @@
     <li class="menu">
       <a href="/blog/tags/">Tags</a>
     </li>
+    <li class="menu">
+      <a href="/blog/acervo/">Acervo</a>
+    </li>
     </ul>
   </nav>
 
 </div>
   </header>
   <div class="divider"></div>
-  <main>
+  <main class="content">
     
   <div class="post-header">
     <h1 class="post-header-title">Spring: IoC, DI &amp; Beans</h1>
       
       <p class="post-date">
-        <i class="fas fa-clock"></i>
         
-        <time datetime="2025.08.15">2025.08.15</time>
+        <time datetime="15 Aug, 2025">15 Aug, 2025</time>
       </p>
   </div>
-  
-  <div class="terms">
-    <div>
-      Tags:
-    </div>
-        <p><a href="/blog/tags/acad%C3%AAmico/">Acadêmico</a></p>
-        <p><a href="/blog/tags/spring/">Spring</a></p>
-        <p><a href="/blog/tags/java/">Java</a></p>
-  </div>
-
 
   <h2 id="ioc">IoC</h2>
 <p>&ldquo;Inversion of Control&rdquo; ou &ldquo;IoC&rdquo; é um princípio dentro da engenharia de software que visa estabelecer um menor acoplamento, <strong>esse baixo acoplamento diz respeito a um código mais abstrato e genérico que cobre a maioria dos casos de uso</strong>, mas que ainda assim dá liberdade ao programador para extender essas funcionalidades dentro dos seus casos de uso específicos.</p>
@@ -130,6 +122,19 @@ public class AccountConfig() {
 <p>Os Beans fazem com que as dependências com essas anotações sejam incluídas na interface <code>ApplicationContext</code> (que é responsável por realizar o IoC dentro do Spring, juntamente com a interface <code>BeanFactory</code>).</p>
 
 
+  
+  
+    <div class="post-tags">
+      
+        <a href="/tags/acad%C3%AAmico" class="tag-link">#Acadêmico</a>
+      
+        <a href="/tags/spring" class="tag-link">#Spring</a>
+      
+        <a href="/tags/java" class="tag-link">#Java</a>
+      
+    </div>
+  
+
   </main>
   <div class="divider"></div>
   <footer>
@@ -138,10 +143,9 @@ public class AccountConfig() {
 </div>
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
   </footer>
 </body>
 </html>

@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Acadêmico on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/blog/tags/acad%C3%AAmico/</link>
+    <link>http://localhost:1313/blog/tags/acad%C3%AAmico/</link>
     <description>Recent content in Acadêmico on Café &amp; Tapioca</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 15 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/blog/tags/acad%C3%AAmico/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/acad%C3%AAmico/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Entendendo protocolos TCP em Java.</title>
+      <link>http://localhost:1313/blog/posts/20250905/</link>
+      <pubDate>Fri, 05 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/20250905/</guid>
+      <description>&lt;p&gt;Teste&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Spring: IoC, DI &amp; Beans</title>
-      <link>https://1917dc.github.io/blog/posts/20250815/</link>
+      <link>http://localhost:1313/blog/posts/20250815/</link>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/blog/posts/20250815/</guid>
-      <description>IoC &amp;ldquo;Inversion of Control&amp;rdquo; ou &amp;ldquo;IoC&amp;rdquo; é um princípio dentro da engenharia de software que visa estabelecer um menor acoplamento, esse baixo acoplamento diz respeito a um código mais abstrato e genérico que cobre a maioria dos casos de uso, mas que ainda assim dá liberdade ao programador para extender essas funcionalidades dentro dos seus casos de uso específicos.&#xA;As vantagens desse tipo de arquitetura são:&#xA;tirar o papel de execução da implementação feita pelo programador; torna mais fácil a refatoração para algum tipo de implementação diferente; maior mudolaridade do código; torna mais fácil o uso de testes com dependências &amp;ldquo;mockadas&amp;rdquo; pelo programador; DI &amp;ldquo;Dependency Injection&amp;rdquo; ou &amp;ldquo;DI&amp;rdquo; é uma das formas de se aplicar o princípio de IoC, dentro desse padrão jogamos a responsabilidade de injetar as dependências para o programador, e não para a interface desse código.</description>
+      <guid>http://localhost:1313/blog/posts/20250815/</guid>
+      <description>&lt;h2 id=&#34;ioc&#34;&gt;IoC&lt;/h2&gt;&#xA;&lt;p&gt;&amp;ldquo;Inversion of Control&amp;rdquo; ou &amp;ldquo;IoC&amp;rdquo; é um princípio dentro da engenharia de software que visa estabelecer um menor acoplamento, &lt;strong&gt;esse baixo acoplamento diz respeito a um código mais abstrato e genérico que cobre a maioria dos casos de uso&lt;/strong&gt;, mas que ainda assim dá liberdade ao programador para extender essas funcionalidades dentro dos seus casos de uso específicos.&lt;/p&gt;&#xA;&lt;p&gt;As vantagens desse tipo de arquitetura são:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;tirar o papel de execução da implementação feita pelo programador;&lt;/li&gt;&#xA;&lt;li&gt;torna mais fácil a refatoração para algum tipo de implementação diferente;&lt;/li&gt;&#xA;&lt;li&gt;maior mudolaridade do código;&lt;/li&gt;&#xA;&lt;li&gt;torna mais fácil o uso de testes com dependências &amp;ldquo;mockadas&amp;rdquo; pelo programador;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;di&#34;&gt;DI&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;Dependency Injection&amp;rdquo; ou &amp;ldquo;DI&amp;rdquo; é uma das formas de se aplicar o princípio de IoC&lt;/strong&gt;, dentro desse padrão jogamos a responsabilidade de &lt;em&gt;injetar&lt;/em&gt; as dependências para o programador, e não para a interface desse código.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

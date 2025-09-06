@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Instrospecção on Café &amp; Tapioca</title>
-    <link>https://1917dc.github.io/blog/tags/instrospec%C3%A7%C3%A3o/</link>
+    <link>http://localhost:1313/blog/tags/instrospec%C3%A7%C3%A3o/</link>
     <description>Recent content in Instrospecção on Café &amp; Tapioca</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Sun, 20 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://1917dc.github.io/blog/tags/instrospec%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/instrospec%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mini resenha: Camus – O Absurdo no Cotidiano.</title>
-      <link>https://1917dc.github.io/blog/posts/20250420/</link>
+      <link>http://localhost:1313/blog/posts/20250420/</link>
       <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/blog/posts/20250420/</guid>
-      <description>Sobre o &amp;ldquo;Absurdo&amp;rdquo; O absurdo não é uma palavra: é um conceito. O universo, claramente, é um lugar irracional. Em toda a sua jornada de existência a raça humana sempre tentou responder uma única questão: “Qual o sentido da existência?”.&#xA;Mas será que essa existência realmente tem um sentido? Ou seria apenas uma questão irrelevante diante de todas as outras questões a serem respondidas?&#xA;A constante guerra contra essa irracionalidade do universo é a luta travada há séculos pelo &amp;ldquo;ser&amp;rdquo;, esse desejo insaciável por clareza que ecoa no coração humano é o que define o absurdo.</description>
+      <guid>http://localhost:1313/blog/posts/20250420/</guid>
+      <description>&lt;h2 id=&#34;sobre-o-absurdo&#34;&gt;Sobre o &amp;ldquo;Absurdo&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;O absurdo não é uma palavra: é um conceito.&#xA;O universo, claramente, é um lugar irracional. Em toda a sua jornada de existência a raça humana sempre tentou responder uma única questão: &lt;strong&gt;“Qual o sentido da existência?”&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Mas será que essa existência realmente tem um sentido? Ou seria apenas uma questão irrelevante diante de todas as outras questões a serem respondidas?&lt;/p&gt;&#xA;&lt;p&gt;A constante guerra contra essa irracionalidade do universo é a luta travada há séculos pelo &lt;strong&gt;&amp;ldquo;ser&amp;rdquo;&lt;/strong&gt;, esse desejo insaciável por clareza que ecoa no coração humano é o que define o absurdo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>O dilema do esclarescimento — Kant &amp; Sociedade dos Poetas Mortos</title>
-      <link>https://1917dc.github.io/blog/posts/20250412/</link>
+      <link>http://localhost:1313/blog/posts/20250412/</link>
       <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://1917dc.github.io/blog/posts/20250412/</guid>
-      <description>Você se sente medíocre? Eu também! Eu constantemente me sinto medíocre, seja pela minha incapacidade as vezes de aprender algum tópico, ou por sentir que meu conhecimento é em sua totalidade raso - e creio que a maioria dos universitários se sentem assim também. Isso em certo nível é bom e saudável, o estudante precisa ter brio, você precisa abaixar seu ego. Aquele que por algum motivo acha que sabe de tudo, não sabe praticamente nada sobre a totalidade daquilo que estuda, porém precisamos ser justos com o &amp;ldquo;eu&amp;rdquo;.</description>
+      <guid>http://localhost:1313/blog/posts/20250412/</guid>
+      <description>&lt;h1 id=&#34;você-se-sente-medíocre-eu-também&#34;&gt;Você se sente medíocre? Eu também!&lt;/h1&gt;&#xA;&lt;p&gt;Eu constantemente me sinto medíocre, seja pela minha incapacidade as vezes de aprender algum tópico, ou por sentir que meu conhecimento é em sua totalidade raso - e creio que a maioria dos universitários se sentem assim também. Isso em certo nível é bom e saudável, o estudante &lt;strong&gt;precisa&lt;/strong&gt; ter &lt;em&gt;brio&lt;/em&gt;, você precisa abaixar seu ego. Aquele que por algum motivo acha que sabe de tudo, não sabe praticamente nada sobre a totalidade daquilo que estuda, porém precisamos ser justos com o &amp;ldquo;eu&amp;rdquo;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
