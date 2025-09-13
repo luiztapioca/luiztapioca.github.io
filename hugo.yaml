@@ -22,9 +22,6 @@ menus:
     - name: "Tags"
       pageRef: "/tags"
       weight: 40
-    - name: "Acervo"
-      pageRef: "/acervo"
-      weight: 50
 taxonomies:
   tag: "tags"
 
