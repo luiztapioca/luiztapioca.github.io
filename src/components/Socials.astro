@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+import type { Social } from "../types";
+
+interface Props {
+    config: Social[];
+}
+
+const { config } = Astro.props;
+---
+
+<ul class="flex">
+    { Object.values(config).map((social) => (
+        <li><a href={ social.link }>
+            <Icon
+                name={ social.icon }
+                size="32"
+            />
+        </a></li>
+    ))}
+</ul>
