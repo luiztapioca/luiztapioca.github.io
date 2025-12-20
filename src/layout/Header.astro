@@ -5,7 +5,7 @@ const { socials } = await getEntry("config", "config")?.then(config => config.da
 ---
 <header class="flex justify-center gap-10 select-none">
     { socials?.map(social => (
-        <a href={ social.link } class="text-rose-400">
+        <a href={ social.link } class="text-rose-400 hover:text-rose-300 transition-colors duration-200" target="_blank" rel="noopener noreferrer">
             <Icon name={ social.icon } class="w-[24px] h-[24px] lg:w-[32px] lg:h-[32px]"/>
         </a>
     ))}

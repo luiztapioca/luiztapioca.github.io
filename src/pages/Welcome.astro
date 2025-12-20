@@ -1,18 +1,26 @@
 ---
 import { ReactTyped } from "react-typed";
+import { Icon } from "astro-icon/components";
 ---
 
-<span class="h-auto min-h-screen flex justify-center items-center">
+<span class="h-auto min-h-screen flex flex-col justify-center items-center gap-12 md:gap-16">
     <ReactTyped
         client:load
         className="lg:text-4xl md:text-xl text-lg text-center"
         strings={[
-            `Olá ヾ(＾ ∇ ＾)`,
-            `Bem vindo ao meu site!`,
+            `Olá <span class="text-rose-400">ヾ(＾ ∇ ＾)</span>`,
+            `Bem vindo ao meu site!`
         ]}
         typeSpeed={60}
         backSpeed={30}
         backDelay={1000}
-        loop={true}
+        loop={false}
     />
+    <button 
+        class="btn rounded-md bg-slate-400 p-2 md:p-4 flex justify-center items-center gap-2 md:gap-4 hover:scale-102 transition-transform duration-200 active:scale-101"
+        onclick="window.open('/curriculum/curriculum.pdf', '_blank')"
+    >
+        <Icon name="mdi:file" class="w-6 h-6 text-slate-900"/>
+        <span class="text-sm md:text-normal text-slate-900">Acesse meu currículo</span>
+    </button>
 </span>

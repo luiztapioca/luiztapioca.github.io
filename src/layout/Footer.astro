@@ -5,5 +5,9 @@ const { user, site } = config.data;
 ---
 <footer class="flex flex-col items-center text-sm md:text-base my-4 select-none">
     <p class="">{ site.description }</p>
-    <p class=""> &COPY; { new Date().getFullYear().toString() }</p>
+    <div class="flex gap-2">
+        <p>{ user.name }</p>
+        <p>&COPY;</p>
+        <p>{ new Date().getFullYear().toString() }</p>
+    </div>
 </footer>
