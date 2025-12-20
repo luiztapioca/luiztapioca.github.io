@@ -1,0 +1,10 @@
+---
+import { getEntry } from "astro:content"
+
+
+const { user, site } = getEntry("config", "config")?.then(config => config.data)!;
+---
+
+<div class="h-auto min-h-screen">
+    
+</div>
