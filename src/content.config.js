@@ -25,6 +25,7 @@ const experiences = defineCollection({
     schema: z.object({
         company: z.string(),
         position: z.string(),
+        description: z.string(),
         startDate: z.date(),
         endDate: z.date().optional(),
     })
