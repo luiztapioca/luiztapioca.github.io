@@ -6,6 +6,8 @@ config:
       icon: "mdi:github"
     - link: "https://linkedin.com/in/username"
       icon: "mdi:linkedin"
+    - link: "https://bool.tec.br/blog"
+      icon: "mdi:pencil-box"
   site:
     title: "Portfolio"
-    description: "Desenvolvedor backend."
+    description: "Desenvolvido usando AstroJS e TailwindCSS."
