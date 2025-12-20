@@ -5,7 +5,7 @@
 #let email = "luiztapioca@icloud.com"
 #let github = "github.com/luiztapioca"
 #let linkedin = "linkedin.com/in/luiztapioca"
-#let phone = "-------------"
+#let phone = ""
 #let personal-site = "bool.tec.br"
 
 #show: resume.with(
