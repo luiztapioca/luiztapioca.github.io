@@ -2,9 +2,13 @@
 import { getEntry } from "astro:content"
 
 
-const { user, site } = getEntry("config", "config")?.then(config => config.data)!;
+const description = (await getEntry("description", "description"))!;
+const { title } = description.data;
+const { html } = description.rendered ?? {};
+
 ---
 
 <div class="h-auto min-h-screen">
-    
+    <h2 class="my-4 text-rose-400">{title}</h2>
+    <div class="lg:text-lg" set:html={html}></div>
 </div>

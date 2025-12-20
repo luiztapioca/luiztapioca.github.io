@@ -27,8 +27,14 @@ const experiences = defineCollection({
         position: z.string(),
         startDate: z.date(),
         endDate: z.date().optional(),
-        description: z.string().optional(),
     })
 })
 
-export const collections = { config, experiences };
+const description = defineCollection({
+    loader: glob({ pattern: "description.md", base: "./src/content/description" }),
+    schema: z.object({
+        title: z.string().optional(),
+    })
+});
+
+export const collections = { config, experiences, description };

@@ -1,12 +1,12 @@
 ---
 import { Icon } from "astro-icon/components";
 import { getEntry } from "astro:content";
-const socials = await getEntry("config", "config")?.then(config => config.data.socials);
+const { socials } = await getEntry("config", "config")?.then(config => config.data)!;
 ---
 <header class="flex justify-center gap-10 select-none">
     { socials?.map(social => (
-        <a href={ social.link }>
-            <Icon name={ social.icon } size="24"/>
+        <a href={ social.link } class="text-rose-400">
+            <Icon name={ social.icon } class="w-[24px] h-[24px] lg:w-[32px] lg:h-[32px]"/>
         </a>
     ))}
 </header>

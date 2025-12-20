@@ -8,4 +8,4 @@ config:
       icon: "mdi:linkedin"
   site:
     title: "Portfolio"
-    description: "Welcome to Username's portfolio."
+    description: "Desenvolvedor backend."
