@@ -1,7 +1,18 @@
 ---
+import { getCollection } from "astro:content";
+import { getEntries } from "astro:content";
+import { getEntry } from "astro:content";
 
+const experiences = await getCollection("experiences");
 ---
 
 <div class="h-auto min-h-screen">
-    
+    <div>
+    {experiences.map((experience) => {
+        const { title, company, position } = experience.data;
+        const { html } = experience.rendered ?? { html: "" };
+
+
+    })}
+    </div>
 </div>
