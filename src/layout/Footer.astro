@@ -1,7 +1,8 @@
 ---
-import { UserConfig } from "../constants";
+import { getEntry } from "astro:content";
+const user = await getEntry("config", "config")?.then(config => config.data.user);
 ---
-<footer class="flex justify-center gap-2 text-sm my-4">
-    <p class="">{ UserConfig.name }</p> &COPY;
+<footer class="flex justify-center gap-2 text-sm my-4 select-none">
+    <p class="">{ user?.name ?? "User" }</p> &COPY;
     <p class="">{ new Date().getFullYear().toString() }</p>
 </footer>

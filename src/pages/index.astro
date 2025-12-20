@@ -1,23 +1,21 @@
 ---
 import "../styles/global.css";
-import Footer from "../layout/Footer.astro";
-import Header from "../layout/Header.astro";
+import Layout from "../layout/Layout.astro";
 import { Font } from "astro:assets";
+import { getEntry } from "astro:content";
+
+const site = await getEntry("config", "config")?.then(config => config.data.site);
 ---
-<html lang="en">
+<html lang="pt-br">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title></title>
+		<title>{ site?.title ?? "Title" }</title>
 	</head>
 	<Font cssVariable="--font-google-sans-code" preload/>
-	<body class="bg-slate-500 text-orange-400 max-w-3xl mx-auto p-4" style="font-family: var(--font-google-sans-code);">
-		<Header/>
-		<main>
-			<slot />
-		</main>
-		<Footer/>
-	</body>
+	<Layout>
+
+	</Layout>
 </html>

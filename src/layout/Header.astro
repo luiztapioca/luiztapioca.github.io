@@ -1,7 +1,12 @@
 ---
-import { UserConfig } from "../constants";
-import Socials from "../components/Socials.astro";
+import { Icon } from "astro-icon/components";
+import { getEntry } from "astro:content";
+const socials = await getEntry("config", "config")?.then(config => config.data.socials);
 ---
-<header class="flex justify-center">
-    <Socials config={ UserConfig.socials } />
+<header class="flex justify-center gap-10 select-none">
+    { socials?.map(social => (
+       <a href={ social.link }>
+                <Icon name={ social.icon } size="24"/>
+        </a>
+    ))}
 </header>
