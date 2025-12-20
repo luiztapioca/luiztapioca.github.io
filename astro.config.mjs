@@ -24,4 +24,5 @@ export default defineConfig({
   },
 
   integrations: [icon(), react()],
+  site: "https://luiztapioca.github.io",
 });
