@@ -9,10 +9,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.2",
     "@iconify-json/mdi": "^1.2.3",
     "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
     "astro": "^5.16.6",
     "astro-icon": "^1.1.5",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-typed": "^2.0.12",
     "tailwindcss": "^4.1.18"
   }
 }
