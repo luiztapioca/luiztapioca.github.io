@@ -1,6 +1,7 @@
 ---
 company: E-Lattes
 position: Pesquisador Bolsista
+description: Ullamco exercitation commodo dolor veniam aliquip in eiusmod minim dolore sunt.
 startDate: 2025-09-01
 endDate: 2026-03-01
 ---
