@@ -1,8 +1,0 @@
-name: Username
-title: "Username's Blog"
-description: "Welcome to Username's personal blog."
-socials:
-  - link: "https://github.com/username"
-    icon: "mdi:github"
-  - link: "https://linkedin.com/in/username"
-    icon: "mdi:linkedin"

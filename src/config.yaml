@@ -1,0 +1,11 @@
+config:
+  user:
+    name: "Username"
+  socials:
+    - link: "https://github.com/username"
+      icon: "mdi:github"
+    - link: "https://linkedin.com/in/username"
+      icon: "mdi:linkedin"
+  site:
+    title: "Portfolio"
+    description: "Welcome to Username's portfolio."
