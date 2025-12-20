@@ -5,8 +5,8 @@ const socials = await getEntry("config", "config")?.then(config => config.data.s
 ---
 <header class="flex justify-center gap-10 select-none">
     { socials?.map(social => (
-       <a href={ social.link }>
-                <Icon name={ social.icon } size="24"/>
+        <a href={ social.link }>
+            <Icon name={ social.icon } size="24"/>
         </a>
     ))}
 </header>
