@@ -8,7 +8,10 @@ const { html } = description.rendered ?? {};
 
 ---
 
-<div class="h-auto min-h-screen">
-    <h2 class="my-4 text-rose-400">{title}</h2>
-    <div class="lg:text-lg" set:html={html}></div>
+<div class="h-auto min-h-screen flex flex-col md:flex-row gap-20 justify-center items-center">
+    <div class="">
+        <h2 class="my-4 text-rose-400">{title}</h2>
+        <div class="md:text-lg text-justify" set:html={html}></div>
+    </div>
+    <img class="h-[400px] w-[400px] md:h-[400px] md:w-[400px] rounded-lg" src="https://github.com/luiztapioca.png" alt="User's GitHub Profile Picture">
 </div>

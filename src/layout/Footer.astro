@@ -3,7 +3,7 @@ import { getEntry } from "astro:content";
 const config = (await getEntry("config", "config"))!;
 const { user } = config.data;
 ---
-<footer class="flex justify-center gap-2 text-sm my-4 select-none">
+<footer class="flex justify-center gap-2 text-sm md:text-base my-4 select-none">
     <p class="">{ user.name ?? "User" }</p> &COPY;
     <p class="">{ new Date().getFullYear().toString() }</p>
 </footer>

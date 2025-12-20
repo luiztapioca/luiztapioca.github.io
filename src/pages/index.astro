@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Layout from "../layout/Layout.astro";
 import Welcome from "./Welcome.astro";
 import User from "./User.astro";
+import Experiences from "./Experiences.astro";
 import { Font } from "astro:assets";
 import { getEntry } from "astro:content";
 
@@ -20,5 +21,6 @@ const site = await getEntry("config", "config")?.then(config => config.data.site
 	<Layout>
 		<Welcome />
 		<User />
+		<Experiences />
 	</Layout>
 </html>
