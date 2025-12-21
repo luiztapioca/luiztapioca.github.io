@@ -12,7 +12,7 @@ function Experiences({ experiences }) {
                     return (
                         <li
                             key={exp.id}
-                            className={`p-2 text-xs md:text-lg ease-in-out duration-200 ${exp.id == experience?.id ? 'font-bold border-l-4 bg-slate-800 border-rose-400 text-rose-400' : ''}`}
+                            className={`select-none p-2 text-xs md:text-lg ease-in-out duration-200 ${exp.id == experience?.id ? 'font-bold border-l-4 bg-slate-800 border-rose-400 text-rose-400' : ''}`}
                             onClick={ () => setExperience(exp) }
                         >
                             { company }
