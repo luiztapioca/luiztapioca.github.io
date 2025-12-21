@@ -21,13 +21,14 @@ const config = defineCollection({
 });
 
 const experiences = defineCollection({
-    loader: glob({ pattern: "*.md", base: "./src/content/experiences" }),
+    loader: glob({ pattern: "*.json", base: "./src/content/experiences" }),
     schema: z.object({
         company: z.string(),
         position: z.string(),
         description: z.string(),
-        startDate: z.date(),
-        endDate: z.date().optional(),
+        startDate: z.string(),
+        endDate: z.string().optional(),
+        bullets: z.array(z.string()).optional()
     })
 })
 
