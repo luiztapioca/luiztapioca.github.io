@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 function Experiences({ experiences }) {
+    experiences.sort((a, b) => a.data.company.localeCompare(b.data.company));
     const [experience, setExperience] = useState(experiences[0]);
-
     return (
         <div className="flex flex-col md:flex-row items-start">
             <div className="md:h-84 overflow-y-auto w-full md:w-auto">
@@ -27,6 +27,9 @@ function Experiences({ experiences }) {
                         <h2 className="font-bold mb-2 text-xs md:text-lg">
                             { experience.data.position } <span className="text-rose-400">@</span> { experience.data.description }
                         </h2>
+                        <p className="italic mb-4 text-xs md:text-lg">
+                            { new Date(experience.data.startDate).toLocaleDateString('en-US', { year: 'numeric', month: 'numeric' }) } - { experience.data.endDate ? new Date(experience.data.endDate).toLocaleDateString('en-US', { year: 'numeric', month: 'numeric' }) : 'Presente' }
+                        </p>
                         <ul>
                         {experience.data.bullets?.map((bullet, index) => {
                             return (
