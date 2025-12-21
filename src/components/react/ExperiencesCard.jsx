@@ -12,7 +12,7 @@ function Experiences({ experiences }) {
                     return (
                         <li
                             key={exp.id}
-                            className={`p-4 text-xs md:text-lg ease-in-out duration-200 ${exp.id == experience?.id ? 'font-bold border-l-4 bg-slate-950 border-rose-400' : ''}`}
+                            className={`p-4 text-xs md:text-lg ease-in-out duration-200 ${exp.id == experience?.id ? 'font-bold border-l-4 bg-slate-950 border-rose-400 text-rose-400' : ''}`}
                             onClick={ () => setExperience(exp) }
                         >
                             { company }
@@ -25,7 +25,7 @@ function Experiences({ experiences }) {
                 { experience && (
                     <div>
                         <h2 className="font-bold mb-2 text-xs md:text-lg">
-                            <span className="text-rose-400">@</span> { experience.data.description } / { experience.data.position }
+                            { experience.data.position } <span className="text-rose-400">@</span> { experience.data.description }
                         </h2>
                         <ul>
                         {experience.data.bullets?.map((bullet, index) => {
