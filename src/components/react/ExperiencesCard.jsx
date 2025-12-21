@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 function Experiences({ experiences }) {
-    const [experience, setExperience] = useState(null);
+    const [experience, setExperience] = useState(experiences[0]);
 
     return (
         <div className="flex flex-col md:flex-row items-start">
             <div className="md:h-84 overflow-y-auto w-full md:w-auto">
-                <ul className={``}>
+                <ul>
                 {experiences.map((exp) => {
                     const { company } = exp.data;
                     return (
