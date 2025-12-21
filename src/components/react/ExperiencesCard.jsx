@@ -1,35 +1,49 @@
 import { useState } from "react";
 
 function Experiences({ experiences }) {
-    const [currentExperience, setCurrentExperience] = useState(null);
+    const [experience, setExperience] = useState(null);
 
     return (
-        <div className="flex items-start">
-            <div className="flex flex-col bg-slate-950">
-            {experiences.map((exp) => {
-                const { company } = exp.data;
-                return (
-                    <div key={ exp.id } className={`${currentExperience?.id == exp.id ? 'border-rose-400 ease-in-out duration-300' : 'border-slate-800'} border-l-4 w-full`}>
-                        <button
-                            className={`p-4`}
-                            onClick={() => setCurrentExperience(exp)}
+        <div className="flex flex-row items-start">
+            <div className="h-84 overflow-y-auto bg-slate-950 rounded-l-lg">
+                <ul className={``}>
+                {experiences.map((exp) => {
+                    const { company } = exp.data;
+                    return (
+                        <li
+                            key={exp.id}
+                            className={`p-4 text-xs md:text-lg bg-slate-950 ease-in-out duration-200 ${exp.id == experience?.id ? 'font-bold border-l-4 border-rose-400' : ''}`}
+                            onClick={ () => setExperience(exp) }
                         >
-                            {company}
-                        </button>
-                    </div>
-                )
-            })}
+                            { company }
+                        </li>
+                    );
+                })}
+                </ul>
             </div>
-            <div className="flex-1 overflow-auto bg-slate-950">
-            { currentExperience && (
-                <p
-                    className="p-8 max-w-2xl"
-                    dangerouslySetInnerHTML={{ __html: currentExperience.rendered?.html || '' }}
-                />
-            )}
+            <div className="bg-slate-950 p-4 h-84 overflow-y-auto flex-1 rounded-r-lg">
+                { experience && (
+                    <div>
+                        <h2 className="font-bold mb-2 text-xs md:text-lg">
+                            <span className="text-rose-400">@</span> { experience.data.description } / { experience.data.position }
+                        </h2>
+                        <ul>
+                        {experience.data.bullets?.map((bullet, index) => {
+                            return (
+                                <li 
+                                    className="mb-2 text-xs md:text-lg list-disc list-inside"
+                                    key={index}
+                                >
+                                    { bullet }
+                                </li>
+                            )
+                        })}
+                        </ul>
+                    </div>
+                )}
             </div>
         </div>
-    )
+    );
 }
 
 export default Experiences;
