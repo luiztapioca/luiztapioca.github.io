@@ -2,10 +2,10 @@
 title: Sobre mim
 ---
 
-Meu foco atual é **backend**, porém sou alguém muito **versátil** na área. 
+Atualmente foco em **backend**, porém, sou alguém muito **versátil** na área de desenvolvimento como um todo. 
 
 
-Gosto muito de entender o **por quês** de tudo o que eu faço, portanto, enxergo a área de backend no geral como a vertente ideal para meu futuro de carreira.
+Gosto muito de entender o **por quês** de tudo o que eu faço, além de adorar **optimizações**. Sendo assim, viso a vertente de backend como a ideal para meu futuro de carreira.
 
-Amante de **Linux** 🐧 e **Software Livre** 🐃.
+Curto muito **Linux** 🐧 e **Software Livre** 🐃.
 
