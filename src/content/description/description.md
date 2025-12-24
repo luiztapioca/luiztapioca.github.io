@@ -7,5 +7,5 @@ Atualmente foco em **backend**, porém, sou alguém muito **versátil** na área
 
 Curto entender os **"por quês"** de tudo o que eu faço, além de adorar **optimizações**. Sendo assim, viso a vertente de backend como a ideal para meu futuro de carreira.
 
-Gosto muito **Linux** 🐧 e **Software Livre** 🐃.
+Gosto muito de **Linux** 🐧 e **Software Livre** 🐃.
 
