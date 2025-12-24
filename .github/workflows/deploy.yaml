@@ -20,11 +20,6 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
-      - name: Compile Typst Curriculum
-        uses: lvignoli/typst-action@main
-        with:
-          source_file: public/curriculum/curriculum.typ
-          output_file: public/curriculum/curriculum.pdf
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         # with:
