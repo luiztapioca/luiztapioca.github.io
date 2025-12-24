@@ -1,6 +1,6 @@
 #import "@preview/basic-resume:0.2.9": *
 
-#let name = "Luiz Gustavo Silva Carvalho"
+#let name = ""
 #let location = "Brasília, DF"
 #let email = "luiztapioca@icloud.com"
 #let github = "github.com/luiztapioca"
