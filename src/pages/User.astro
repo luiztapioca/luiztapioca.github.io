@@ -10,7 +10,7 @@ const { html } = description.rendered ?? {};
 <div class="h-screen flex flex-col md:flex-row gap-12 md:gap-20 justify-center items-center">
     <div class="">
         <h2 class="my-4 font-bold text-md md:text-xl">{title}</h2>
-        <div class="text-sm md:text-lg text-justify [&_strong]:text-rose-400" set:html={html}></div>
+        <div class="text-sm md:text-lg text-justify [&_strong]:text-rose-400 [&_p]:mb-4" set:html={html}></div>
     </div>
     <img class="h-[400px] w-[400px] md:h-[400px] md:w-[400px] rounded-lg" src="https://github.com/luiztapioca.png" alt="User's GitHub Profile Picture">
 </div>
