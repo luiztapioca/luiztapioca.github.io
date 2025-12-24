@@ -4,8 +4,8 @@
   "startDate": "06-01-2024",
   "description": "Analytics, Infra, Desenvolvimento",
   "bullets": [
-    "Desenvolvi uma plataforma PaaS interna em Python que centralizou o deploy da equipe, reduzindo o tempo de publicação de 1 dia para minutos através da automação de PIDs e Git.",
-    "Implementei arquitetura de segurança com Proxy Reverso (isolamento de portas 7000 -> 5000) e servidor Waitress, mitigando ataques Slowloris e eliminando a necessidade de Docker.",
+    "Desenvolvi um Web-Server e orquestrador em Python que reduziu o tempo de deploy de 1 dia para minutos, integrando-se ao Git corporativo para automatizar a instalação de dependências, geração de certificados SSL e gerenciamento do ciclo de vida das aplicações.",
+    "Implementei arquitetura de segurança com Proxy Reverso (isolamento de portas 7000 -> 5000) e servidor Waitress, garantindo estabilidade em um ambiente restrito sem acesso ao Docker.",
     "Engenhei uma biblioteca 'Wrapper' para SQLAlchemy que resolveu problemas críticos de connection pooling e thread-safety, além de um Framework de Formulários proprietário.",
     "Implementei pipelines de backend para Agentes de IA, convertendo inferências não estruturadas em dados relacionais (PostgreSQL) para alimentar dashboards de decisão estratégica."
   ]
