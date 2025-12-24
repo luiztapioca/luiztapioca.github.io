@@ -41,7 +41,7 @@
   dates: dates-helper(start-date: "Jun 2025", end-date: "Presente"),
 )
 // PROJETO PAAS & DEVOPS
-- **Engenharia de Plataforma (Internal PaaS):** Desenvolvi uma plataforma de orquestração em Python que centralizou o deploy da equipe, **reduzindo o tempo de publicação de 1 dia para minutos**. A ferramenta gerencia processos (PIDs), automatiza Git e gera certificados SSL para integração com OAuth.
+- **Engenharia de Plataforma (Web-Server):** Desenvolvi uma plataforma de orquestração em Python que centralizou o deploy da equipe, **reduzindo o tempo de publicação de 1 dia para minutos**. A ferramenta gerencia processos (PIDs), automatiza Git e gera certificados SSL para integração com OAuth.
 - **Segurança & Redes:** Implementei arquitetura de **Proxy Reverso** (isolamento de portas 7000 $arrow$ 5000) e servidor **Waitress** com *request buffering*. Isso mitigou ataques de clientes lentos (*Slowloris*) e garantiu estabilidade em ambiente sem Docker.
 // PROJETO GENAI & TOOLS
 - **Core Engineering (SQLAlchemy Wrapper):** Engenhei uma biblioteca de abstração de banco de dados (inspirada no Flask-SQLAlchemy) que resolveu problemas críticos de *connection pooling* e *thread-safety*. Implementei métodos de *upsert* inteligentes (`save_from_dict`) que garantem integridade nas transações.
