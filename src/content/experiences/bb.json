@@ -1,7 +1,7 @@
 {
   "company": "Banco do Brasil",
   "position": "Estagiário",
-  "startDate": "06-01-2026",
+  "startDate": "06-01-2025",
   "description": "Analytics, Infra, Desenvolvimento",
   "bullets": [
     "Desenvolvi um Web-Server e orquestrador em Python que reduziu o tempo de deploy de 1 dia para minutos, integrando-se ao Git corporativo para automatizar a instalação de dependências, geração de certificados SSL e gerenciamento do ciclo de vida das aplicações.",
