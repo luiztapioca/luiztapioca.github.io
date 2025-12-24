@@ -1,10 +1,11 @@
 {
-  "company": "E-Lattes",
-  "position": "Pesquisador Bolsista",
+  "company": "Plataforma E-Lattes",
+  "position": "Pesquisador Bolsista (Backend)",
   "startDate": "09-01-2025",
   "endDate": "03-01-2026",
-  "description": "E-Lattes",
+  "description": "Modernização de Sistemas Legados",
   "bullets": [
-    "Labore sit velit cillum. Adipisicing minim ea mollit id. Do amet exercitation ex aliqua do nisi dolor consequat velit mollit ipsum elit. Dolor dolor adipisicing minim ullamco consequat fugiat. Commodo commodo incididunt aliqua ex et esse id eiusmod id magna aute ad qui reprehenderit irure."
+    "Lidero a migração estratégica da camada de persistência de banco de dados, transicionando de MariaDB para PostgreSQL para suportar queries complexas de análise acadêmica.",
+    "Atuo na refatoração de código legado (Zend Framework), substituindo padrões antigos por ORMs modernos e garantindo a integridade referencial dos dados durante a migração."
   ]
 }

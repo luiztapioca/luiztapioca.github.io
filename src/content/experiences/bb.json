@@ -1,11 +1,12 @@
 {
-  "company": "BB",
-  "position": "Estagiário",
-  "startDate": "06-01-2025",
-  "description": "Banco do Brasil",
+  "company": "Banco do Brasil",
+  "position": "Estagiário em Desenvolvimento & DevOps",
+  "startDate": "06-01-2024",
+  "description": "Engenharia de Plataforma e Ferramentas Internas",
   "bullets": [
-    "Tempor proident excepteur anim excepteur. Est nisi do deserunt dolor exercitation non reprehenderit. Dolor id deserunt fugiat aliqua exercitation eu nostrud ex amet labore. Aliquip aliqua incididunt officia consequat nulla adipisicing ullamco nulla aliqua nostrud ad irure culpa fugiat do.",
-    "Ullamco id labore consequat tempor sint exercitation occaecat non irure esse consectetur sint nulla dolor Lorem.",
-    "Ullamco id labore consequat tempor sint exercitation occaecat non irure esse consectetur sint nulla dolor Lorem."
+    "Desenvolvi uma plataforma PaaS interna em Python que centralizou o deploy da equipe, reduzindo o tempo de publicação de 1 dia para minutos através da automação de PIDs e Git.",
+    "Implementei arquitetura de segurança com Proxy Reverso (isolamento de portas 7000 -> 5000) e servidor Waitress, mitigando ataques Slowloris e eliminando a necessidade de Docker.",
+    "Engenhei uma biblioteca 'Wrapper' para SQLAlchemy que resolveu problemas críticos de connection pooling e thread-safety, além de um Framework de Formulários proprietário.",
+    "Implementei pipelines de backend para Agentes de IA, convertendo inferências não estruturadas em dados relacionais (PostgreSQL) para alimentar dashboards de decisão estratégica."
   ]
 }
