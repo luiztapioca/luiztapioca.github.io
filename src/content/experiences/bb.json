@@ -1,8 +1,8 @@
 {
   "company": "Banco do Brasil",
-  "position": "Estagiário em Desenvolvimento & DevOps",
+  "position": "Estagiário",
   "startDate": "06-01-2024",
-  "description": "Engenharia de Plataforma e Ferramentas Internas",
+  "description": "Analytics, Infra, Desenvolvimento",
   "bullets": [
     "Desenvolvi uma plataforma PaaS interna em Python que centralizou o deploy da equipe, reduzindo o tempo de publicação de 1 dia para minutos através da automação de PIDs e Git.",
     "Implementei arquitetura de segurança com Proxy Reverso (isolamento de portas 7000 -> 5000) e servidor Waitress, mitigando ataques Slowloris e eliminando a necessidade de Docker.",
