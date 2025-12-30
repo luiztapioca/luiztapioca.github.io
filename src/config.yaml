@@ -4,10 +4,10 @@ config:
   socials:
     - link: "https://github.com/luiztapioca"
       icon: "mdi:github"
-    - link: "https://linkedin.com/in/luiztapioca"
-      icon: "mdi:linkedin"
-    - link: "https://bool.tec.br/blog"
-      icon: "mdi:pencil-box"
+    # - link: "https://linkedin.com/in/luiztapioca"
+    #   icon: "mdi:linkedin"
+    # - link: "https://bool.tec.br/blog"
+    #   icon: "mdi:pencil-box"
   site:
     title: "Portfólio"
     description: "Desenvolvido usando AstroJS e TailwindCSS."
