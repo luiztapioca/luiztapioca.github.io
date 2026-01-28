@@ -8,6 +8,22 @@
     "dist"
   ],
   "compilerOptions": {
+    "paths": {
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@layouts/*": [
+        "./src/layouts/*"
+      ],
+      "@data/*": [
+        "./src/data/*"
+      ],
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   }

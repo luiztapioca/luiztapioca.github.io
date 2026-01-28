@@ -1,26 +1,29 @@
 ---
-import "../styles/global.css";
-import Layout from "../layout/Layout.astro";
-import Welcome from "./Welcome.astro";
-import User from "./User.astro";
-import Experiences from "./Experiences.astro";
-import { Font } from "astro:assets";
-import { getEntry } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ExperiencesCard from "@components/react/ExperiencesCard";
 
-const site = await getEntry("config", "config")?.then(config => config.data.site);
+import { Content as IntroContent } from './_intro.md';
+
+import { experiences } from "@data/experiences";
+
+const title = "Portfólio & Blog";
+const description = "Desenvolvedor de Software e Pesquisador.";
 ---
-<html lang="pt-br">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{ site?.title ?? "Title" }</title>
-	</head>
-	<Font cssVariable="--font-google-sans-code" preload/>
-	<Layout>
-		<Welcome />
-		<User />
-		<Experiences />
-	</Layout>
-</html>
+
+<BaseLayout title={title} description={description}>
+    
+    <section>
+        <IntroContent />
+    </section>
+
+    <section class="not-prose mt-8">
+        
+        <h2 class="mb-6 text-base sm:text-xl font-bold text-gray-900 dark:text-gray-100 font-mono">
+            Experiência
+        </h2>
+
+        <ExperiencesCard client:load experiences={experiences} />
+        
+    </section>
+
+</BaseLayout>

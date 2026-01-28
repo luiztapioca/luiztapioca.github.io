@@ -1,13 +1,1 @@
----
-import { getEntry } from "astro:content";
-const config = (await getEntry("config", "config"))!;
-const { user, site } = config.data;
----
-<footer class="flex flex-col items-center text-sm md:text-base my-4 select-none">
-    <p class="">{ site.description }</p>
-    <div class="flex gap-2">
-        <p>{ user.name }</p>
-        <p>&COPY;</p>
-        <p>{ new Date().getFullYear().toString() }</p>
-    </div>
-</footer>
+<footer class="flex justify-center text-rose-300 select-none text-sm my-4">⸜(*ˊᗜˋ*)⸝</footer>

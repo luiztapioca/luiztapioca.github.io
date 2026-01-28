@@ -1,0 +1,65 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+import { Content as IntroContent } from './_intro.md';
+
+const posts = (await getCollection("posts", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+})).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout title="Blog" description="Minhas resenhas e pensamentos">
+    <section>
+        <div class="mb-10 text-gray-700 dark:text-gray-300">
+            <IntroContent />
+        </div>
+        
+        <ul class="flex flex-col gap-6 list-none p-0">
+            {posts.map((post) => (
+                <li class="flex flex-col">
+                    <div class="flex justify-between items-baseline gap-4 w-full">
+                        <a 
+                            href={`/blog/${post.id}/`} 
+                            class="
+                                /* Mobile: text-sm | Desktop: text-lg */
+                                text-sm sm:text-lg font-medium
+                                text-rose-300! dark:text-rose-300!
+                                hover:text-rose-400! dark:hover:text-rose-200!
+                                hover:underline decoration-1 underline-offset-2
+                            "
+                        >
+                            {post.data.title}
+                        </a>
+                            {post.data.draft && <span class="text-[10px] sm:text-xs text-blue-300 ml-2 font-mono no-underline">[RASCUNHO]</span>}
+
+                        <time 
+                            datetime={post.data.date.toISOString()} 
+                            class="
+                                /* Mobile: 10px | Desktop: text-sm */
+                                text-[10px] sm:text-sm 
+                                text-gray-500 dark:text-gray-400 font-mono whitespace-nowrap
+                            "
+                        >
+                            {post.data.date.toLocaleDateString('pt-BR', {
+                                day: '2-digit',
+                                month: 'short',
+                                year: 'numeric',
+                            })}
+                        </time>
+                    </div>
+
+                    {post.data.tags && (
+                        <div class="flex gap-3 mt-1 text-[10px] sm:text-xs font-mono text-gray-500 dark:text-gray-400">
+                            {post.data.tags.map((tag) => (
+                                <span>#{tag}</span>
+                            ))}
+                        </div>
+                    )}
+                </li>
+            ))}
+        </ul>
+    </section>
+</BaseLayout>

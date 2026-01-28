@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  transition: background-color 0.2s, color 0.2s;
+}

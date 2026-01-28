@@ -1,0 +1,89 @@
+---
+import "../styles/global.css";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>{title}</title>
+    <meta name="description" content={description} />
+</head>
+<body class="
+    font-mono min-h-screen max-w-3xl mx-auto px-4 
+    bg-white text-gray-900 
+    dark:bg-[#121212] dark:text-gray-200
+    transition-colors duration-200
+">
+    <Header/>
+    
+    <hr class="border-t-2 border-dashed border-gray-500 dark:border-gray-600 my-4"/>
+    
+    <main>
+        <article class="
+            prose max-w-none dark:prose-invert
+            
+            /* --- PARÁGRAFOS (P) --- */
+            /* Mobile: text-xs (menor) */
+            /* Desktop (sm): text-sm (normal) */
+            prose-p:text-xs sm:prose-p:text-sm
+            prose-p:leading-relaxed 
+            
+            /* Hifenização e Quebra de Linha */
+            prose-p:hyphens-auto      /* Habilita a divisão silábica inteligente */
+            prose-p:text-justify      /* Justifica o texto (opcional, fica bom com hifenização) */
+            prose-p:break-words       /* Garante que palavras muito longas não quebrem o layout */
+
+            /* --- HEADINGS --- */
+            prose-headings:font-bold 
+            prose-h1:text-lg sm:prose-h1:text-2xl prose-h1:my-4 
+            prose-h2:text-base sm:prose-h2:text-xl prose-h2:mt-8 prose-h2:my-3 
+            prose-h3:text-sm sm:prose-h3:text-lg prose-h3:mt-6 prose-h3:my-2 
+            
+            /* --- LINKS --- */
+            prose-a:text-rose-300 
+            prose-a:font-semibold
+            prose-a:no-underline
+            [&_a:hover]:underline
+            [&_a:hover]:decoration-1
+            [&_a:hover]:underline-offset-2
+            [&_a:hover]:text-rose-400
+            dark:[&_a:hover]:text-rose-300
+            
+            /* --- CODE BLOCKS --- */
+            prose-pre:!bg-transparent prose-pre:!p-0 prose-pre:!font-normal prose-pre:!border-0 prose-pre:!ring-0
+            prose-code:px-1 prose-code:font-mono prose-code:text-[10px]! sm:prose-code:text-xs!
+            
+            /* --- BLOCKQUOTES --- */
+            prose-blockquote:bg-gray-100 dark:prose-blockquote:bg-gray-800/50
+            prose-blockquote:border-l-4 
+            prose-blockquote:border-gray-400 dark:prose-blockquote:border-gray-600
+            prose-blockquote:italic
+            prose-blockquote:ml-2
+            prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
+            
+            /* --- IMAGES & LISTS --- */
+            /* Adicionado prose-img:mx-auto para centralizar */
+            prose-img:rounded-lg prose-img:shadow-md prose-img:my-6 prose-img:mx-auto
+            prose-li:text-sm
+            prose-li:marker:text-gray-400 dark:prose-li:marker:text-gray-500
+            
+            /* --- HR --- */
+            prose-hr:border-dashed 
+            prose-hr:border-gray-600 dark:prose-hr:border-gray-700
+        ">
+            <slot />
+        </article>
+    </main>
+    
+    <hr class="border-t-2 border-dashed border-gray-500 dark:border-gray-600 my-4"/>
+    
+    <Footer/>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</body>
+</html>
