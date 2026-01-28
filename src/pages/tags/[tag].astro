@@ -2,34 +2,20 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-export async function getStaticPaths() {
-    const allPosts = await getCollection("posts", ({ data }) => {
-        return import.meta.env.PROD ? data.draft !== true : true;
-    });
+import { Content as IntroContent } from './_intro.md';
 
-    const uniqueTags = [...new Set(allPosts.flatMap(post => post.data.tags || []))];
-
-    return uniqueTags.map((tag) => {
-        const filteredPosts = allPosts
-            .filter((post) => post.data.tags?.includes(tag))
-            .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-        return {
-            params: { tag },
-            props: { posts: filteredPosts },
-        };
-    });
-}
-
-const { tag } = Astro.params;
-const { posts } = Astro.props;
+const posts = (await getCollection("posts", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+})).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
 ---
 
-<BaseLayout title={`Tag: #${tag}`} description={`Posts marcados com ${tag}`}>
-    <section class="mt-4 sm:mt-8">
-        <h1 class="font-bold text-lg sm:text-2xl mb-6 sm:mb-8 font-mono">
-            <span class="text-rose-300">#</span> {tag}
-        </h1>
+<BaseLayout title="Blog" description="Minhas resenhas e pensamentos">
+    <section>
+        <div class="mb-10 text-gray-700 dark:text-gray-300">
+            <IntroContent />
+        </div>
         
         <ul class="flex flex-col gap-6 list-none p-0">
             {posts.map((post) => (
@@ -38,21 +24,20 @@ const { posts } = Astro.props;
                         <a 
                             href={`/blog/${post.id}/`} 
                             class="
-                                /* Mobile: text-sm | Desktop: text-lg */
-                                text-sm sm:text-lg font-medium
-                                text-rose-300! dark:text-rose-300!
-                                hover:text-rose-400! dark:hover:text-rose-200!
+                                text-base sm:text-lg font-medium
+                                text-rose-500 dark:text-rose-300
+                                hover:text-rose-600 dark:hover:text-rose-200
                                 hover:underline decoration-1 underline-offset-2
                             "
                         >
                             {post.data.title}
                         </a>
+                            {post.data.draft && <span class="text-xs sm:text-sm text-blue-300 ml-2 font-mono no-underline">[RASCUNHO]</span>}
 
                         <time 
                             datetime={post.data.date.toISOString()} 
                             class="
-                                /* Mobile: 10px | Desktop: text-sm */
-                                text-[10px] sm:text-sm 
+                                text-xs sm:text-sm 
                                 text-gray-500 dark:text-gray-400 font-mono whitespace-nowrap
                             "
                         >
@@ -65,11 +50,9 @@ const { posts } = Astro.props;
                     </div>
 
                     {post.data.tags && (
-                        <div class="flex gap-3 mt-1 text-[10px] sm:text-xs font-mono text-gray-500 dark:text-gray-400">
-                            {post.data.tags.map((t) => (
-                                <span class={t === tag ? "text-rose-200 font-bold" : ""}>
-                                    # {t}
-                                </span>
+                        <div class="flex gap-3 mt-1 text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400">
+                            {post.data.tags.map((tag) => (
+                                <span>#{tag}</span>
                             ))}
                         </div>
                     )}

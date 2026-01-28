@@ -29,15 +29,15 @@ const { title, description } = Astro.props;
             prose max-w-none dark:prose-invert
             
             /* --- PARÁGRAFOS (P) --- */
-            /* Mobile: text-xs (menor) */
-            /* Desktop (sm): text-sm (normal) */
+            /* Revertido para o tamanho anterior: */
+            /* Mobile: text-xs | Desktop: text-sm */
             prose-p:text-xs sm:prose-p:text-sm
             prose-p:leading-relaxed 
             
             /* Hifenização e Quebra de Linha */
-            prose-p:hyphens-auto      /* Habilita a divisão silábica inteligente */
-            prose-p:text-justify      /* Justifica o texto (opcional, fica bom com hifenização) */
-            prose-p:break-words       /* Garante que palavras muito longas não quebrem o layout */
+            prose-p:hyphens-auto      
+            prose-p:text-justify      
+            prose-p:break-words       
 
             /* --- HEADINGS --- */
             prose-headings:font-bold 
@@ -45,15 +45,24 @@ const { title, description } = Astro.props;
             prose-h2:text-base sm:prose-h2:text-xl prose-h2:mt-8 prose-h2:my-3 
             prose-h3:text-sm sm:prose-h3:text-lg prose-h3:mt-6 prose-h3:my-2 
             
-            /* --- LINKS --- */
-            prose-a:text-rose-300 
+            /* --- LINKS (Mantendo a nova cor solicitada) --- */
             prose-a:font-semibold
             prose-a:no-underline
+            
+            /* CORES BASE */
+            /* Claro: 500 | Escuro: 300 */
+            prose-a:text-rose-500 
+            dark:prose-a:text-rose-300
+            
+            /* HOVER STATE */
             [&_a:hover]:underline
             [&_a:hover]:decoration-1
             [&_a:hover]:underline-offset-2
-            [&_a:hover]:text-rose-400
-            dark:[&_a:hover]:text-rose-300
+            
+            /* CORES HOVER */
+            /* Claro: 600 | Escuro: 200 */
+            [&_a:hover]:text-rose-600
+            dark:[&_a:hover]:text-rose-200
             
             /* --- CODE BLOCKS --- */
             prose-pre:!bg-transparent prose-pre:!p-0 prose-pre:!font-normal prose-pre:!border-0 prose-pre:!ring-0
@@ -68,9 +77,10 @@ const { title, description } = Astro.props;
             prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
             
             /* --- IMAGES & LISTS --- */
-            /* Adicionado prose-img:mx-auto para centralizar */
             prose-img:rounded-lg prose-img:shadow-md prose-img:my-6 prose-img:mx-auto
-            prose-li:text-sm
+            
+            /* Revertido Listas para acompanhar os parágrafos (xs/sm) */
+            prose-li:text-xs sm:prose-li:text-sm
             prose-li:marker:text-gray-400 dark:prose-li:marker:text-gray-500
             
             /* --- HR --- */

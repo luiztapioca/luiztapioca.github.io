@@ -24,22 +24,27 @@ const posts = (await getCollection("posts", ({ data }) => {
                         <a 
                             href={`/blog/${post.id}/`} 
                             class="
-                                /* Mobile: text-sm | Desktop: text-lg */
-                                text-sm sm:text-lg font-medium
-                                text-rose-300! dark:text-rose-300!
-                                hover:text-rose-400! dark:hover:text-rose-200!
+                                /* Mobile: text-base (era sm) | Desktop: text-lg */
+                                text-base sm:text-lg font-medium
+                                
+                                /* CORES BASE: Claro 500 | Escuro 300 */
+                                text-rose-500 dark:text-rose-300
+                                
+                                /* CORES HOVER: Claro 600 | Escuro 200 */
+                                hover:text-rose-600 dark:hover:text-rose-200
+                                
                                 hover:underline decoration-1 underline-offset-2
                             "
                         >
                             {post.data.title}
                         </a>
-                            {post.data.draft && <span class="text-[10px] sm:text-xs text-blue-300 ml-2 font-mono no-underline">[RASCUNHO]</span>}
+                            {post.data.draft && <span class="text-xs sm:text-sm text-blue-300 ml-2 font-mono no-underline">[RASCUNHO]</span>}
 
                         <time 
                             datetime={post.data.date.toISOString()} 
                             class="
-                                /* Mobile: 10px | Desktop: text-sm */
-                                text-[10px] sm:text-sm 
+                                /* Mobile: text-xs (era 10px) | Desktop: text-sm */
+                                text-xs sm:text-sm 
                                 text-gray-500 dark:text-gray-400 font-mono whitespace-nowrap
                             "
                         >
@@ -52,7 +57,7 @@ const posts = (await getCollection("posts", ({ data }) => {
                     </div>
 
                     {post.data.tags && (
-                        <div class="flex gap-3 mt-1 text-[10px] sm:text-xs font-mono text-gray-500 dark:text-gray-400">
+                        <div class="flex gap-3 mt-1 text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400">
                             {post.data.tags.map((tag) => (
                                 <span>#{tag}</span>
                             ))}
