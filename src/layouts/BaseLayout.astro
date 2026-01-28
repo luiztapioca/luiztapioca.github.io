@@ -13,6 +13,22 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <title>{title}</title>
     <meta name="description" content={description} />
+    <script is:inline>
+        (function() {
+            const getInitialTheme = () => {
+                if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                    return localStorage.getItem('theme');
+                }
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            };
+
+            const theme = getInitialTheme();
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+            localStorage.setItem('theme', theme);
+        })();
+    </script>
 </head>
 <body class="
     font-mono min-h-screen max-w-3xl mx-auto px-4 
@@ -93,26 +109,6 @@ const { title, description } = Astro.props;
     <hr class="border-t-2 border-dashed border-gray-500 dark:border-gray-600 my-4"/>
     
     <Footer/>
-    
-    <script is:inline>
-        const theme = (() => {
-            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-                return localStorage.getItem('theme');
-            }
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                return 'dark';
-            }
-            return 'light';
-        })();
-
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-
-        window.localStorage.setItem('theme', theme);
-    </script>
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 </body>

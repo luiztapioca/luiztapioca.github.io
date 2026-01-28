@@ -1,21 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
+const getTheme = (): "light" | "dark" => {
+    if (typeof document === "undefined") return "light";
+    return document.documentElement.classList.contains("dark") ? "dark" : "light";
+};
+
 export default function ThemeToggle() {
-    const [theme, setTheme] = useState<"light" | "dark">("light");
+    const [theme, setTheme] = useState<"light" | "dark">(getTheme);
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
         setMounted(true);
-        const isDark = document.documentElement.classList.contains("dark");
-        setTheme(isDark ? "dark" : "light");
+        setTheme(getTheme());
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handleChange = (e: MediaQueryListEvent) => {
+            if (!localStorage.getItem("theme")) {
+                const newTheme = e.matches ? "dark" : "light";
+                document.documentElement.classList.toggle("dark", e.matches);
+                setTheme(newTheme);
+            }
+        };
+
+        mediaQuery.addEventListener("change", handleChange);
+        return () => mediaQuery.removeEventListener("change", handleChange);
     }, []);
 
     const toggleTheme = () => {
-        const element = document.documentElement;
         const newTheme = theme === "light" ? "dark" : "light";
         
-        element.classList.toggle("dark");
+        document.documentElement.classList.toggle("dark", newTheme === "dark");
         localStorage.setItem("theme", newTheme);
         setTheme(newTheme);
     };
