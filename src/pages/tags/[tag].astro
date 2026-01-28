@@ -26,9 +26,9 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout title={`Tag: #${tag}`} description={`Posts marcados com ${tag}`}>
-    <section>
-        <h1 class="font-bold text-2xl mb-8">
-            <span class="text-rose-500">#</span>{tag}
+    <section class="mt-4 sm:mt-8">
+        <h1 class="font-bold text-lg sm:text-2xl mb-6 sm:mb-8 font-mono">
+            <span class="text-rose-300">#</span> {tag}
         </h1>
         
         <ul class="flex flex-col gap-6 list-none p-0">
@@ -38,9 +38,10 @@ const { posts } = Astro.props;
                         <a 
                             href={`/blog/${post.id}/`} 
                             class="
-                                text-lg font-medium
-                                text-gray-900 dark:text-gray-100
-                                hover:text-rose-500 dark:hover:text-rose-400
+                                /* Mobile: text-sm | Desktop: text-lg */
+                                text-sm sm:text-lg font-medium
+                                text-rose-300! dark:text-rose-300!
+                                hover:text-rose-400! dark:hover:text-rose-200!
                                 hover:underline decoration-1 underline-offset-2
                             "
                         >
@@ -49,7 +50,11 @@ const { posts } = Astro.props;
 
                         <time 
                             datetime={post.data.date.toISOString()} 
-                            class="text-sm text-gray-500 dark:text-gray-400 font-mono whitespace-nowrap"
+                            class="
+                                /* Mobile: 10px | Desktop: text-sm */
+                                text-[10px] sm:text-sm 
+                                text-gray-500 dark:text-gray-400 font-mono whitespace-nowrap
+                            "
                         >
                             {post.data.date.toLocaleDateString('pt-BR', {
                                 day: '2-digit',
@@ -60,10 +65,10 @@ const { posts } = Astro.props;
                     </div>
 
                     {post.data.tags && (
-                        <div class="flex gap-3 mt-1 text-xs font-mono text-gray-500 dark:text-gray-400">
+                        <div class="flex gap-3 mt-1 text-[10px] sm:text-xs font-mono text-gray-500 dark:text-gray-400">
                             {post.data.tags.map((t) => (
-                                <span class={t === tag ? "text-rose-500 font-bold" : ""}>
-                                    #{t}
+                                <span class={t === tag ? "text-rose-200 font-bold" : ""}>
+                                    # {t}
                                 </span>
                             ))}
                         </div>
