@@ -12,8 +12,6 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <Font cssVariable="--font-playpen-sans" preload />
-    <Font cssVariable="--font-inter" preload />
     <Font cssVariable="--font-jetbrains" preload />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -35,7 +33,7 @@ const { title, description } = Astro.props;
     </script>
 </head>
 <body class="
-    font-inter min-h-screen max-w-3xl mx-auto px-4 
+    font-jetbrains min-h-screen max-w-3xl mx-auto px-4 
     bg-white text-gray-900 
     dark:bg-[#121212] dark:text-gray-200
     transition-colors duration-200
@@ -59,7 +57,7 @@ const { title, description } = Astro.props;
             prose-p:break-words       
 
             /* --- HEADINGS --- */
-            prose-headings:font-bold prose-headings:font-inter
+            prose-headings:font-bold prose-headings:font-jetbrains
             prose-h1:text-lg sm:prose-h1:text-2xl prose-h1:my-4 
             prose-h2:text-base sm:prose-h2:text-xl prose-h2:mt-8 prose-h2:my-3 
             prose-h3:text-sm sm:prose-h3:text-lg prose-h3:mt-6 prose-h3:my-2 

@@ -3,8 +3,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-playpen: var(--font-playpen-sans), cursive;
-  --font-inter: var(--font-inter), sans-serif;
   --font-jetbrains: var(--font-jetbrains), monospace;
 }
 
@@ -29,13 +27,9 @@ html {
 }
 
 .prose :where(code):not(:where(pre *, [class~="not-prose"], [class~="not-prose"] *)) {
-  background-color: rgb(0 0 0 / 0.05);
   color: rgb(225 29 72); /* rose-600 */
-  padding: 0.1rem 0.25rem;
-  border-radius: 0.2rem;
 }
 
 .dark .prose :where(code):not(:where(pre *, [class~="not-prose"], [class~="not-prose"] *)) {
-  background-color: rgb(255 255 255 / 0.08);
   color: rgb(251 113 133); /* rose-400 */
 }

@@ -15,21 +15,9 @@ export default defineConfig({
   experimental: {
     fonts: [{
       provider: fontProviders.google(),
-      name: "Playpen Sans",
-      cssVariable: "--font-playpen-sans",
-      weights: [400, 500, 600, 700],
-      styles: ["normal"],
-    }, {
-      provider: fontProviders.google(),
-      name: "Inter",
-      cssVariable: "--font-inter",
-      weights: [300, 400, 500, 600, 700],
-      styles: ["normal", "italic"],
-    }, {
-      provider: fontProviders.google(),
       name: "JetBrains Mono",
       cssVariable: "--font-jetbrains",
-      weights: [400, 500, 700],
+      weights: [300, 400, 500, 600, 700],
       styles: ["normal"],
     }]
   },
