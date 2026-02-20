@@ -27,7 +27,7 @@ const { posts } = Astro.props;
 
 <BaseLayout title={`Tag: #${tag}`} description={`Posts marcados com ${tag}`}>
     <section class="mt-4 sm:mt-8">
-        <h1 class="font-bold text-lg sm:text-2xl mb-6 sm:mb-8 font-mono">
+        <h1 class="font-bold text-lg sm:text-2xl mb-6 sm:mb-8 font-fira">
             <span class="text-rose-400 dark:text-rose-300">#</span> {tag}
         </h1>
         
@@ -39,7 +39,7 @@ const { posts } = Astro.props;
                             href={`/blog/${post.id}/`} 
                             class="
                                 /* Mobile: text-sm | Desktop: text-lg */
-                                text-sm sm:text-lg font-medium
+                                text-sm sm:text-lg font-medium font-fira
                                 
                                 /* CORES BASE: Claro 400 | Escuro 300 */
                                 text-rose-400 dark:text-rose-300
@@ -68,16 +68,6 @@ const { posts } = Astro.props;
                             })}
                         </time>
                     </div>
-
-                    {post.data.tags && (
-                        <div class="flex gap-3 mt-1 text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400">
-                            {post.data.tags.map((t) => (
-                                <span class={t === tag ? "text-rose-400 dark:text-rose-300 font-bold" : ""}>
-                                    #{t}
-                                </span>
-                            ))}
-                        </div>
-                    )}
                 </li>
             ))}
         </ul>

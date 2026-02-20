@@ -2,6 +2,12 @@
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-playpen: var(--font-playpen-sans), cursive;
+  --font-fira: var(--font-fira-sans), sans-serif;
+  --font-mono: var(--font-fira-mono), monospace;
+}
+
 html {
   transition: background-color 0.2s, color 0.2s;
 }
