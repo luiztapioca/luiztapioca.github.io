@@ -25,7 +25,7 @@ const posts = (await getCollection("posts", ({ data }) => {
                             href={`/blog/${post.id}/`} 
                             class="
                                 /* Mobile: text-sm (era sm) | Desktop: text-lg */
-                                text-sm sm:text-lg font-medium font-fira
+                                text-sm sm:text-lg font-medium font-inter
                                 
                                 /* CORES BASE: Claro 500 | Escuro 300 */
                                 text-rose-500 dark:text-rose-300
@@ -38,14 +38,14 @@ const posts = (await getCollection("posts", ({ data }) => {
                         >
                             {post.data.title}
                         </a>
-                            {post.data.draft && <span class="text-xs sm:text-sm text-blue-300 ml-2 font-mono no-underline">[RASCUNHO]</span>}
+                            {post.data.draft && <span class="text-xs sm:text-sm text-blue-300 ml-2 font-jetbrains no-underline">[RASCUNHO]</span>}
 
                         <time 
                             datetime={post.data.date.toISOString()} 
                             class="
                                 /* Mobile: text-xs (era 10px) | Desktop: text-sm */
                                 text-xs sm:text-sm 
-                                text-gray-500 dark:text-gray-400 font-mono whitespace-nowrap
+                                text-gray-500 dark:text-gray-400 font-jetbrains whitespace-nowrap
                             "
                         >
                             {post.data.date.toLocaleDateString('pt-BR', {
@@ -57,7 +57,7 @@ const posts = (await getCollection("posts", ({ data }) => {
                     </div>
 
                     {post.data.tags && (
-                        <div class="flex gap-3 mt-1 text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400">
+                        <div class="flex gap-3 mt-1 text-xs sm:text-sm font-jetbrains text-gray-500 dark:text-gray-400">
                             {post.data.tags.map((tag) => (
                                 <span>#{tag}</span>
                             ))}

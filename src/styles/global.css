@@ -4,10 +4,20 @@
 
 @theme {
   --font-playpen: var(--font-playpen-sans), cursive;
-  --font-fira: var(--font-fira-sans), sans-serif;
-  --font-mono: var(--font-fira-mono), monospace;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-jetbrains: var(--font-jetbrains), monospace;
 }
 
 html {
   transition: background-color 0.2s, color 0.2s;
+}
+
+::selection {
+  background-color: rgb(244 63 94 / 0.3); /* rose-500 with opacity */
+  color: inherit;
+}
+
+.dark ::selection {
+  background-color: rgb(253 164 175 / 0.3); /* rose-300 with opacity */
+  color: inherit;
 }

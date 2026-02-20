@@ -21,14 +21,14 @@ export default defineConfig({
       styles: ["normal"],
     }, {
       provider: fontProviders.google(),
-      name: "Fira Sans",
-      cssVariable: "--font-fira-sans",
+      name: "Inter",
+      cssVariable: "--font-inter",
       weights: [300, 400, 500, 600, 700],
       styles: ["normal", "italic"],
     }, {
       provider: fontProviders.google(),
       name: "JetBrains Mono",
-      cssVariable: "--font-fira-mono",
+      cssVariable: "--font-jetbrains",
       weights: [400, 500, 700],
       styles: ["normal"],
     }]
@@ -46,7 +46,7 @@ export default defineConfig({
       return ':root:not(.dark)'
     },
     styleOverrides: {
-      codeFontFamily: 'var(--font-mono)',
+      codeFontFamily: 'var(--font-jetbrains)',
       borderRadius: '0',
       frames: {
         shadowColor: 'transparent',

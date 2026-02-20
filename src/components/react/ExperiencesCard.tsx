@@ -13,7 +13,7 @@ export default function ExperiencesCard({ experiences }: Props) {
     const [experience, setExperience] = useState<Experience>(sortedExperiences[0]);
 
     return (
-        <div className="flex flex-col md:flex-row items-start gap-4 font-mono text-gray-900 dark:text-gray-200">
+        <div className="flex flex-col md:flex-row items-start gap-4 font-jetbrains text-gray-900 dark:text-gray-200">
             <div className="w-full md:w-1/3 overflow-y-auto">
                 <ul className="flex flex-row md:flex-col overflow-x-auto md:overflow-visible w-full pb-2 md:pb-0">
                     {sortedExperiences.map((exp) => {
