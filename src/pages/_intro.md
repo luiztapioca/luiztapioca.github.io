@@ -3,4 +3,4 @@ Esse site é a minha presença digital, contendo um blog e um resumo do meu *por
 
 Em resumo: admiro o mundo de desenvolvimento open-source, e gosto de experimentar com todo o tipo de tecnologia, isso agregando ou não no meu currículo -- querendo ou não, programação também é um hobbie.
 
-[The Grug Brained Developer: A layman's guide to thinking like the self-aware smol brained](https://grugbrain.dev/)
+[you say: complexity very, very bad](https://grugbrain.dev/)
