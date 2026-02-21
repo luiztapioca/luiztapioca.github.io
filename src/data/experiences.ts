@@ -42,13 +42,21 @@ export const experiences: Experience[] = [
         company: "E-Lattes",
         position: "Pesquisador",
         startDate: "2025-09-01",
-        endDate: "2026-03-01",
         description: "Modernização de Sistemas Legados",
         bullets: [
             "Lidero a migração estratégica da camada de persistência de banco de dados, transicionando de MariaDB para PostgreSQL para suportar queries complexas de análise acadêmica.",
             "Atuo na refatoração de código legado (Zend Framework), substituindo padrões antigos por ORMs modernos e garantindo a integridade referencial dos dados durante a migração.",
             "Arquiteto a reescrita de algoritmos recursivos de extração de currículos, migrando-os de R para Python. O projeto transforma scripts monolíticos em uma arquitetura de microsserviços escaláveis, orquestrados via filas de prioridade para habilitar processamento paralelo e assíncrono."
         ]
-    }
+    },
+    // {
+    //     id: "Rubik",
+    //     company: "Rubik",
+    //     position: "Desenvolvedor de Software",
+    //     startDate: "2026-01-01",
+    //     description: "Plataforma de estudos.",
+    //     bullets: [
 
+    //     ]
+    // }
 ];
