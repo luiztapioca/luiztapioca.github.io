@@ -2,8 +2,17 @@
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+  font-family: 'Monaco';
+  src: url('/fonts/Monaco.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
-  --font-jetbrains: var(--font-jetbrains), monospace;
+    --font-monaco: 'Monaco', monospace;
 }
 
 html {
@@ -37,4 +46,13 @@ html {
 /* Bullet list styling - use asterisk */
 .prose :where(ul > li):not(:where([class~="not-prose"], [class~="not-prose"] *))::marker {
   content: "* ";
+}
+
+@layer base {
+  b, strong, h1, h2, h3, h4, h5, h6 {
+    /* Engrossa a fonte artificialmente usando a própria cor do texto */
+    text-shadow: 0 0 0.5px currentColor, 0 0 0.5px currentColor;
+    /* Tenta forçar o navegador a sintetizar o bold (se suportado) */
+    font-synthesis: weight;
+  }
 }

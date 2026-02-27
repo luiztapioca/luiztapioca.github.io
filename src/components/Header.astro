@@ -7,7 +7,7 @@ const NAV_LINKS = [
     { title: "blog", link: "/blog"},
     { title: "sobre", link: "/sobre"},
     { title: "software", link: "/software"},
-    { title: "rss", link: "/rss.xml", newTab: true}, 
+    { title: "rss", link: "/rss.xml", newTab: true},
 ];
 
 const currentPath = Astro.url.pathname;
@@ -16,23 +16,27 @@ const currentPath = Astro.url.pathname;
     <nav class="mt-2">
         <ul class="flex gap-2 sm:gap-3 text-center text-sm sm:text-base">
         { NAV_LINKS.map((item, i) => {
-            const isActive = item.link === '/' 
-                ? currentPath === '/' 
+            const isActive = item.link === '/'
+                ? currentPath === '/'
                 : currentPath.startsWith(item.link);
 
             return (
-                <li class="font-semibold text-gray-800 dark:text-gray-200 flex gap-2 sm:gap-3 items-center">
-                    
+                /* Texto base da navbar: base00 no claro, base0 no escuro */
+                <li class="font-semibold text-[#657b83] dark:text-[#839496] flex gap-2 sm:gap-3 items-center">
+
                     { i !== 0 && (
-                        <Star class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-gray-400" />
+                        /* Ícone separador com cor mutada (base1 no claro, base01 no escuro) */
+                        <Star class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#93a1a1] dark:text-[#586e75]" />
                     )}
-                    
-                    <a 
+
+                    <a
                         class:list={[
                             "transition-colors",
-                            isActive 
-                                ? "text-rose-500 dark:text-rose-300" 
-                                : "hover:text-rose-600 dark:hover:text-rose-200 hover:underline hover:decoration-1 hover:underline-offset-2"
+                            isActive
+                                /* Link ativo usando o Azul Solarized */
+                                ? "text-[#268bd2] dark:text-[#268bd2]"
+                                /* Efeito hover usando o Magenta Solarized */
+                                : "hover:text-[#d33682] dark:hover:text-[#d33682] hover:underline hover:decoration-1 hover:underline-offset-2"
                         ]}
                         href={ item.link }
                         target={ item.newTab ? "_blank" : "_self" }

@@ -29,14 +29,14 @@ export default function ThemeToggle() {
 
     const toggleTheme = () => {
         const newTheme = theme === "light" ? "dark" : "light";
-        
+
         document.documentElement.classList.toggle("dark", newTheme === "dark");
         localStorage.setItem("theme", newTheme);
         setTheme(newTheme);
     };
 
     if (!mounted) {
-        return <div className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-0 mt-2" />; 
+        return <div className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-0 mt-2" />;
     }
 
     return (
@@ -44,9 +44,11 @@ export default function ThemeToggle() {
             onClick={toggleTheme}
             aria-label="Toggle Dark Mode"
             className="
-                text-gray-800 dark:text-gray-200 
-                hover:text-rose-600 dark:hover:text-rose-200 
-                transition-colors 
+                /* Cor inativa igual à da Navbar (base00 / base0) */
+                text-[#657b83] dark:text-[#839496]
+                /* Cor de Hover Magenta Solarized para interações */
+                hover:text-[#d33682] dark:hover:text-[#d33682]
+                transition-colors
                 ml-2 sm:ml-0 mt-2
             "
         >

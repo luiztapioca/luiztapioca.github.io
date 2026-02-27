@@ -13,39 +13,46 @@ const posts = (await getCollection("posts", ({ data }) => {
 
 <BaseLayout title="Blog" description="Minhas resenhas e pensamentos">
     <section>
-        <div class="mb-10 text-gray-700 dark:text-gray-300">
+        <div class="mb-10 text-[#657b83] dark:text-[#93a1a1]">
             <IntroContent />
         </div>
-        
+
         <ul class="flex flex-col gap-6 list-none p-0">
             {posts.map((post) => (
                 <li class="flex flex-col">
                     <div class="flex justify-between items-baseline gap-4 w-full">
-                        <a 
-                            href={`/blog/${post.id}/`} 
+                        <a
+                            href={`/blog/${post.id}/`}
                             class="
-                                /* Mobile: text-sm (era sm) | Desktop: text-lg */
+                                /* Mobile: text-sm | Desktop: text-lg */
                                 text-sm sm:text-lg font-medium font-jetbrains
-                                
-                                /* CORES BASE: Claro 500 | Escuro 300 */
-                                text-rose-500 dark:text-rose-300
-                                
-                                /* CORES HOVER: Claro 600 | Escuro 200 */
-                                hover:text-rose-600 dark:hover:text-rose-200
-                                
+
+                                /* CORES BASE: Azul Solarized */
+                                text-[#268bd2] dark:text-[#268bd2]
+
+                                /* CORES HOVER: Magenta Solarized */
+                                hover:text-[#d33682] dark:hover:text-[#d33682]
+
+                                transition-colors
                                 hover:underline decoration-1 underline-offset-2
                             "
                         >
                             {post.data.title}
                         </a>
-                            {post.data.draft && <span class="text-xs sm:text-sm text-blue-300 ml-2 font-jetbrains no-underline">[RASCUNHO]</span>}
+                            {post.data.draft && (
+                                /* Rascunho com a cor de Aviso (Laranja Solarized) */
+                                <span class="text-xs sm:text-sm text-[#cb4b16] dark:text-[#cb4b16] ml-2 font-jetbrains no-underline">
+                                    [RASCUNHO]
+                                </span>
+                            )}
 
-                        <time 
-                            datetime={post.data.date.toISOString()} 
+                        <time
+                            datetime={post.data.date.toISOString()}
                             class="
-                                /* Mobile: text-xs (era 10px) | Desktop: text-sm */
-                                text-xs sm:text-sm 
-                                text-gray-500 dark:text-gray-400 font-jetbrains whitespace-nowrap
+                                /* Mobile: text-xs | Desktop: text-sm */
+                                text-xs sm:text-sm
+                                /* Datas mutadas (base1/base01) */
+                                text-[#93a1a1] dark:text-[#586e75] font-jetbrains whitespace-nowrap
                             "
                         >
                             {post.data.date.toLocaleDateString('pt-BR', {
@@ -57,9 +64,12 @@ const posts = (await getCollection("posts", ({ data }) => {
                     </div>
 
                     {post.data.tags && (
-                        <div class="flex gap-3 mt-1 text-xs sm:text-sm font-jetbrains text-gray-500 dark:text-gray-400">
+                        /* Tags com cor mutada, mas mantendo o # colorido para dar vida */
+                        <div class="flex gap-3 mt-1 text-xs sm:text-sm font-jetbrains text-[#93a1a1] dark:text-[#586e75]">
                             {post.data.tags.map((tag) => (
-                                <span>#{tag}</span>
+                                <span>
+                                    <span class="text-[#d33682] dark:text-[#d33682]">#</span>{tag}
+                                </span>
                             ))}
                         </div>
                     )}

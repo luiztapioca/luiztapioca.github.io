@@ -12,29 +12,27 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  experimental: {
-    fonts: [{
-      provider: fontProviders.google(),
-      name: "JetBrains Mono",
-      cssVariable: "--font-jetbrains",
-      weights: [300, 400, 500, 600, 700],
-      styles: ["normal"],
-    }]
-  },
+  // experimental: {
+  //   fonts: [{
+  //     provider: fontProviders.google(),
+  //     name: "JetBrains Mono",
+  //     cssVariable: "--font-jetbrains",
+  //     weights: [300, 400, 500, 600, 700],
+  //     styles: ["normal"],
+  //   }]
+  // },
 
   integrations: [expressiveCode({
-    themes: ['catppuccin-latte', 'catppuccin-macchiato'],
-    // catppuccin-latte (light) is first, rose-pine (dark) is second
+    themes: ['solarized-light', 'solarized-dark'],
     useDarkModeMediaQuery: false,
     themeCssSelector: (theme) => {
-      // rose-pine is dark theme, catppuccin-latte is light theme
-      if (theme.name === 'catppuccin-macchiato') {
+      if (theme.name === 'solarized-dark') {
         return '.dark'
       }
       return ':root:not(.dark)'
     },
     styleOverrides: {
-      codeFontFamily: 'var(--font-jetbrains)',
+      codeFontFamily: 'Monaco',
       borderRadius: '0',
       frames: {
         shadowColor: 'transparent',

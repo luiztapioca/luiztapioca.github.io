@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import { Font } from "astro:assets";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 
@@ -12,7 +11,6 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <Font cssVariable="--font-jetbrains" preload />
     <title>{title}</title>
     <meta name="description" content={description} />
     <script is:inline>
@@ -33,83 +31,85 @@ const { title, description } = Astro.props;
     </script>
 </head>
 <body class="
-    font-jetbrains min-h-screen max-w-3xl mx-auto px-4 
-    bg-white text-gray-900 
-    dark:bg-[#121212] dark:text-gray-200
+    font-monaco min-h-screen max-w-3xl mx-auto px-4
+    /* Tema Claro - Fundo: base3, Texto: base00 */
+    bg-[#fdf6e3] text-[#657b83]
+    /* Tema Escuro - Fundo: base03, Texto: base0 */
+    dark:bg-[#002b36] dark:text-[#839496]
     transition-colors duration-200
 ">
     <Header/>
-    
-    <hr class="border-t-2 border-dashed border-gray-500 dark:border-gray-600 my-4"/>
-    
+
+    <hr class="border-t-2 border-dashed border-[#93a1a1] dark:border-[#586e75] my-4"/>
+
     <main>
         <article class="
-            prose max-w-none dark:prose-invert
-            
-            /* --- PARÁGRAFOS (P) --- */
-            /* Mobile: text-xs | Desktop: text-sm */
-            prose-p:text-xs sm:prose-p:text-sm
-            prose-p:leading-relaxed 
-            
-            /* Hifenização e Quebra de Linha */
-            prose-p:hyphens-auto      
-            prose-p:text-justify      
-            prose-p:break-words       
+                    prose max-w-none
 
-            /* --- HEADINGS --- */
-            prose-headings:font-bold prose-headings:font-jetbrains
-            prose-h1:text-lg sm:prose-h1:text-2xl prose-h1:my-4 
-            prose-h2:text-base sm:prose-h2:text-xl prose-h2:mt-8 prose-h2:my-3 
-            prose-h3:text-sm sm:prose-h3:text-lg prose-h3:mt-6 prose-h3:my-2 
-            
-            /* --- LINKS --- */
-            prose-a:font-semibold
-            prose-a:no-underline
-            
-            /* CORES BASE (Suas preferências) */
-            /* Claro: 500 | Escuro: 300 */
-            prose-a:text-rose-500 
-            dark:prose-a:text-rose-300
-            
-            /* HOVER STATE */
-            [&_a:hover]:underline
-            [&_a:hover]:decoration-1
-            [&_a:hover]:underline-offset-2
-            
-            /* CORES HOVER (Suas preferências) */
-            /* Claro: 600 | Escuro: 200 */
-            [&_a:hover]:text-rose-600
-            dark:[&_a:hover]:text-rose-200
-            
-            /* --- CODE BLOCKS --- */
-            prose-pre:!bg-transparent prose-pre:!p-0 prose-pre:!font-normal prose-pre:!border-0 prose-pre:!ring-0
-            prose-code:px-1 prose-code:font-jetbrains prose-code:text-[10px]! sm:prose-code:text-xs!
-            
-            /* --- BLOCKQUOTES --- */
-            prose-blockquote:bg-gray-100 dark:prose-blockquote:bg-gray-800/50
-            prose-blockquote:border-l-4 
-            prose-blockquote:border-gray-400 dark:prose-blockquote:border-gray-600
-            prose-blockquote:italic
-            prose-blockquote:ml-2
-            prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
-            
-            /* --- IMAGES & LISTS --- */
-            prose-img:rounded-lg prose-img:shadow-md prose-img:my-6 prose-img:mx-auto
-            
-            /* Listas */
-            prose-li:text-xs sm:prose-li:text-sm
-            prose-li:marker:text-gray-400 dark:prose-li:marker:text-gray-500
-            
-            /* --- HR --- */
-            prose-hr:border-dashed 
-            prose-hr:border-gray-600 dark:prose-hr:border-gray-700
-        ">
-            <slot />
+                    /* --- TEXTO BASE DO ARTIGO (Forçando a cor) --- */
+                    text-[#657b83] dark:text-[#93a1a1]
+
+                    /* --- PARÁGRAFOS (P) --- */
+                    prose-p:text-xs sm:prose-p:text-sm
+                    prose-p:leading-relaxed
+                    prose-p:hyphens-auto
+                    prose-p:text-justify
+                    prose-p:break-words
+                    /* Corrigindo a cor dos parágrafos no escuro */
+                    prose-p:text-[#657b83] dark:prose-p:text-[#93a1a1]
+
+                    /* --- TEXTOS EM DESTAQUE (Negrito) --- */
+                    prose-strong:text-[#586e75] dark:prose-strong:text-[#eee8d5]
+
+                    /* --- HEADINGS --- */
+                    prose-headings:font-bold prose-headings:font-monaco
+                    /* Títulos com mais contraste (base01 no claro, base2 no escuro) */
+                    prose-headings:text-[#586e75] dark:prose-headings:text-[#eee8d5]
+                    prose-h1:text-lg sm:prose-h1:text-2xl prose-h1:my-4
+                    prose-h2:text-base sm:prose-h2:text-xl prose-h2:mt-8 prose-h2:my-3
+                    prose-h3:text-sm sm:prose-h3:text-lg prose-h3:mt-6 prose-h3:my-2
+
+                    /* --- LINKS --- */
+                    prose-a:font-semibold
+                    prose-a:no-underline
+                    prose-a:text-[#268bd2] dark:prose-a:text-[#268bd2]
+
+                    /* HOVER STATE */
+                    [&_a:hover]:underline [&_a:hover]:decoration-1 [&_a:hover]:underline-offset-2
+                    [&_a:hover]:text-[#d33682] dark:[&_a:hover]:text-[#d33682]
+
+                    /* --- CODE BLOCKS --- */
+                    prose-pre:!bg-transparent prose-pre:!p-0 prose-pre:!font-normal prose-pre:!border-0 prose-pre:!ring-0
+                    prose-code:px-1 prose-code:font-monaco prose-code:text-[10px]! sm:prose-code:text-xs!
+                    prose-code:text-[#b58900] dark:prose-code:text-[#b58900]
+
+                    /* --- BLOCKQUOTES --- */
+                    prose-blockquote:bg-[#eee8d5] dark:prose-blockquote:bg-[#073642]
+                    prose-blockquote:border-l-4
+                    prose-blockquote:border-[#93a1a1] dark:prose-blockquote:border-[#586e75]
+                    prose-blockquote:italic
+                    prose-blockquote:ml-2
+                    prose-blockquote:text-[#586e75] dark:prose-blockquote:text-[#93a1a1]
+
+                    /* --- IMAGES & LISTS --- */
+                    prose-img:rounded-lg prose-img:shadow-md prose-img:my-6 prose-img:mx-auto
+
+                    /* Listas */
+                    prose-li:text-xs sm:prose-li:text-sm
+                    /* Corrigindo a cor das listas no escuro */
+                    prose-li:text-[#657b83] dark:prose-li:text-[#93a1a1]
+                    prose-li:marker:text-[#93a1a1] dark:prose-li:marker:text-[#586e75]
+
+                    /* --- HR INTERNO --- */
+                    prose-hr:border-dashed
+                    prose-hr:border-[#93a1a1] dark:prose-hr:border-[#586e75]
+                ">
+                    <slot />
         </article>
     </main>
-    
-    <hr class="border-t-2 border-dashed border-gray-500 dark:border-gray-600 my-4"/>
-    
+
+    <hr class="border-t-2 border-dashed border-[#93a1a1] dark:border-[#586e75] my-4"/>
+
     <Footer/>
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>

@@ -2,29 +2,30 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
-<BaseLayout 
-    title="404 - Página não encontrada" 
+<BaseLayout
+    title="404 - Página não encontrada"
     description="Esta página não existe."
 >
     <div class="flex flex-col items-center justify-center min-h-[60vh] text-center">
-        <div class="flex items-center gap-4 mb-6">
+        <div class="flex items-center gap-4 mb-6 text-[#657b83] dark:text-[#93a1a1]">
             <span class="text-2xl sm:text-xl">σ(￣、￣〃)</span>
-            <span class="text-3xl sm:text-5xl font-bold text-rose-500 dark:text-rose-300">404</span>
+            <span class="text-3xl sm:text-5xl font-bold text-[#dc322f] dark:text-[#dc322f]">404</span>
         </div>
-        
-        <p class="text-base sm:text-lg mb-8 text-gray-700 dark:text-gray-300">
+
+        <p class="text-base sm:text-lg mb-8 text-[#657b83] dark:text-[#93a1a1]">
             Essa página infelizmente não existe...
         </p>
-        
-        <a 
-            href="/" 
+
+        <a
+            href="/"
             class="
                 text-sm sm:text-base font-semibold
-                text-rose-500 dark:text-rose-300
-                hover:text-rose-600 dark:hover:text-rose-200
-                dark:border-rose-300
+                /* Link Base: Azul Solarized */
+                text-[#268bd2] dark:text-[#268bd2]
+                /* Hover: Magenta Solarized + Sublinhado */
+                hover:text-[#d33682] dark:hover:text-[#d33682]
+                hover:underline hover:decoration-1 hover:underline-offset-2
                 transition-colors
-                no-underline
             "
         >
             Voltar
