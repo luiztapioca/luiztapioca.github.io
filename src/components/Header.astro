@@ -35,9 +35,9 @@ const currentPath = Astro.url.pathname;
                             "transition-colors",
                             isActive
                                 /* Link ativo usando o Azul Solarized */
-                                ? "text-[#268bd2] dark:text-[#268bd2]"
+                                ? "text-[#d33682] dark:text-[#d33682]"
                                 /* Efeito hover usando o Magenta Solarized */
-                                : "hover:text-[#d33682] dark:hover:text-[#d33682] hover:underline hover:decoration-1 hover:underline-offset-2"
+                                : "hover:text-[#268bd2] dark:hover:text-[#268bd2] hover:underline hover:decoration-1 hover:underline-offset-2"
                         ]}
                         href={ item.link }
                         target={ item.newTab ? "_blank" : "_self" }
