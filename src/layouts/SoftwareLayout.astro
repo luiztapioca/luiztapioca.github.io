@@ -1,9 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import ExperiencesCard from "@components/react/ExperiencesCard";
-
-import { Content as IntroContent } from './_intro.md';
-
 import { experiences } from "@data/experiences";
 
 const title = "Software";
@@ -14,7 +11,7 @@ const description = "Desenvolvedor de Software e Pesquisador.";
 
     <section>
         {/* Este conteúdo já vai herdar automaticamente as cores Solarized do article no BaseLayout */}
-        <IntroContent />
+        <slot/>
     </section>
 
     <section class="not-prose mt-8">

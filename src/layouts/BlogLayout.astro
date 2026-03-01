@@ -2,8 +2,6 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-import { Content as IntroContent } from './_intro.md';
-
 const posts = (await getCollection("posts", ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
 })).sort(
@@ -14,7 +12,7 @@ const posts = (await getCollection("posts", ({ data }) => {
 <BaseLayout title="Blog" description="Minhas resenhas e pensamentos">
     <section>
         <div class="mb-10 text-[#657b83] dark:text-[#93a1a1]">
-            <IntroContent />
+            <slot />
         </div>
 
         <ul class="flex flex-col gap-6 list-none p-0">
