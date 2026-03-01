@@ -5,20 +5,20 @@ date: 2026-03-01
 draft: false
 ---
 
-`> writes entire systems alone 
+<p>> writes entire systems alone
 
-`> makes video on the internet actually work 
+<p>> makes video on the internet actually work 
 
-`> builds QEMU, virtualization becomes normal 
+<p>> builds QEMU, virtualization becomes normal 
 
-`> writes a C compiler for fun, it’s stupid fast 
+<p>> writes a C compiler for fun, it’s stupid fast 
 
-`> implements JavaScript correctly, not loudly 
+<p>> implements JavaScript correctly, not loudly 
 
-`> wins contests by finishing everything 
+<p>> wins contests by finishing everything 
 
-`> no hype, no blog, no brand 
+<p>> no hype, no blog, no brand 
 
-`> drops code, vanishes
+<p>> drops code, vanishes
 
 ![fabrice_bellard.jpg](../../assets/img/fabrice_bellard.jpg)
