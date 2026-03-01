@@ -47,14 +47,12 @@ export default function ExperiencesCard({ experiences }: Props) {
             <div className="w-full md:w-2/3 min-h-[300px]">
                 {experience && (
                     <div className="animate-fade-in px-2">
-                        {/* Título: Usa a regra de contraste superior para títulos (base01/base2) */}
                         <h2 className="font-bold text-base sm:text-xl mb-1 text-[#586e75] dark:text-[#eee8d5]">
                             {experience.position}{" "}
                             <span className="text-[#d33682] dark:text-[#d33682]">@</span>{" "}
                             {experience.company}
                         </h2>
 
-                        {/* Data: Cores mutadas/suaves (base1/base01) */}
                         <p className="italic text-[10px] sm:text-sm text-[#93a1a1] dark:text-[#586e75] mb-4 flex items-center gap-2">
                             <svg className="w-3 h-3 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><path d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" /></svg>
 

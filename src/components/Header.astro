@@ -21,11 +21,9 @@ const currentPath = Astro.url.pathname;
                 : currentPath.startsWith(item.link);
 
             return (
-                /* Texto base da navbar: base00 no claro, base0 no escuro */
                 <li class="font-semibold text-[#657b83] dark:text-[#839496] flex gap-2 sm:gap-3 items-center">
 
                     { i !== 0 && (
-                        /* Ícone separador com cor mutada (base1 no claro, base01 no escuro) */
                         <Star class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#93a1a1] dark:text-[#586e75]" />
                     )}
 

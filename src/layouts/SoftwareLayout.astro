@@ -10,13 +10,11 @@ const description = "Desenvolvedor de Software e Pesquisador.";
 <BaseLayout title={title} description={description}>
 
     <section>
-        {/* Este conteúdo já vai herdar automaticamente as cores Solarized do article no BaseLayout */}
         <slot/>
     </section>
 
     <section class="not-prose mt-8">
 
-        {/* O card de experiências já foi adaptado no ficheiro React */}
         <ExperiencesCard client:load experiences={experiences} />
 
     </section>
