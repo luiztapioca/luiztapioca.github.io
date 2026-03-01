@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseNotesLayout from '@layouts/BaseNotesLayout.astro';
+
+export async function getStaticPaths() {
+    const notes = await getCollection('notes', ({ data }) => {
+        return import.meta.env.PROD ? data.draft !== true : true;
+    });
+
+    return notes.map(post => ({
+        params: { slug: post.id },
+        props: post,
+    }));
+}
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseNotesLayout frontmatter={post.data}>
+    <Content />
+</BaseNotesLayout>

@@ -4,11 +4,11 @@ import { Star } from "@lucide/astro";
 
 const { frontmatter } = Astro.props;
 
-const { title, description, date, tags } = frontmatter || Astro.props;
+const { title, date, tags } = frontmatter || Astro.props;
 
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title}>
 
     <header class="mb-10">
         <h1 class="mb-4 text-2xl sm:text-3xl font-bold text-[#586e75] dark:text-[#93a1a1] font-jetbrains">
