@@ -1,10 +1,10 @@
 // @ts-check
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import icon from "astro-icon";
 import expressiveCode from 'astro-expressive-code';
 
-import react from '@astrojs/react';
+import svelte from '@astrojs/svelte';
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,7 +38,7 @@ export default defineConfig({
         shadowColor: 'transparent',
       },
     }
-  }), icon(), react()],
+  }), icon(), svelte()],
 
   site: "https://luiztapioca.github.io",
 });

@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import ExperiencesCard from "@components/react/ExperiencesCard";
-import { experiences } from "@data/experiences";
+import Terminal from "@components/svelte/terminal.svelte";
 
 const title = "Software";
 const description = "Desenvolvedor de Software e Pesquisador.";
@@ -14,9 +13,7 @@ const description = "Desenvolvedor de Software e Pesquisador.";
     </section>
 
     <section class="not-prose mt-8">
-
-        <ExperiencesCard client:load experiences={experiences} />
-
+        <Terminal client:load />
     </section>
 
 </BaseLayout>

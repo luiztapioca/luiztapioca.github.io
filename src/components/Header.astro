@@ -1,6 +1,6 @@
 ---
 import { Star } from "@lucide/astro";
-import ThemeToggle from "./react/ThemeToggle";
+import ThemeToggle from "./svelte/theme-toggle.svelte";
 
 const NAV_LINKS = [
     { title: "início", link: "/"},
@@ -30,7 +30,6 @@ const currentPath = Astro.url.pathname;
 
                     <a
                         class:list={[
-                            "transition-colors",
                             isActive
                                 /* Link ativo usando o Azul Solarized */
                                 ? "text-[#268bd2] dark:text-[#268bd2]"
@@ -48,5 +47,6 @@ const currentPath = Astro.url.pathname;
         </ul>
     </nav>
 
+    <!-- <ThemeToggle client:load /> -->
     <ThemeToggle client:load />
 </header>
