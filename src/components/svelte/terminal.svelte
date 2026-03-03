@@ -1,12 +1,10 @@
 <script lang="ts">
   import { experiences } from "@data/experiences";
 
-  // Nova sequência de 3 comandos
   let commands = ["ls", "cat resume.md", "./experiences"];
   let currentCommandIndex = $state(0);
   let displayedCommand = $state("");
 
-  // Controle de visibilidade dos resultados
   let showLsOutput = $state(false);
   let showResumeOutput = $state(false);
   let showExpOutput = $state(false);
@@ -29,19 +27,16 @@
       } else {
         timeout = setTimeout(() => {
           if (currentCommandIndex === 0) {
-            // Fim do comando ls
             showLsOutput = true;
             currentCommandIndex++;
             displayedCommand = "";
             timeout = setTimeout(() => typeCommand(0), executeDelay * 2);
           } else if (currentCommandIndex === 1) {
-            // Fim do comando cat resume.md
             showResumeOutput = true;
             currentCommandIndex++;
             displayedCommand = "";
             timeout = setTimeout(() => typeCommand(0), executeDelay * 2);
           } else if (currentCommandIndex === 2) {
-            // Fim do comando ./experiences
             showExpOutput = true;
           }
         }, executeDelay);
@@ -61,7 +56,7 @@
     }
   }
 
-  function formatDate(dateString?: string) {
+  function formatYYYYMM(dateString?: string) {
     if (!dateString) return 'Atual';
     return dateString.substring(0, 7);
   }
@@ -71,36 +66,32 @@
 
   <div class="flex items-center flex-wrap gap-1.5 sm:gap-2">
     <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
-        <span class="text-[#657b83] dark:text-[#839496] font-bold flex-shrink-0">ヾ(*'▽'*)</span>
-        <span class="text-[#268bd2] dark:text-[#268bd2] truncate">~/portfolio</span>
-        <span class="text-[#657b83] dark:text-[#839496] whitespace-nowrap">master<span class="text-[#dc322f] dark:text-[#dc322f]">*</span></span>
-        <span class="font-bold text-[#d33682] dark:text-[#d33682] flex-shrink-0">λ</span>
+        <span class="font-bold flex-shrink-0">ヾ(*'▽'*)</span>
+        <span class="text-[#268bd2] truncate">~/portfolio</span>
+        <span class="whitespace-nowrap">master<span class="text-[#dc322f]">*</span></span>
+        <span class="font-bold text-[#d33682] flex-shrink-0">λ</span>
     </div>
-
     <span class="break-all">{currentCommandIndex === 0 ? displayedCommand : commands[0]}</span>
-
     {#if currentCommandIndex === 0 && !showLsOutput}
         <span class="inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
     {/if}
   </div>
 
   {#if showLsOutput}
-    <div class="mt-3 mb-3 sm:mt-4 sm:mb-4 flex flex-wrap gap-2 sm:gap-4 px-2 sm:px-0">
-      <span class="text-[#657b83] dark:text-[#839496] text-xs sm:text-sm">experiences.go</span>
-      <span class="text-[#657b83] dark:text-[#839496] text-xs sm:text-sm">resume.md</span>
-      <span class="font-bold text-[#d33682] dark:text-[#d33682] text-xs sm:text-sm">experiences</span>
+    <div class="my-2 flex flex-wrap gap-4">
+      <span class="text-[#6c71c4]">experiences.go</span>
+      <span>resume.md</span>
+      <span class="font-bold text-[#2aa198]">experiences</span>
     </div>
 
-    <div class="flex items-center flex-wrap gap-1.5 sm:gap-2">
+    <div class="flex items-center flex-wrap gap-1.5 sm:gap-2 mt-2">
       <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
-          <span class="text-[#657b83] dark:text-[#839496] font-bold flex-shrink-0">ヾ(*'▽'*)</span>
-          <span class="text-[#268bd2] dark:text-[#268bd2] truncate">~/portfolio</span>
-          <span class="text-[#657b83] dark:text-[#839496] whitespace-nowrap">master<span class="text-[#dc322f] dark:text-[#dc322f]">*</span></span>
-          <span class="font-bold text-[#d33682] dark:text-[#d33682] flex-shrink-0">λ</span>
+          <span class="font-bold flex-shrink-0">ヾ(*'▽'*)</span>
+          <span class="text-[#268bd2] truncate">~/portfolio</span>
+          <span class="whitespace-nowrap">master<span class="text-[#dc322f]">*</span></span>
+          <span class="font-bold text-[#d33682] flex-shrink-0">λ</span>
       </div>
-
       <span class="break-all">{currentCommandIndex === 1 ? displayedCommand : commands[1]}</span>
-
       {#if currentCommandIndex === 1 && !showResumeOutput}
           <span class="inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
       {/if}
@@ -108,22 +99,26 @@
   {/if}
 
   {#if showResumeOutput}
-    <div class="mt-4 mb-6 pl-2 sm:pl-4">
-      <div class="flex flex-col gap-3 leading-relaxed opacity-90 text-[#657b83] dark:text-[#839496] text-xs sm:text-sm">
-        <p>
-          adoro reinventar a roda no meu tempo livre.
-        </p>
-      </div>
+    <div class="my-2">
+      <p class="leading-relaxed opacity-90">
+        atualmente trabalho com pesquisas e faço estágio de meio período,
+         ando buscando me aprofundar nas bases até o fim desse período de graduação.
+         <br>
+         <br>
+        entendo que o aprendizado leva tempo e dedicação, então, ao menos durante esse
+         período, eu ando reinventando muito a roda com o objetivo de aprender mais e mais
+         sobre as ferramentas e os paradigmas que são usados mundo a fora.
+
+      </p>
     </div>
 
-    <div class="flex items-center flex-wrap gap-1.5 sm:gap-2">
+    <div class="flex items-center flex-wrap gap-1.5 sm:gap-2 mt-2">
       <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
-          <span class="text-[#657b83] dark:text-[#839496] font-bold flex-shrink-0">ヾ(*'▽'*)</span>
-          <span class="text-[#268bd2] dark:text-[#268bd2] truncate">~/portfolio</span>
-          <span class="text-[#657b83] dark:text-[#839496] whitespace-nowrap">master<span class="text-[#dc322f] dark:text-[#dc322f]">*</span></span>
-          <span class="font-bold text-[#d33682] dark:text-[#d33682] flex-shrink-0">λ</span>
+          <span class="font-bold flex-shrink-0">ヾ(*'▽'*)</span>
+          <span class="text-[#268bd2] truncate">~/portfolio</span>
+          <span class="whitespace-nowrap">master<span class="text-[#dc322f]">*</span></span>
+          <span class="font-bold text-[#d33682] flex-shrink-0">λ</span>
       </div>
-
       <span class="break-all">{currentCommandIndex === 2 ? displayedCommand : commands[2]}</span>
 
       {#if currentCommandIndex === 2 && !showExpOutput}
@@ -133,48 +128,48 @@
   {/if}
 
   {#if showExpOutput}
-    <div class="mt-4 mb-2 pl-1 sm:pl-2">
-
-      <div class="flex flex-col gap-2 sm:gap-4 px-2 sm:px-0">
-        {#each experiences as exp}
-          <div
-            class="border border-[#eee8d5] dark:border-[#073642] p-2 sm:p-3 cursor-pointer hover:bg-[#f5f5dc] hover:dark:bg-[#002b36] transition-colors"
-            onclick={() => toggleExp(exp.id)}
-          >
-            <div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-between gap-1 sm:gap-2">
-              <div class="flex items-center gap-1 sm:gap-2 min-w-0">
-                <span class="text-[#dc322f] dark:text-[#dc322f] w-3 sm:w-4 text-center flex-shrink-0">
-                  {expandedExps.includes(exp.id) ? '▼' : '▶'}
-                </span>
-                <span class="font-bold text-[#dc322f] dark:text-[#dc322f] truncate text-xs sm:text-sm">{exp.company}</span>
-                <span class="opacity-60 flex-shrink-0">—</span>
-                <span class="font-semibold text-[#268bd2] dark:text-[#268bd2] truncate text-xs sm:text-sm">{exp.position}</span>
-              </div>
-              <div class="text-xs text-[#cb4b16] dark:text-[#cb4b16] opacity-80 font-semibold tracking-wide">
-                [{formatDate(exp.startDate)} → {formatDate(exp.endDate)}]
-              </div>
-            </div>
-
-            {#if expandedExps.includes(exp.id)}
-              <div class="mt-3 sm:mt-4 pl-4 sm:pl-6 animate-in slide-in-from-top-2 fade-in duration-200">
-                <div class="italic opacity-90 pl-2 py-0.5 my-1 text-xs sm:text-sm leading-relaxed">
-                  {exp.description}
-                </div>
-
-                <ul class="flex flex-col gap-1.5 sm:gap-2 mt-2 sm:mt-3">
-                  {#each exp.bullets as bullet}
-                    <li class="flex items-start gap-1.5 sm:gap-2 text-xs sm:text-sm">
-                      <span class="text-[#dc322f] dark:text-[#dc322f] flex-shrink-0 font-bold">&gt;</span>
-                      <span class="leading-relaxed opacity-90">{bullet}</span>
-                    </li>
-                  {/each}
-                </ul>
-              </div>
-            {/if}
-          </div>
-        {/each}
+    <div class="mt-3 flex flex-col w-full max-w-3xl border-t border-[#93a1a1]/30 dark:border-[#586e75]/30 pt-2">
+      <div class="mb-2 text-[#93a1a1] dark:text-[#586e75] text-xs uppercase tracking-widest font-bold">
+        Interativo (Pressione para expandir)
       </div>
 
+      {#each experiences as exp}
+        <div class="flex flex-col">
+          <div
+            class="flex items-center cursor-pointer py-1 px-1 hover:bg-[#eee8d5] hover:dark:bg-[#073642] select-none"
+            onclick={() => toggleExp(exp.id)}
+            role="button"
+          >
+            <span class="text-[#b58900] font-bold w-8 shrink-0">
+              {expandedExps.includes(exp.id) ? '[-]' : '[+]'}
+            </span>
+            <span class="font-bold text-[#268bd2]">{exp.company}</span>
+            <span class="text-[#93a1a1] dark:text-[#586e75] mx-2">-</span>
+            <span class="text-[#2aa198]">{exp.position}</span>
+          </div>
+
+          {#if expandedExps.includes(exp.id)}
+            <div class="flex flex-col pl-8 mt-1 mb-4 gap-2">
+
+              <div class="text-[#cb4b16] opacity-90 font-semibold tracking-wide inline-block py-0.5 w-fit">
+                [ {formatYYYYMM(exp.startDate)} :: {formatYYYYMM(exp.endDate)} ]
+              </div>
+
+              <div class="flex flex-col gap-1 mt-1">
+                {#each exp.bullets as bullet}
+                  <div class="flex items-start">
+                    <span class="text-[#2aa198] font-bold mr-2 mt-0.5">></span>
+                    <span class="leading-relaxed opacity-90">{bullet}</span>
+                  </div>
+                {/each}
+              </div>
+
+            </div>
+          {/if}
+        </div>
+      {/each}
+
+      <div class="h-2"></div>
     </div>
   {/if}
 
