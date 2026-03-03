@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import type { Experience } from "../../data/experiences";
+import type { Experience } from "@data/experiences";
 
 interface Props {
     experiences: Experience[];
