@@ -1,3 +1,3 @@
 ---
-layout: ../layouts/SoftwareLayout.astro
+layout: ../layouts/PortfolioLayout.astro
 ---
