@@ -13,9 +13,9 @@ const NAV_LINKS = [
 
 const currentPath = Astro.url.pathname;
 ---
-<header class="flex justify-between items-center my-3 sm:my-4 gap-2 sm:gap-0">
-    <nav class="mt-2 flex">
-        <ul class="flex gap-2 sm:gap-3 text-center text-sm sm:text-base">
+<header class="flex justify-between items-center my-3 sm:my-4 gap-2 sm:gap-0 overflow-x-hidden w-full min-w-0">
+    <nav class="mt-2 flex min-w-0 overflow-x-auto">
+        <ul class="flex flex-wrap gap-x-2 sm:gap-x-3 gap-y-1 text-center text-xs sm:text-base">
         { NAV_LINKS.map((item, i) => {
             const isActive = item.link === '/'
                 ? currentPath === '/'
