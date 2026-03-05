@@ -72,19 +72,19 @@
         <span class="font-bold text-[#d33682] flex-shrink-0">λ</span>
     </div>
     <span class="break-all">{currentCommandIndex === 0 ? displayedCommand : commands[0]}</span>
-    {#if currentCommandIndex === 0 && !showLsOutput}
-        <span class="inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
+    {#if currentCommandIndex === 0}
+        <span class="animate-blink inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
     {/if}
   </div>
 
   {#if showLsOutput}
-    <div class="my-2 flex flex-wrap gap-4">
+    <div class="my-2 flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
       <span class="text-[#6c71c4]">experiences.go</span>
       <span>resume.md</span>
       <span class="font-bold text-[#2aa198]">experiences</span>
     </div>
 
-    <div class="flex items-center flex-wrap gap-1.5 sm:gap-2 mt-2">
+    <div class="flex items-center flex-wrap gap-1.5 sm:gap-2 mt-2 animate-in fade-in slide-in-from-bottom-2 duration-300 delay-100">
       <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
           <span class="font-bold flex-shrink-0">ヾ(*'▽'*)</span>
           <span class="text-[#268bd2] truncate">~/portfolio</span>
@@ -92,14 +92,14 @@
           <span class="font-bold text-[#d33682] flex-shrink-0">λ</span>
       </div>
       <span class="break-all">{currentCommandIndex === 1 ? displayedCommand : commands[1]}</span>
-      {#if currentCommandIndex === 1 && !showResumeOutput}
-          <span class="inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
+      {#if currentCommandIndex === 1}
+          <span class="animate-blink inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
       {/if}
     </div>
   {/if}
 
   {#if showResumeOutput}
-    <div class="my-2">
+    <div class="my-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
       <p class="leading-relaxed opacity-90">
         atualmente trabalho com pesquisas e faço estágio de meio período,
          ando buscando me aprofundar nas bases até o fim desse período de graduação.
@@ -112,7 +112,7 @@
       </p>
     </div>
 
-    <div class="flex items-center flex-wrap gap-1.5 sm:gap-2 mt-2">
+    <div class="flex items-center flex-wrap gap-1.5 sm:gap-2 mt-2 animate-in fade-in slide-in-from-bottom-2 duration-300 delay-100">
       <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
           <span class="font-bold flex-shrink-0">ヾ(*'▽'*)</span>
           <span class="text-[#268bd2] truncate">~/portfolio</span>
@@ -122,23 +122,26 @@
       <span class="break-all">{currentCommandIndex === 2 ? displayedCommand : commands[2]}</span>
 
       {#if currentCommandIndex === 2 && !showExpOutput}
-          <span class="inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
+          <span class="animate-blink inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
       {/if}
     </div>
   {/if}
 
   {#if showExpOutput}
-    <div class="mt-3 flex flex-col w-full max-w-3xl border-t border-[#93a1a1]/30 dark:border-[#586e75]/30 pt-2">
-      <div class="mb-2 text-[#93a1a1] dark:text-[#586e75] text-xs uppercase tracking-widest font-bold">
-        Interativo (Pressione para expandir)
-      </div>
-
+    <div class="mt-3 flex flex-col w-full max-w-3xl border-t border-[#93a1a1]/30 dark:border-[#586e75]/30 pt-2 animate-in fade-in slide-in-from-bottom-4 duration-500">
       {#each experiences as exp}
         <div class="flex flex-col">
           <div
             class="flex items-center cursor-pointer py-1 px-1 hover:bg-[#eee8d5] hover:dark:bg-[#073642] select-none"
             onclick={() => toggleExp(exp.id)}
+            onkeydown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleExp(exp.id);
+              }
+            }}
             role="button"
+            tabindex="0"
           >
             <span class="text-[#b58900] font-bold w-8 shrink-0">
               {expandedExps.includes(exp.id) ? '[-]' : '[+]'}
@@ -149,7 +152,7 @@
           </div>
 
           {#if expandedExps.includes(exp.id)}
-            <div class="flex flex-col pl-8 mt-1 mb-4 gap-2">
+            <div class="flex flex-col pl-8 mt-1 mb-4 gap-2 animate-in fade-in slide-in-from-top-2 duration-200">
 
               <div class="text-[#cb4b16] opacity-90 font-semibold tracking-wide inline-block py-0.5 w-fit">
                 [ {formatYYYYMM(exp.startDate)} :: {formatYYYYMM(exp.endDate)} ]
