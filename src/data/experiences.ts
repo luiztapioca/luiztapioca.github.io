@@ -12,51 +12,53 @@ export const experiences: Experience[] = [
   {
     id: "BB",
     company: "Banco do Brasil",
-    position: "Estagiário",
+    position: "Estagiário em Desenvolvimento de Software",
     startDate: "2025-06-01",
-    description: "Analytics, Infra, Desenvolvimento",
+    description: "Engenharia de Software, IA e Infraestrutura",
     bullets: [
-      "Desenvolvi um Web-Server e orquestrador em Python que reduziu o tempo de deploy de 1 dia para minutos, integrando-se ao Git corporativo para automatizar a instalação de dependências, geração de certificados SSL e gerenciamento do ciclo de vida das aplicações.",
-      "Implementei arquitetura de segurança com Proxy Reverso (isolamento de portas 7000 -> 5000) e servidor Waitress, garantindo estabilidade em um ambiente restrito sem acesso ao Docker.",
-      "Engenhei uma biblioteca 'Wrapper' para SQLAlchemy que resolveu problemas críticos de connection pooling e thread-safety, além de um Framework de Formulários proprietário.",
-      "Implementei pipelines de backend para Agentes de IA, convertendo inferências não estruturadas em dados relacionais (PostgreSQL) para alimentar dashboards de decisão estratégica.",
-      "Projetei e publiquei o 'Direo Forge', um pacote pip interno com interface CLI (construído com Typer e Copier) para geração automatizada de boilerplates. A ferramenta consolidou um padrão arquitetural de minha autoria para novos projetos, garantindo a adoção de boas práticas e a integração out-of-the-box de bibliotecas corporativas."
+      "Desenvolvi uma plataforma interativa onde o usuário propõe novos indicadores de desempenho e os aprimora respondendo a perguntas de uma IA. Criei o motor de conversação orquestrando múltiplos agentes especialistas alimentados com dados corporativos.",
+      "Construí a 'Matriz de Aderência', um painel visual utilizado por altos executivos para avaliar se os indicadores co-criados com a IA estão alinhados aos objetivos estratégicos do banco.",
+      "Desenvolvi de ponta a ponta um sistema que consome dados via API (Businessmap) e alimenta um painel dinâmico em Flask e HTMX. A interface é exibida continuamente em todas as TVs da diretoria, fornecendo visão em tempo real para direcionamento de cobranças executivas.",
+      "Construí uma plataforma interna de deploy usando Python e WebSockets que reduziu o tempo de publicação de aplicações de 1 dia para poucos minutos, incluindo proxy reverso interno e isolamento de portas para rodar em ambiente sem Docker.",
+      "Desenvolvi uma biblioteca centralizada (SQLAlchemy e Pandas) que permite à aplicação consultar simultaneamente diferentes bancos de dados (PostgreSQL, IBM DB2 e SQLite), resolvendo travamentos causados por excesso de concorrência.",
+      "Projetei um padrão arquitetural de código adotado pela equipe e criei uma ferramenta de linha de comando (CLI com Typer e Copier) que gera automaticamente a estrutura base de novos projetos já com as bibliotecas corporativas."
     ]
   },
   {
     id: "ibict",
     company: "IBICT",
-    position: "Pesquisador",
-    startDate: "2025-01-03",
-    endDate: "2025-12-01",
-    description: "Desenvolvimento de microsserviços",
+    position: "Pesquisador em Backend e MLOps",
+    startDate: "2025-03-01",
+    endDate: "2025-11-01",
+    description: "Desenvolvimento de Microsserviços e Integração de IA",
     bullets: [
-      "Projetei um microsserviço de classificação de texto utilizando o padrão Producer-Consumer (FastAPI + Redis) para desacoplar a ingestão de dados da inferência pesada de IA.",
-      "Otimizei a performance do modelo BERT implementando Dynamic Batching e filas de processamento assíncronas, aumentando drasticamente o throughput da GPU.",
-      "Implementei estratégias de resiliência como Dead Letter Queues (DLQ) e Graceful Shutdown nos workers, assegurando a integridade dos dados em caso de falhas.",
-      "Realizei a containerização completa com Docker (incluindo GPU Passthrough) e validação de escalabilidade através de testes de estresse com K6."
+      "Criei uma API assíncrona (FastAPI) integrada ao Redis para gerenciar filas de mensagens, separando o recebimento dos dados do processamento pesado e mantendo o sistema responsivo.",
+      "Integrei um modelo de IA (BERT) para análise de textos e otimizei o envio de dados para a placa de vídeo (GPU) em lotes, alcançando o processamento de cerca de 400 mensagens por minuto.",
+      "Implementei filas de recuperação de erros e rotinas de desligamento seguro, garantindo que nenhum dado seja perdido caso o servidor precise ser reiniciado.",
+      "Configurei a infraestrutura com Docker (habilitando uso de GPU) e validei a estabilidade do sistema criando testes automatizados com K6, suportando acessos simultâneos sem lentidão."
     ]
   },
   {
     id: "E-Lattes",
-    company: "E-Lattes",
-    position: "Pesquisador",
+    company: "Plataforma E-Lattes",
+    position: "Desenvolvedor Backend (Bolsista)",
     startDate: "2025-09-01",
     description: "Modernização de Sistemas Legados",
     bullets: [
-      "Lidero a migração estratégica da camada de persistência de banco de dados, transicionando de MariaDB para PostgreSQL para suportar queries complexas de análise acadêmica.",
-      "Atuo na refatoração de código legado (Zend Framework), substituindo padrões antigos por ORMs modernos e garantindo a integridade referencial dos dados durante a migração.",
-      "Arquiteto a reescrita de algoritmos recursivos de extração de currículos, migrando-os de R para Python. O projeto transforma scripts monolíticos em uma arquitetura de microsserviços escaláveis, orquestrados via filas de prioridade para habilitar processamento paralelo e assíncrono."
+      "Reescrevi scripts legados de extração de currículos da linguagem R para Python, migrando de um código único (monolito) para serviços independentes.",
+      "Adicionei um sistema de filas com prioridade para permitir que grandes volumes de dados fossem processados simultaneamente de forma paralela e muito mais rápida.",
+      "Conduzi a migração do banco de dados de MariaDB para PostgreSQL, refatorando a estrutura para suportar consultas analíticas complexas e novas funcionalidades."
     ]
   },
   // {
-  //     id: "Rubik",
-  //     company: "Rubik",
-  //     position: "Desenvolvedor de Software",
-  //     startDate: "2026-01-01",
-  //     description: "Plataforma de estudos.",
-  //     bullets: [
-
-  //     ]
+  //   id: "NN-Go",
+  //   company: "Projeto Pessoal",
+  //   position: "Engenheiro de Software",
+  //   startDate: "2026-01-01", // Ajuste para a data em que começou
+  //   description: "Desenvolvimento de Rede Neural Artificial em Go",
+  //   bullets: [
+  //     "Desenvolvi uma rede neural artificial do zero utilizando exclusivamente a linguagem Go, construindo toda a lógica matemática sem o uso de bibliotecas externas de Inteligência Artificial.",
+  //     "Implementei algoritmos de treinamento e inferência para reconhecer e classificar dígitos numéricos manuscritos a partir da base de dados MNIST."
+  //   ]
   // }
 ];
