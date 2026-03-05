@@ -174,6 +174,16 @@
 
       <div class="h-2"></div>
     </div>
+
+    <a
+      href="/cv.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-2 flex items-center py-1 px-1 font-semibold text-[#657b83] dark:text-[#839496] hover:bg-[#eee8d5] hover:dark:bg-[#073642] hover:text-[#d33682] dark:hover:text-[#d33682] [text-decoration:none] hover:[text-decoration:none]"
+    >
+      <span class="text-[#b58900] font-bold w-8 shrink-0">[↓]</span>
+      Baixe meu currículo
+    </a>
   {/if}
 
 </div>
