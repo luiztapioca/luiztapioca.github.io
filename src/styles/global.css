@@ -45,7 +45,7 @@ html {
 
 /* Bullet list styling - use star */
 .prose :where(ul > li):not(:where([class~="not-prose"], [class~="not-prose"] *))::marker {
-  content: "✦ ";
+  content: "* ";
 }
 
 @layer base {
