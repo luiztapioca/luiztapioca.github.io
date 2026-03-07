@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseNotesLayout from '@layouts/BaseNotesLayout.astro';
+import Giscus from '@components/svelte/giscus.svelte';
 
 export async function getStaticPaths() {
     const notes = await getCollection('notes', ({ data }) => {
@@ -19,4 +20,5 @@ const { Content } = await render(post);
 
 <BaseNotesLayout frontmatter={post.data}>
     <Content />
+    <Giscus client:visible />
 </BaseNotesLayout>

@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BasePostLayout from '@layouts/BasePostLayout.astro';
+import Giscus from '@components/svelte/giscus.svelte';
 
 export async function getStaticPaths() {
     const posts = await getCollection('posts', ({ data }) => {
@@ -19,4 +20,5 @@ const { Content } = await render(post);
 
 <BasePostLayout frontmatter={post.data}>
     <Content />
+    <Giscus client:visible />
 </BasePostLayout>
