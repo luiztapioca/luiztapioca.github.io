@@ -7,7 +7,6 @@
   onclick={ toggleMode }
   class="
     flex-shrink-0 flex items-center justify-center
-    w-8 h-8
     text-[#657b83] dark:text-[#839496]
     hover:text-[#268bd2] dark:hover:text-[#268bd2]
     active:scale-90
@@ -16,5 +15,5 @@
     cursor-pointer
     [-webkit-tap-highlight-color:transparent]
   ">
-    <SunMoon class="h-5 w-5" />
+    <SunMoon class="h-3.5 w-3.5 sm:h-[1.1rem] sm:w-[1.1rem]" />
 </button>
