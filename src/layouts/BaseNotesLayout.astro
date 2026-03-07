@@ -11,13 +11,13 @@ const { title, date, tags } = frontmatter || Astro.props;
 <BaseLayout title={title}>
 
     <header class="mb-10">
-        <h1 class="mb-4 text-2xl sm:text-3xl font-bold text-[#586e75] dark:text-[#93a1a1] font-jetbrains">
+
+        <h1 class="text-2xl sm:text-3xl font-bold text-[#586e75] dark:text-[#93a1a1]">
             {title}
         </h1>
 
-        <div class="flex flex-wrap items-center gap-3 text-sm sm:text-base text-[#93a1a1] dark:text-[#586e75] font-jetbrains">
-
-            {date && (
+        {date && (
+            <div class="flex items-center gap-2 mt-2 text-sm text-[#93a1a1] dark:text-[#586e75]">
                 <time datetime={new Date(date).toISOString()}>
                     {new Date(date).toLocaleDateString('pt-BR', {
                         day: '2-digit',
@@ -25,33 +25,29 @@ const { title, date, tags } = frontmatter || Astro.props;
                         year: 'numeric',
                     })}
                 </time>
-            )}
 
-            {date && tags && tags.length > 0 && (
-                <Star class="w-3.5 h-3.5 text-[#93a1a1] dark:text-[#586e75]" />
-            )}
+                {tags && tags.length > 0 && (
+                    <Star class="w-3 h-3" />
+                )}
 
-            {tags && tags.length > 0 && (
-                <div class="flex gap-2 flex-wrap">
-                    {tags.map((tag:string) => (
-                        <a
-                            href={`/tags/${tag}`}
-                            class="
-                                /* CORES BASE: Azul Solarized */
-                                text-[#d33682] dark:text-[#d33682]
-
-                                /* CORES HOVER: Magenta Solarized */
-                                hover:text-[#268bd2] dark:hover:text-[#268bd2]
-
-                                hover:underline decoration-1 underline-offset-2
-                            "
-                        >
-                            #{tag}
-                        </a>
-                    ))}
-                </div>
-            )}
-        </div>
+                {tags && tags.length > 0 && (
+                    <div class="flex gap-2 flex-wrap">
+                        {tags.map((tag:string) => (
+                            <a
+                                href={`/tags/${tag}`}
+                                class="
+                                    text-[#d33682] dark:text-[#d33682]
+                                    hover:text-[#268bd2] dark:hover:text-[#268bd2]
+                                    hover:underline decoration-1 underline-offset-2
+                                "
+                            >
+                                #{tag}
+                            </a>
+                        ))}
+                    </div>
+                )}
+            </div>
+        )}
 
     </header>
 

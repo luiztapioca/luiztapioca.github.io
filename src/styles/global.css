@@ -4,15 +4,39 @@
 
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
-  font-family: 'Monaco';
-  src: url('/fonts/Monaco.ttf') format('truetype');
+  font-family: 'Maple Mono NF CN';
+  src: url('/fonts/MapleMono-NF-CN-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Maple Mono NF CN';
+  src: url('/fonts/MapleMono-NF-CN-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maple Mono NF CN';
+  src: url('/fonts/MapleMono-NF-CN-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maple Mono NF CN';
+  src: url('/fonts/MapleMono-NF-CN-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
 @theme {
-    --font-monaco: 'Monaco', monospace;
+    --font-maple: 'Maple Mono NF CN', monospace;
 }
 
 html {
@@ -48,13 +72,7 @@ html {
   content: "* ";
 }
 
-@layer base {
-  b, strong, h1, h2, h3, h4, h5, h6,
-  nav li {
-    -webkit-text-stroke: 0.3px currentColor;
-    font-synthesis: weight;
-  }
-}
+
 
 @layer utilities {
   .animate-blink {

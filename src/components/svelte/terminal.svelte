@@ -125,7 +125,10 @@
       <div class="border border-[#93a1a1]/30 dark:border-[#586e75]/30 rounded-lg overflow-hidden">
         <!-- title bar -->
         <div class="px-3 py-1.5 border-b border-[#93a1a1]/30 dark:border-[#586e75]/30 flex items-center justify-between">
-          <span class="text-[#d33682] font-bold">Experiências</span>
+          <div class="flex items-center gap-2">
+            <span class="text-[#d33682] font-bold">Experiências</span>
+            <span class="text-[0.75em] text-[#93a1a1] dark:text-[#586e75] italic">clique para expandir</span>
+          </div>
           <span class="text-[#93a1a1] dark:text-[#586e75] text-[0.8em]">{expandedExps.length}/{experiences.length}</span>
         </div>
 
@@ -136,7 +139,7 @@
             <div
               class="flex items-center gap-2 px-3 py-1.5 cursor-pointer select-none
                 {isOpen
-                  ? 'bg-[#d33682]/10 dark:bg-[#d33682]/10'
+                  ? 'bg-[#d33682]/10 dark:bg-[#d33682]/20'
                   : 'hover:bg-[#93a1a1]/10 dark:hover:bg-[#586e75]/10'
                 }"
               onclick={() => toggleExp(exp.id)}
@@ -152,7 +155,7 @@
             </div>
 
             {#if isOpen}
-              <div class="px-3 py-2 pl-8 flex flex-col gap-1 border-t border-[#93a1a1]/10 dark:border-[#586e75]/10 bg-[#eee8d5]/30 dark:bg-[#073642]/30">
+              <div class="px-3 py-2 pl-8 flex flex-col gap-1 border-t border-[#93a1a1]/10 dark:border-[#586e75]/10 bg-[#eee8d5]/30 dark:bg-[#073642]/60">
                 {#each exp.bullets as bullet}
                   <div class="flex items-start gap-1.5">
                     <span class="text-[#d33682] shrink-0 text-[0.7em] mt-[0.35em]">✦</span>
@@ -165,7 +168,7 @@
         {/each}
 
         <!-- footer -->
-        <div class="px-3 py-1.5 border-t border-[#93a1a1]/30 dark:border-[#586e75]/30 flex items-center justify-between text-[0.8em] text-[#93a1a1] dark:text-[#586e75]">
+        <div class="px-3 py-1.5 border-t border-[#93a1a1]/30 dark:border-[#586e75]/30 flex items-center text-[0.8em] text-[#93a1a1] dark:text-[#586e75]">
           <a
             href="/cv.pdf"
             target="_blank"
@@ -174,7 +177,6 @@
           >
             <span class="text-[#b58900]">[↓]</span> Baixe meu currículo
           </a>
-          <span>↑↓ navegar · ↵ expandir</span>
         </div>
       </div>
     </div>
