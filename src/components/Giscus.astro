@@ -1,0 +1,46 @@
+---
+---
+<section class="mt-12 not-prose giscus">
+    <script
+        src="https://giscus.app/client.js"
+        data-repo="luiztapioca/luiztapioca.github.io"
+        data-repo-id="R_kgDOQrW4bw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOQrW4b84C35Q-"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="https://luiztapioca.github.io/giscus-solarized-light.css"
+        data-lang="pt"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+    ></script>
+</section>
+
+<script>
+    function getGiscusTheme() {
+        const base = "https://luiztapioca.github.io";
+        return document.documentElement.classList.contains("dark")
+            ? `${base}/giscus-solarized-dark.css`
+            : `${base}/giscus-solarized-light.css`;
+    }
+
+    function setGiscusTheme(theme: string) {
+        const iframe = document.querySelector<HTMLIFrameElement>("iframe.giscus-frame");
+        if (iframe) {
+            iframe.contentWindow?.postMessage(
+                { giscus: { setConfig: { theme } } },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    // Watch for dark mode toggle
+    const observer = new MutationObserver(() => {
+        setGiscusTheme(getGiscusTheme());
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+</script>
