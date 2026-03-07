@@ -2,9 +2,7 @@
   import { mode } from "mode-watcher";
 
   const BASE_URL = "https://luiztapioca.github.io";
-  const themeUrl = (t) => t === "dark"
-    ? `${BASE_URL}/giscus-solarized-dark.css`
-    : `${BASE_URL}/giscus-solarized-light.css`;
+  const themeUrl = (t) => t === "dark" ? "dark_dimmed" : "light";
 
   let container = $state(null);
 
