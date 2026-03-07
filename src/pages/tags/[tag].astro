@@ -27,50 +27,37 @@ const { posts } = Astro.props;
 
 <BaseLayout title={`Tag: #${tag}`} description={`Posts marcados com ${tag}`}>
     <section class="mt-4 sm:mt-8">
-        <h1 class="font-bold text-lg sm:text-2xl mb-6 sm:mb-8 font-jetbrains text-[#586e75] dark:text-[#eee8d5]">
-            <span class="text-[#d33682] dark:text-[#d33682]">#</span> {tag}
+        <h1 class="not-prose text-sm sm:text-lg font-bold font-monaco text-[#586e75] dark:text-[#eee8d5] mb-6">
+            <span class="text-[#268bd2]"># </span>{tag}
         </h1>
 
-        <ul class="flex flex-col gap-6 list-none p-0">
+        <div class="not-prose flex flex-col gap-3 text-xs sm:text-sm font-monaco">
             {posts.map((post) => (
-                <li class="flex flex-col">
-                    <div class="flex justify-between items-baseline gap-4 w-full">
-                        <a
-                            href={`/blog/${post.id}/`}
-                            class="
-                                /* Mobile: text-sm | Desktop: text-lg */
-                                text-sm sm:text-lg font-medium font-jetbrains
-
-                                /* CORES BASE: Azul Solarized */
-                                text-[#268bd2] dark:text-[#268bd2]
-
-                                /* CORES HOVER: Magenta Solarized */
-                                hover:text-[#d33682] dark:hover:text-[#d33682]
-
-                                hover:underline decoration-1 underline-offset-2
-                            "
-                        >
-                            {post.data.title}
-                        </a>
-
-                        <time
-                            datetime={post.data.date.toISOString()}
-                            class="
-                                /* Mobile: xs | Desktop: sm */
-                                text-xs sm:text-sm
-                                /* Cores mutadas/suaves para as datas (base1/base01) */
-                                text-[#93a1a1] dark:text-[#586e75] font-jetbrains whitespace-nowrap
-                            "
-                        >
-                            {post.data.date.toLocaleDateString('pt-BR', {
-                                day: '2-digit',
-                                month: 'short',
-                                year: 'numeric',
-                            })}
-                        </time>
-                    </div>
-                </li>
+                <a
+                    href={`/blog/${post.id}/`}
+                    class="group flex items-baseline gap-1.5 min-w-0 [text-decoration:none] hover:[text-decoration:none]"
+                >
+                    <span class="text-[#d33682] shrink-0">✦</span>
+                    <span class="
+                        truncate
+                        text-[#657b83] dark:text-[#93a1a1]
+                        group-hover:text-[#d33682] dark:group-hover:text-[#d33682]
+                    ">
+                        {post.data.title}
+                    </span>
+                    <span class="flex-1 border-b border-dotted border-[#93a1a1]/40 dark:border-[#586e75]/40 translate-y-[-0.3em] mx-1"></span>
+                    <time
+                        datetime={post.data.date.toISOString()}
+                        class="text-[#93a1a1] dark:text-[#586e75] whitespace-nowrap shrink-0"
+                    >
+                        {post.data.date.toLocaleDateString('pt-BR', {
+                            day: '2-digit',
+                            month: 'short',
+                            year: 'numeric',
+                        })}
+                    </time>
+                </a>
             ))}
-        </ul>
+        </div>
     </section>
 </BaseLayout>

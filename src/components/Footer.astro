@@ -1,7 +1,12 @@
 ---
-import { Icon } from "astro-icon/components"
+import { Star } from "@lucide/astro";
 ---
 
-<footer class="flex justify-center text-[#268bd2] dark:text-[#268bd2] select-none text-sm my-4 font-jetbrains text-center items-center gap-5">
-    ⸜(*ˊᗜˋ*)⸝
+<footer class="my-6 select-none font-jetbrains text-center">
+    <div class="flex items-center gap-3 mb-3">
+        <span class="flex-1 border-t-2 border-dashed border-[#93a1a1] dark:border-[#586e75]"></span>
+        <Star class="w-3 h-3 text-[#d33682] dark:text-[#d33682]" />
+        <span class="flex-1 border-t-2 border-dashed border-[#93a1a1] dark:border-[#586e75]"></span>
+    </div>
+    <span class="text-[#d33682] dark:text-[#d33682] text-sm">⸜(*ˊᗜˋ*)⸝</span>
 </footer>

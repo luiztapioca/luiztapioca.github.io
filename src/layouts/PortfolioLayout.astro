@@ -1,9 +1,16 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Terminal from "@components/svelte/terminal.svelte";
+import { marked } from "marked";
+import fs from "node:fs";
+import path from "node:path";
 
 const title = "Software";
 const description = "Desenvolvedor de Software e Pesquisador.";
+
+const resumePath = path.resolve("src/content/resume.md");
+const resumeMd = fs.readFileSync(resumePath, "utf-8");
+const resumeHtml = await marked(resumeMd);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -13,7 +20,7 @@ const description = "Desenvolvedor de Software e Pesquisador.";
     </section>
 
     <section class="not-prose mt-8">
-        <Terminal client:load />
+        <Terminal client:load resumeHtml={resumeHtml} />
     </section>
 
 </BaseLayout>

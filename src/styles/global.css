@@ -43,16 +43,15 @@ html {
   color: rgb(251 113 133); /* rose-400 */
 }
 
-/* Bullet list styling - use asterisk */
+/* Bullet list styling - use star */
 .prose :where(ul > li):not(:where([class~="not-prose"], [class~="not-prose"] *))::marker {
-  content: "* ";
+  content: "✦ ";
 }
 
 @layer base {
-  b, strong, h1, h2, h3, h4, h5, h6 {
-    /* Engrossa a fonte artificialmente usando a própria cor do texto */
-    text-shadow: 0 0 0.5px currentColor, 0 0 0.5px currentColor;
-    /* Tenta forçar o navegador a sintetizar o bold (se suportado) */
+  b, strong, h1, h2, h3, h4, h5, h6,
+  nav li {
+    -webkit-text-stroke: 0.3px currentColor;
     font-synthesis: weight;
   }
 }

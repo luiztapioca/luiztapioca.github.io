@@ -8,10 +8,10 @@
   class="
     flex-shrink-0 flex items-center justify-center
     text-[#657b83] dark:text-[#839496]
-    hover:text-[#268bd2] dark:hover:text-[#268bd2]
+    hover:text-[#d33682] dark:hover:text-[#d33682]
     active:scale-90
     transition-all duration-150
-    focus:outline-none focus-visible:ring-2 focus-visible:ring-[#268bd2]
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d33682]
     cursor-pointer
     [-webkit-tap-highlight-color:transparent]
   ">

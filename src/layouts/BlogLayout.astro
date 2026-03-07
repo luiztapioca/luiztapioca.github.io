@@ -11,46 +11,32 @@ const posts = (await getCollection("posts", ({ data }) => {
 
 <BaseLayout title="Blog" description="Minhas resenhas e pensamentos">
     <section>
-        <div class="mb-10 text-[#657b83] dark:text-[#93a1a1]">
+        <div class="mb-8 text-[#657b83] dark:text-[#93a1a1]">
             <slot />
         </div>
 
-        <ul class="flex flex-col gap-6 list-none p-0">
+        <div class="not-prose flex flex-col gap-3 text-xs sm:text-sm font-monaco">
             {posts.map((post) => (
-                <li class="flex flex-col">
-                    <div class="flex justify-between items-baseline gap-4 w-full">
-                        <a
-                            href={`/blog/${post.id}/`}
-                            class="
-                                /* Mobile: text-sm | Desktop: text-lg */
-                                text-sm sm:text-lg font-medium font-jetbrains
-
-                                /* CORES BASE: Azul Solarized */
-                                text-[#268bd2] dark:text-[#268bd2]
-
-                                /* CORES HOVER: Magenta Solarized */
-                                hover:text-[#d33682] dark:hover:text-[#d33682]
-
-                                hover:underline decoration-1 underline-offset-2
-                            "
-                        >
+                <a
+                    href={`/blog/${post.id}/`}
+                    class="group flex flex-col gap-0.5 [text-decoration:none] hover:[text-decoration:none]"
+                >
+                    <div class="flex items-baseline gap-1.5 min-w-0">
+                        <span class="text-[#d33682] shrink-0">✦</span>
+                        <span class="
+                            truncate
+                            text-[#657b83] dark:text-[#93a1a1]
+                            group-hover:text-[#d33682] dark:group-hover:text-[#d33682]
+                        ">
                             {post.data.title}
-                        </a>
-                            {post.data.draft && (
-                                /* Rascunho com a cor de Aviso (Laranja Solarized) */
-                                <span class="text-xs sm:text-sm text-[#cb4b16] dark:text-[#cb4b16] ml-2 font-jetbrains no-underline">
-                                    [RASCUNHO]
-                                </span>
-                            )}
-
+                        </span>
+                        {post.data.draft && (
+                            <span class="text-[#cb4b16] shrink-0">[rascunho]</span>
+                        )}
+                        <span class="flex-1 border-b border-dotted border-[#93a1a1]/40 dark:border-[#586e75]/40 translate-y-[-0.3em] mx-1"></span>
                         <time
                             datetime={post.data.date.toISOString()}
-                            class="
-                                /* Mobile: text-xs | Desktop: text-sm */
-                                text-xs sm:text-sm
-                                /* Datas mutadas (base1/base01) */
-                                text-[#93a1a1] dark:text-[#586e75] font-jetbrains whitespace-nowrap
-                            "
+                            class="text-[#93a1a1] dark:text-[#586e75] whitespace-nowrap shrink-0"
                         >
                             {post.data.date.toLocaleDateString('pt-BR', {
                                 day: '2-digit',
@@ -59,23 +45,15 @@ const posts = (await getCollection("posts", ({ data }) => {
                             })}
                         </time>
                     </div>
-
                     {post.data.tags && (
-                        /* Tags com cor mutada, mas mantendo o # colorido para dar vida */
-                        <div class="flex gap-3 mt-1 text-xs sm:text-sm font-jetbrains text-[#93a1a1] dark:text-[#586e75]">
+                        <div class="flex gap-2 pl-4 text-[0.85em] text-[#93a1a1] dark:text-[#586e75]">
                             {post.data.tags.map((tag) => (
-                                <span>
-                                    <a href={`/tags/${tag}`}><span class="
-                                        text-[#d33682] dark:text-[#d33682] hover:text-[#268bd2] dark:hover:text-[#268bd2]
-
-                                        hover:underline decoration-1 underline-offset-2
-                                    ">#{tag}</span></a>
-                                </span>
+                                <span class="group-hover:text-[#268bd2]">#{tag}</span>
                             ))}
                         </div>
                     )}
-                </li>
+                </a>
             ))}
-        </ul>
+        </div>
     </section>
 </BaseLayout>
