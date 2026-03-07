@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
   {
     id: "BB",
     company: "Banco do Brasil",
-    position: "Estagiário em Desenvolvimento de Software",
+    position: "Estagiário",
     startDate: "2025-06-01",
     description: "Engenharia de Software, IA e Infraestrutura",
     bullets: [
@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
   {
     id: "ibict",
     company: "IBICT",
-    position: "Pesquisador em Backend e MLOps",
+    position: "Pesquisador",
     startDate: "2025-03-01",
     endDate: "2025-11-01",
     description: "Desenvolvimento de Microsserviços e Integração de IA",
@@ -41,7 +41,7 @@ export const experiences: Experience[] = [
   {
     id: "E-Lattes",
     company: "Plataforma E-Lattes",
-    position: "Desenvolvedor Backend (Bolsista)",
+    position: "Desenvolvedor",
     startDate: "2025-09-01",
     description: "Modernização de Sistemas Legados",
     bullets: [

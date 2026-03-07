@@ -73,7 +73,7 @@
     </div>
     <span class="break-all">{currentCommandIndex === 0 ? displayedCommand : commands[0]}</span>
     {#if currentCommandIndex === 0}
-        <span class="animate-blink inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
+        <span class="animate-blink inline-block w-1.5 sm:w-2 h-3 sm:h-4 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
     {/if}
   </div>
 
@@ -93,7 +93,7 @@
       </div>
       <span class="break-all">{currentCommandIndex === 1 ? displayedCommand : commands[1]}</span>
       {#if currentCommandIndex === 1}
-          <span class="animate-blink inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
+          <span class="animate-blink inline-block w-1.5 sm:w-2 h-3 sm:h-4 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
       {/if}
     </div>
   {/if}
@@ -122,7 +122,7 @@
       <span class="break-all">{currentCommandIndex === 2 ? displayedCommand : commands[2]}</span>
 
       {#if currentCommandIndex === 2 && !showExpOutput}
-          <span class="animate-blink inline-block w-2 sm:w-2.5 h-4 sm:h-5 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
+          <span class="animate-blink inline-block w-1.5 sm:w-2 h-3 sm:h-4 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
       {/if}
     </div>
   {/if}
@@ -132,7 +132,7 @@
       {#each experiences as exp}
         <div class="flex flex-col">
           <div
-            class="flex items-center cursor-pointer py-1 px-1 hover:bg-[#eee8d5] hover:dark:bg-[#073642] select-none"
+            class="flex items-start cursor-pointer py-1 px-1 hover:bg-[#eee8d5] hover:dark:bg-[#073642] select-none"
             onclick={() => toggleExp(exp.id)}
             onkeydown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') {
@@ -143,12 +143,14 @@
             role="button"
             tabindex="0"
           >
-            <span class="text-[#b58900] font-bold w-8 shrink-0">
+            <span class="text-[#b58900] font-bold w-8 shrink-0 mt-0.5">
               {expandedExps.includes(exp.id) ? '[-]' : '[+]'}
             </span>
-            <span class="font-bold text-[#268bd2]">{exp.company}</span>
-            <span class="text-[#93a1a1] dark:text-[#586e75] mx-2">-</span>
-            <span class="text-[#2aa198]">{exp.position}</span>
+            <div class="flex flex-wrap items-center gap-x-1 min-w-0">
+              <span class="font-bold text-[#268bd2]">{exp.company}</span>
+              <span class="text-[#93a1a1] dark:text-[#586e75]">-</span>
+              <span class="text-[#2aa198]">{exp.position}</span>
+            </div>
           </div>
 
           {#if expandedExps.includes(exp.id)}
