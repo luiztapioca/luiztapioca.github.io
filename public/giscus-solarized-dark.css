@@ -1,23 +1,114 @@
+/*! Solarized Dark for Giscus — bool.tec.br */
+
 main {
+  color: #839496;
+  background-color: #002b36;
+
   --color-canvas-default: #002b36;
+  --color-canvas-overlay: #002b36;
   --color-canvas-subtle: #073642;
   --color-canvas-inset: #073642;
   --color-border-default: #586e75;
-  --color-border-muted: #586e75;
+  --color-border-muted: rgba(88, 110, 117, 0.4);
+  --color-border-overlay: #586e75;
   --color-fg-default: #839496;
   --color-fg-muted: #586e75;
   --color-fg-subtle: #586e75;
+  --color-fg-on-emphasis: #fdf6e3;
   --color-accent-fg: #d33682;
   --color-accent-emphasis: #d33682;
+  --color-accent-muted: rgba(211, 54, 130, 0.3);
+  --color-accent-subtle: rgba(211, 54, 130, 0.1);
   --color-neutral-muted: rgba(88, 110, 117, 0.2);
+  --color-neutral-subtle: rgba(88, 110, 117, 0.1);
+  --color-neutral-emphasis: #93a1a1;
+  --color-neutral-emphasis-plus: #eee8d5;
+
   --color-btn-bg: #073642;
-  --color-btn-border: #586e75;
+  --color-btn-border: rgba(88, 110, 117, 0.4);
   --color-btn-text: #839496;
   --color-btn-hover-bg: #002b36;
   --color-btn-hover-border: #93a1a1;
+  --color-btn-active-bg: #073642;
   --color-btn-primary-bg: #d33682;
   --color-btn-primary-border: #d33682;
   --color-btn-primary-text: #fdf6e3;
   --color-btn-primary-hover-bg: #c42d75;
   --color-btn-primary-hover-border: #c42d75;
+  --color-social-reaction-bg-hover: #073642;
+  --color-social-reaction-bg-reacted-hover: rgba(211, 54, 130, 0.2);
+}
+
+main * {
+  color: inherit;
+  border-color: rgba(88, 110, 117, 0.4);
+}
+
+main a {
+  color: #d33682;
+}
+
+main a:hover {
+  color: #268bd2;
+}
+
+main .gsc-reaction-button.has-reacted {
+  border-color: rgba(211, 54, 130, 0.5);
+  color: #d33682;
+  background-color: rgba(211, 54, 130, 0.08);
+}
+
+main textarea {
+  color: #839496;
+  background-color: #002b36;
+}
+
+main textarea::placeholder {
+  color: #586e75;
+}
+
+/* Typography — system monospace to match site feel */
+main {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+main .gsc-comment-box textarea {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  font-size: 12px;
+}
+
+/* Reactions — compact, minimal */
+main .gsc-reactions {
+  gap: 6px;
+}
+
+main .gsc-reaction-button {
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  border: 1px solid rgba(88, 110, 117, 0.3);
+}
+
+main .gsc-reaction-button:hover {
+  border-color: #d33682;
+}
+
+/* Comments — clean spacing */
+main .gsc-comment {
+  border: 1px solid rgba(88, 110, 117, 0.3);
+  border-radius: 6px;
+}
+
+main .gsc-header {
+  font-size: 11px;
+}
+
+main .gsc-comment-box-tabs {
+  font-size: 11px;
+}
+
+main .gsc-comment-box-separator {
+  border-top: 1px dashed rgba(88, 110, 117, 0.4);
 }
