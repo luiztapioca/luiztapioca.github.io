@@ -71,17 +71,14 @@
 <div class="text-xs sm:text-sm md:text-base text-[#657b83] dark:text-[#839496] overflow-hidden">
 
 {#snippet promptLine(text: string, showCursor: boolean)}
-  <div class="flex items-center flex-wrap gap-1.5 sm:gap-2">
+  <div class="flex items-center gap-1.5 sm:gap-2">
     <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
-      <span class="font-bold flex-shrink-0">ヾ(*'▽'*)</span>
-      <span class="text-[#268bd2] truncate">~/portfolio</span>
+      <span class="font-bold">ヾ(*'▽'*)</span>
+      <span class="text-[#268bd2]">~/portfolio</span>
       <span class="whitespace-nowrap">master<span class="text-[#dc322f]">*</span></span>
-      <span class="font-bold text-[#d33682] flex-shrink-0">λ</span>
+      <span class="font-bold text-[#d33682]">λ</span>
     </div>
-    <span class="break-all">{text}</span>
-    {#if showCursor}
-      <span class="animate-blink inline-block w-1.5 sm:w-2 h-3 sm:h-4 bg-current ml-0.5 sm:ml-1 align-middle flex-shrink-0"></span>
-    {/if}
+    <span class="break-all">{text}{#if showCursor}<span class="animate-blink inline-block w-1.5 sm:w-2 h-[0.8em] translate-y-[0.1em] bg-current ml-px"></span>{/if}</span>
   </div>
 {/snippet}
 
@@ -128,60 +125,73 @@
   {/if}
 
   {#if showExpOutput}
-    <div class="mt-3 flex flex-col w-full max-w-3xl border-t border-[#93a1a1]/30 dark:border-[#586e75]/30 pt-2 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      {#each experiences as exp}
-        <div class="flex flex-col">
-          <div
-            class="flex items-start cursor-pointer py-1 px-1 hover:bg-[#eee8d5] hover:dark:bg-[#073642] select-none"
-            onclick={() => toggleExp(exp.id)}
-            onkeydown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleExp(exp.id);
-              }
-            }}
-            role="button"
-            tabindex="0"
-          >
-            <span class="text-[#b58900] font-bold w-8 shrink-0 pt-0.5">
-              {expandedExps.includes(exp.id) ? '[-]' : '[+]'}
-            </span>
-            <div class="flex flex-col min-w-0">
-              <span class="font-bold text-[#268bd2]">{exp.company}</span>
-              <span class="text-[#2aa198]">
-                {exp.position}
-                <span class="text-[#cb4b16] opacity-90 font-semibold">
-                  · [ {formatYYYYMM(exp.startDate)} :: {formatYYYYMM(exp.endDate)} ]
-                </span>
-              </span>
-            </div>
-          </div>
+    <div class="mt-3 w-full max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <div class="border border-[#93a1a1]/50 dark:border-[#586e75]/50">
 
-          {#if expandedExps.includes(exp.id)}
-            <div class="flex flex-col pl-8 mt-1 mb-4 gap-1 animate-in fade-in slide-in-from-top-2 duration-200">
-              {#each exp.bullets as bullet}
-                <div class="flex items-start">
-                  <span class="text-[#2aa198] font-bold mr-2 mt-0.5">></span>
-                  <span class="leading-relaxed opacity-90">{bullet}</span>
-                </div>
-              {/each}
+        <div class="flex items-center gap-2 px-2 py-0.5 border-b border-[#93a1a1]/50 dark:border-[#586e75]/50 bg-[#eee8d5] dark:bg-[#073642] select-none">
+          <span class="text-[#b58900] font-bold">Experiência Profissional</span>
+          <span class="text-[#93a1a1] dark:text-[#586e75] text-[0.75em] ml-auto">↵ expandir</span>
+        </div>
+
+        {#each experiences as exp}
+          <div class="flex flex-col border-b last:border-b-0 border-[#93a1a1]/20 dark:border-[#586e75]/20">
+            <div
+              class="flex items-start cursor-pointer px-2 py-1.5 select-none {expandedExps.includes(exp.id) ? 'bg-[#eee8d5] dark:bg-[#073642]' : 'hover:bg-[#eee8d5]/60 dark:hover:bg-[#073642]/60'}"
+              onclick={() => toggleExp(exp.id)}
+              onkeydown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  toggleExp(exp.id);
+                }
+              }}
+              role="button"
+              tabindex="0"
+            >
+              <span class="text-[#d33682] font-bold w-5 shrink-0">
+                {expandedExps.includes(exp.id) ? '▼' : '▶'}
+              </span>
+              <div class="flex flex-col min-w-0">
+                <span class="font-bold text-[#268bd2]">{exp.company}</span>
+                <span class="text-[#2aa198]">
+                  {exp.position}
+                  <span class="text-[#cb4b16] opacity-80">· [ {formatYYYYMM(exp.startDate)} :: {formatYYYYMM(exp.endDate)} ]</span>
+                </span>
+              </div>
             </div>
+
+            {#if expandedExps.includes(exp.id)}
+              <div class="px-2 pt-1.5 pb-2 border-t border-[#93a1a1]/20 dark:border-[#586e75]/20 animate-in fade-in slide-in-from-top-1 duration-150">
+                <div class="flex flex-col gap-1 pl-5">
+                  {#each exp.bullets as bullet}
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-[#2aa198] font-bold shrink-0">›</span>
+                      <span class="leading-relaxed opacity-90">{bullet}</span>
+                    </div>
+                  {/each}
+                </div>
+              </div>
+            {/if}
+          </div>
+        {/each}
+
+        <div class="flex items-center px-2 py-0.5 border-t border-[#93a1a1]/50 dark:border-[#586e75]/50 bg-[#eee8d5] dark:bg-[#073642] select-none text-[#93a1a1] dark:text-[#586e75] text-[0.75em]">
+          <span>{experiences.length} entradas</span>
+          {#if expandedExps.length > 0}
+            <span class="ml-auto">{expandedExps.length} expandido{expandedExps.length !== 1 ? 's' : ''}</span>
           {/if}
         </div>
-      {/each}
+      </div>
 
-      <div class="h-2"></div>
+      <a
+        href="/cv.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-2 flex items-center py-1 px-1 font-semibold text-[#657b83] dark:text-[#839496] hover:bg-[#eee8d5] hover:dark:bg-[#073642] hover:text-[#d33682] dark:hover:text-[#d33682] [text-decoration:none] hover:[text-decoration:none]"
+      >
+        <span class="text-[#b58900] font-bold w-8 shrink-0">[↓]</span>
+        Baixe meu currículo
+      </a>
     </div>
-
-    <a
-      href="/cv.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="mt-2 flex items-center py-1 px-1 font-semibold text-[#657b83] dark:text-[#839496] hover:bg-[#eee8d5] hover:dark:bg-[#073642] hover:text-[#d33682] dark:hover:text-[#d33682] [text-decoration:none] hover:[text-decoration:none]"
-    >
-      <span class="text-[#b58900] font-bold w-8 shrink-0">[↓]</span>
-      Baixe meu currículo
-    </a>
   {/if}
 
 </div>
