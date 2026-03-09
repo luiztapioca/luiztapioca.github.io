@@ -21,10 +21,10 @@ const currentPath = Astro.url.pathname;
                 : currentPath.startsWith(item.link);
 
             return (
-                <li class="font-semibold text-[#657b83] dark:text-[#839496] flex gap-2 sm:gap-3 items-center">
+                <li class="font-semibold text-[#657b83] dark:text-[#839496] flex gap-1.5 sm:gap-2 items-center">
 
                     { i !== 0 && (
-                        <span class="text-[#93a1a1] dark:text-[#586e75] text-xs select-none">·</span>
+                        <span class="text-[#6c71c4] text-[0.65rem] sm:text-xs select-none font-bold">∘</span>
                     )}
 
                     <a

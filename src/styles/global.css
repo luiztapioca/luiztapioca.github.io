@@ -43,36 +43,155 @@ html {
   transition: background-color 0.2s, color 0.2s;
 }
 
+/* ═══ Twinkling star particles ═══ */
+body {
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  opacity: 0.12;
+  animation: twinkle-slow 6s ease-in-out infinite alternate;
+  box-shadow:
+    /* Layer 1 — muted base stars */
+    12vw 8vh 1px 0px #93a1a1,
+    87vw 15vh 1px 0px #93a1a1,
+    45vw 32vh 0.5px 0px #93a1a1,
+    72vw 48vh 1px 0px #93a1a1,
+    28vw 65vh 0.5px 0px #93a1a1,
+    91vw 72vh 1px 0px #93a1a1,
+    6vw 88vh 0.5px 0px #93a1a1,
+    55vw 91vh 1px 0px #93a1a1,
+    38vw 12vh 0.5px 0px #93a1a1,
+    80vw 38vh 1px 0px #93a1a1,
+    18vw 55vh 0.5px 0px #93a1a1,
+    63vw 78vh 1px 0px #93a1a1,
+    95vw 5vh 0.5px 0px #93a1a1,
+    33vw 45vh 1px 0px #93a1a1,
+    8vw 25vh 0.5px 0px #93a1a1,
+    70vw 60vh 1px 0px #93a1a1,
+    50vw 82vh 0.5px 0px #93a1a1,
+    22vw 95vh 1px 0px #93a1a1,
+    /* Layer 2 — magenta accent stars */
+    42vw 18vh 1px 0.5px #d33682,
+    78vw 55vh 1px 0.5px #d33682,
+    15vw 72vh 0.5px 0.5px #d33682,
+    58vw 4vh 1px 0.5px #d33682,
+    88vw 88vh 0.5px 0.5px #d33682,
+    /* Layer 3 — blue/violet accent stars */
+    25vw 40vh 1px 0.5px #268bd2,
+    65vw 22vh 0.5px 0.5px #6c71c4,
+    92vw 42vh 1px 0.5px #268bd2,
+    5vw 58vh 0.5px 0.5px #6c71c4,
+    48vw 68vh 1px 0.5px #268bd2;
+}
+
+body::after {
+  opacity: 0.08;
+  animation: twinkle-fast 4s ease-in-out infinite alternate-reverse;
+  box-shadow:
+    17vw 14vh 0.5px 0px #93a1a1,
+    82vw 28vh 1px 0px #93a1a1,
+    52vw 52vh 0.5px 0px #93a1a1,
+    35vw 75vh 1px 0px #93a1a1,
+    68vw 85vh 0.5px 0px #93a1a1,
+    10vw 42vh 1px 0px #93a1a1,
+    75vw 8vh 0.5px 0px #93a1a1,
+    40vw 95vh 1px 0px #93a1a1,
+    60vw 35vh 0.5px 0px #d33682,
+    30vw 82vh 1px 0px #6c71c4,
+    85vw 62vh 0.5px 0px #268bd2,
+    3vw 18vh 1px 0px #d33682;
+}
+
+.dark body::before { opacity: 0.22; }
+.dark body::after { opacity: 0.14; }
+
+@keyframes twinkle-slow {
+  0% { opacity: inherit; }
+  100% { opacity: 0.04; }
+}
+
+@keyframes twinkle-fast {
+  0% { opacity: inherit; }
+  100% { opacity: 0.18; }
+}
+
+/* ═══ Selection — violet (FP accent) ═══ */
 ::selection {
-  background-color: rgb(244 63 94 / 0.3); /* rose-500 with opacity */
+  background-color: rgb(108 113 196 / 0.3); /* violet #6c71c4 */
   color: inherit;
 }
 
 .dark ::selection {
-  background-color: rgb(253 164 175 / 0.3); /* rose-300 with opacity */
+  background-color: rgb(108 113 196 / 0.35); /* violet #6c71c4 */
   color: inherit;
 }
 
-/* Inline code styling - remove backticks and add highlight */
+/* ═══ Inline code styling ═══ */
 .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before,
 .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
   content: "" !important;
 }
 
 .prose :where(code):not(:where(pre *, [class~="not-prose"], [class~="not-prose"] *)) {
-  color: rgb(225 29 72); /* rose-600 */
+  color: #b58900; /* solarized yellow */
 }
 
 .dark .prose :where(code):not(:where(pre *, [class~="not-prose"], [class~="not-prose"] *)) {
-  color: rgb(251 113 133); /* rose-400 */
+  color: #b58900; /* solarized yellow */
 }
 
-/* Bullet list styling - use star */
+/* ═══ Bullet list — star marker ═══ */
 .prose :where(ul > li):not(:where([class~="not-prose"], [class~="not-prose"] *))::marker {
-  content: "* ";
+  content: "✦ ";
+  color: #d33682;
 }
 
+/* ═══ Blockquote — Haskell comment prefix ═══ */
+.prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  position: relative;
+  padding-left: 2rem;
+}
 
+.prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
+  content: "--";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.75rem;
+  font-style: normal;
+  font-weight: bold;
+  color: #6c71c4;
+  opacity: 0.6;
+}
+
+.dark .prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
+  color: #6c71c4;
+  opacity: 0.7;
+}
+
+/* ═══ Ordered list — use λ-calc style ═══ */
+.prose :where(ol > li):not(:where([class~="not-prose"], [class~="not-prose"] *))::marker {
+  color: #6c71c4;
+}
+
+/* ═══ Type signature utility ═══ */
+.type-sig {
+  font-style: italic;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
 
 @layer utilities {
   .animate-blink {

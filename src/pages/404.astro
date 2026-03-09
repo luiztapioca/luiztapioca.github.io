@@ -6,28 +6,31 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     title="404 - Página não encontrada"
     description="Esta página não existe."
 >
-    <div class="flex flex-col items-center justify-center min-h-[60vh] text-center">
-        <div class="flex items-center gap-4 mb-6 text-[#657b83] dark:text-[#93a1a1]">
-            <span class="text-2xl sm:text-xl">σ(￣、￣〃)</span>
-            <span class="text-3xl sm:text-5xl font-bold text-[#dc322f] dark:text-[#dc322f]">404</span>
-        </div>
+    <div class="flex flex-col items-center justify-center min-h-[60vh] text-center not-prose font-maple">
 
-        <p class="text-base sm:text-lg mb-8 text-[#657b83] dark:text-[#93a1a1]">
+        <div class="text-3xl sm:text-5xl font-bold text-[#dc322f] dark:text-[#dc322f] mb-4">404</div>
+
+        <span class="text-2xl mb-4 text-[#657b83] dark:text-[#93a1a1]">σ(￣、￣〃)</span>
+
+        <p class="text-sm mb-2 text-[#93a1a1] dark:text-[#586e75]">
             Essa página infelizmente não existe...
         </p>
+
+        <!-- minimal pattern match accent -->
+        <div class="text-xs text-[#93a1a1] dark:text-[#586e75] mb-6">
+            <span class="text-[#cb4b16] dark:text-[#cb4b16]">Nothing</span> <span class="text-[#6c71c4] dark:text-[#6c71c4]">→</span> <span class="text-[#dc322f] dark:text-[#dc322f]">✦</span>
+        </div>
 
         <a
             href="/"
             class="
-                text-sm sm:text-base font-semibold
-                /* Link Base: Azul Solarized */
+                text-sm font-semibold
                 text-[#d33682] dark:text-[#d33682]
-                /* Hover: Magenta Solarized + Sublinhado */
                 hover:text-[#268bd2] dark:hover:text-[#268bd2]
                 hover:underline hover:decoration-1 hover:underline-offset-2
             "
         >
-            Voltar
+            ← voltar
         </a>
     </div>
 </BaseLayout>

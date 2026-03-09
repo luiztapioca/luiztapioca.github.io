@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import { Star } from "@lucide/astro";
 
 const { frontmatter } = Astro.props;
 
@@ -12,13 +11,14 @@ const { title, description, date, tags } = frontmatter || Astro.props;
 
     <header class="mb-10">
 
-        <h1 class="text-2xl sm:text-3xl font-bold text-[#586e75] dark:text-[#93a1a1]">
+        <h1 class="text-2xl sm:text-3xl font-bold text-[#586e75] dark:text-[#eee8d5]">
             {title}
         </h1>
 
         {date && (
-            <div class="flex items-center gap-2 mt-2 text-sm text-[#93a1a1] dark:text-[#586e75]">
-                <time datetime={new Date(date).toISOString()}>
+            <div class="flex items-center gap-1.5 mt-3 text-xs sm:text-sm text-[#93a1a1] dark:text-[#586e75] font-maple flex-wrap">
+                <span class="text-[#6c71c4] dark:text-[#6c71c4]">--</span>
+                <time datetime={new Date(date).toISOString()} class="italic">
                     {new Date(date).toLocaleDateString('pt-BR', {
                         day: '2-digit',
                         month: 'short',
@@ -27,7 +27,7 @@ const { title, description, date, tags } = frontmatter || Astro.props;
                 </time>
 
                 {tags && tags.length > 0 && (
-                    <Star class="w-3 h-3" />
+                    <span class="text-[#6c71c4] dark:text-[#6c71c4]">|</span>
                 )}
 
                 {tags && tags.length > 0 && (

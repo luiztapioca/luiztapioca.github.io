@@ -15,6 +15,12 @@ const posts = (await getCollection("posts", ({ data }) => {
             <slot />
         </div>
 
+        {posts.length === 0 ? (
+            <div class="not-prose text-center py-12 text-[#93a1a1] dark:text-[#586e75]">
+                <span class="text-2xl block mb-2">(´・ω・`)</span>
+                <span class="text-sm">nenhum post ainda...</span>
+            </div>
+        ) : (
         <div class="not-prose flex flex-col gap-4 text-xs sm:text-sm font-maple">
             {posts.map((post) => (
                 <a
@@ -23,7 +29,7 @@ const posts = (await getCollection("posts", ({ data }) => {
                 >
                     <div class="flex items-baseline justify-between gap-2 min-w-0">
                         <div class="flex items-baseline gap-1.5 min-w-0">
-                            <span class="text-[#d33682] shrink-0">✦</span>
+                            <span class="text-[#d33682] dark:text-[#d33682] shrink-0">✦</span>
                             <span class="
                                 truncate
                                 text-[#657b83] dark:text-[#93a1a1]
@@ -32,7 +38,7 @@ const posts = (await getCollection("posts", ({ data }) => {
                                 {post.data.title}
                             </span>
                             {post.data.draft && (
-                                <span class="text-[#cb4b16] shrink-0">[rascunho]</span>
+                                <span class="text-[#cb4b16] dark:text-[#cb4b16] shrink-0">[rascunho]</span>
                             )}
                         </div>
                         <span class="flex-1 min-w-4 h-px translate-y-[-0.3em] bg-[radial-gradient(circle,_#93a1a140_1.5px,_transparent_1.5px)] dark:bg-[radial-gradient(circle,_#586e7540_1.5px,_transparent_1.5px)] bg-[length:8px_3px]"></span>
@@ -48,14 +54,15 @@ const posts = (await getCollection("posts", ({ data }) => {
                         </time>
                     </div>
                     {post.data.tags && post.data.tags.length > 0 && (
-                        <div class="flex gap-2 pl-4 text-[0.85em] text-[#93a1a1] dark:text-[#586e75]">
+                        <div class="flex gap-2 pl-5 text-[0.85em] text-[#93a1a1] dark:text-[#586e75]">
                             {post.data.tags.map((tag) => (
-                                <span class="group-hover:text-[#268bd2]">#{tag}</span>
+                                <span class="group-hover:text-[#268bd2] dark:group-hover:text-[#268bd2]">#{tag}</span>
                             ))}
                         </div>
                     )}
                 </a>
             ))}
         </div>
+        )}
     </section>
 </BaseLayout>

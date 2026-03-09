@@ -9,31 +9,35 @@ const notes = (await getCollection("notes", ({ data }) => {
 );
 ---
 
-<BaseLayout title="Blog" description="Minhas resenhas e pensamentos">
+<BaseLayout title="Notas" description="Notas e anotações rápidas">
     <section>
         <div class="mb-8 text-[#657b83] dark:text-[#93a1a1]">
             <slot />
         </div>
 
-        <div class="not-prose flex flex-col gap-4 text-xs sm:text-sm font-maple">
+        {notes.length === 0 ? (
+            <div class="not-prose text-center py-12 text-[#93a1a1] dark:text-[#586e75]">
+                <span class="text-2xl block mb-2">(´・ω・`)</span>
+                <span class="text-sm">nenhuma nota ainda...</span>
+            </div>
+        ) : (
+        <div class="not-prose flex flex-col gap-3 text-xs sm:text-sm font-maple">
             {notes.map((post) => (
                 <a
                     href={`/notes/${post.id}/`}
                     class="group flex items-baseline gap-2 min-w-0 [text-decoration:none] hover:[text-decoration:none]"
                 >
-                    <div class="flex items-baseline gap-1.5 min-w-0">
-                        <span class="text-[#d33682] shrink-0">✦</span>
-                        <span class="
-                            truncate
-                            text-[#657b83] dark:text-[#93a1a1]
-                            group-hover:text-[#d33682] dark:group-hover:text-[#d33682]
-                        ">
-                            {post.data.title}
-                        </span>
-                        {post.data.draft && (
-                            <span class="text-[#cb4b16] shrink-0">[rascunho]</span>
-                        )}
-                    </div>
+                    <span class="text-[#d33682] dark:text-[#d33682] shrink-0">✦</span>
+                    <span class="
+                        truncate
+                        text-[#657b83] dark:text-[#93a1a1]
+                        group-hover:text-[#d33682] dark:group-hover:text-[#d33682]
+                    ">
+                        {post.data.title}
+                    </span>
+                    {post.data.draft && (
+                        <span class="text-[#cb4b16] dark:text-[#cb4b16] shrink-0">[rascunho]</span>
+                    )}
                     <span class="flex-1 min-w-4 h-px translate-y-[-0.3em] bg-[radial-gradient(circle,_#93a1a140_1.5px,_transparent_1.5px)] dark:bg-[radial-gradient(circle,_#586e7540_1.5px,_transparent_1.5px)] bg-[length:8px_3px]"></span>
                     <time
                         datetime={post.data.date.toISOString()}
@@ -48,5 +52,6 @@ const notes = (await getCollection("notes", ({ data }) => {
                 </a>
             ))}
         </div>
+        )}
     </section>
 </BaseLayout>

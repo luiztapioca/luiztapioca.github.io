@@ -27,17 +27,23 @@ const { posts } = Astro.props;
 
 <BaseLayout title={`Tag: #${tag}`} description={`Posts marcados com ${tag}`}>
     <section class="mt-4 sm:mt-8">
-        <h1 class="not-prose text-sm sm:text-lg font-bold font-maple text-[#586e75] dark:text-[#eee8d5] mb-6">
-            <span class="text-[#268bd2]"># </span>{tag}
-        </h1>
+        <h2 class="not-prose text-lg sm:text-xl font-maple mb-6 text-[#657b83] dark:text-[#93a1a1]">
+            <span class="text-[#d33682] dark:text-[#d33682]">✦</span> #{tag}
+        </h2>
 
+        {posts.length === 0 ? (
+            <div class="not-prose text-center py-12 text-[#93a1a1] dark:text-[#586e75]">
+                <span class="text-2xl block mb-2">(；・∀・)</span>
+                <span class="text-sm">nenhum post com essa tag...</span>
+            </div>
+        ) : (
         <div class="not-prose flex flex-col gap-3 text-xs sm:text-sm font-maple">
             {posts.map((post) => (
                 <a
                     href={`/blog/${post.id}/`}
-                    class="group flex items-baseline gap-1.5 min-w-0 [text-decoration:none] hover:[text-decoration:none]"
+                    class="group flex items-baseline gap-2 min-w-0 [text-decoration:none] hover:[text-decoration:none]"
                 >
-                    <span class="text-[#d33682] shrink-0">✦</span>
+                    <span class="text-[#d33682] dark:text-[#d33682] shrink-0">✦</span>
                     <span class="
                         truncate
                         text-[#657b83] dark:text-[#93a1a1]
@@ -45,7 +51,7 @@ const { posts } = Astro.props;
                     ">
                         {post.data.title}
                     </span>
-                    <span class="flex-1 border-b border-dotted border-[#93a1a1]/40 dark:border-[#586e75]/40 translate-y-[-0.3em] mx-1"></span>
+                    <span class="flex-1 min-w-4 h-px translate-y-[-0.3em] bg-[radial-gradient(circle,_#93a1a140_1.5px,_transparent_1.5px)] dark:bg-[radial-gradient(circle,_#586e7540_1.5px,_transparent_1.5px)] bg-[length:8px_3px]"></span>
                     <time
                         datetime={post.data.date.toISOString()}
                         class="text-[#93a1a1] dark:text-[#586e75] whitespace-nowrap shrink-0"
@@ -59,5 +65,6 @@ const { posts } = Astro.props;
                 </a>
             ))}
         </div>
+        )}
     </section>
 </BaseLayout>
