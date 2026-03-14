@@ -1,0 +1,24 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: Viva mais calmamente
+date: 2026-03-14
+draft: false
+---
+Em um mundo de muitos estímulos, se alienar até certo nível se torna algo necessário para ter o mínimo de sanidade e autonomia sob a própria vida. Em um mundo onde os tempos de tela apenas aumentam, e por consequência, as pessoas se tornam muito binárias — ou você está comigo, ou não está, ou é ou não é — as nuances se tornam cada vez menos importantes, é como se as pessoas estivessem perdendo a capacidade de enxergar a própria humanidade em outras pessoas.   
+
+Assim como você, sou alguém que tem muita dificuldade de abdicar totalmente dessas plataformas, mesmo não trabalhando de nenhuma forma com elas, sinto que o [FOMO](https://www.urbandictionary.com/define.php?term=fomo) vai tomar conta de mim — é algo bem idiota né? essa constante necessidade de querer fazer parte de algo, mesmo que indiretamente.
+
+Sinto que o [brio](https://www.dicio.com.br/brio/) é uma coisa básica para evitar comportamentos do tipo… afinal, eu sou o dono da minha própria vida, certo?   
+   
+Sempre que penso em coisas do tipo, me lembro do grande professor Nicolelis, enquanto ele tem muito a falar, eu tenho muito o que aprender.
+
+<iframe 
+  width="100%" 
+  height="315" 
+  src="https://www.youtube.com/embed/XgNKfKuWeHk" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" 
+  allowfullscreen>
+</iframe>
