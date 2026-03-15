@@ -30,7 +30,7 @@ const currentPath = Astro.url.pathname;
                     return (
                         <li class="font-semibold text-[#657b83] dark:text-[#839496] flex gap-1.5 sm:gap-2 items-center">
                             {i !== 0 && (
-                                <span class="text-[#6c71c4] text-[0.65rem] sm:text-xs select-none font-bold">
+                                <span class="text-[#657b83] dark:text-[#839496]  text-[0.65rem] sm:text-xs select-none font-bold">
                                     ::
                                 </span>
                             )}
@@ -39,7 +39,7 @@ const currentPath = Astro.url.pathname;
                                 class:list={[
                                     isActive
                                         ? /* Link ativo usando o Azul Solarized */
-                                          "text-[#d33682] dark:text-[#d33682]"
+                                          "text-[#268bd2] dark:text-[#268bd2]"
                                         : /* Efeito hover usando o Magenta Solarized */
                                           "hover:text-[#268bd2] dark:hover:text-[#268bd2] hover:underline hover:decoration-1 hover:underline-offset-2",
                                 ]}

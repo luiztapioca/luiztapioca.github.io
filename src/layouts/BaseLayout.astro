@@ -6,60 +6,63 @@ import { ModeWatcher } from "mode-watcher";
 
 const { title, description } = Astro.props;
 ---
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <script is:inline>
-      const isBrowser = typeof localStorage !== 'undefined';
-      const getThemePreference = () => {
-        if (isBrowser && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
-        }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark' : 'light';
-      };
-      const isDark = getThemePreference() === 'dark';
-      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
 
-      if (isBrowser) {
-        const observer = new MutationObserver(() => {
-          const isDark = document.documentElement.classList.contains('dark');
-          localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
-        observer.observe(document.documentElement, {
-          attributes: true,
-          attributeFilter: ['class']
-        });
-      }
-    </script>
-</head>
-<body class="
-    font-maple min-h-screen max-w-3xl mx-auto px-4
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <script is:inline>
+            const isBrowser = typeof localStorage !== "undefined";
+            const getThemePreference = () => {
+                if (isBrowser && localStorage.getItem("theme")) {
+                    return localStorage.getItem("theme");
+                }
+                return window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light";
+            };
+            const isDark = getThemePreference() === "dark";
+            document.documentElement.classList[isDark ? "add" : "remove"](
+                "dark",
+            );
+
+            if (isBrowser) {
+                const observer = new MutationObserver(() => {
+                    const isDark =
+                        document.documentElement.classList.contains("dark");
+                    localStorage.setItem("theme", isDark ? "dark" : "light");
+                });
+                observer.observe(document.documentElement, {
+                    attributes: true,
+                    attributeFilter: ["class"],
+                });
+            }
+        </script>
+    </head>
+    <body
+        class="font-maple min-h-screen max-w-3xl mx-auto px-4
     /* Tema Claro - Fundo: base3, Texto: base00 */
     bg-[#fdf6e3] text-[#657b83]
     /* Tema Escuro - Fundo: base03, Texto: base0 */
-    dark:bg-[#002b36] dark:text-[#839496]
-">
-    <Header/>
+    dark:bg-[#002b36] dark:text-[#839496]"
+    >
+        <Header />
 
-    <div class="flex items-center gap-3 my-4">
-        <span class="flex-1 border-t-2 border-dashed border-[#93a1a1] dark:border-[#586e75]"></span>
-        <span class="text-[#d33682] dark:text-[#d33682] text-sm font-bold select-none">λ</span>
-        <span class="flex-1 border-t-2 border-dashed border-[#93a1a1] dark:border-[#586e75]"></span>
-    </div>
+        <div class="flex items-center gap-3 my-4">
+            <span
+                class="flex-1 border-t-2 border-dashed border-[#93a1a1] dark:border-[#586e75]"
+            ></span>
+        </div>
 
-    <main>
-        <article class="
-                    prose max-w-none
-
+        <main>
+            <article
+                class="prose max-w-none
                     /* --- TEXTO BASE DO ARTIGO (Forçando a cor) --- */
                     text-[#657b83] dark:text-[#93a1a1]
-
                     /* --- PARÁGRAFOS (P) --- */
                     prose-p:text-xs sm:prose-p:text-sm
                     prose-p:leading-relaxed
@@ -68,10 +71,8 @@ const { title, description } = Astro.props;
                     prose-p:break-words
                     /* Corrigindo a cor dos parágrafos no escuro */
                     prose-p:text-[#657b83] dark:prose-p:text-[#93a1a1]
-
                     /* --- TEXTOS EM DESTAQUE (Negrito) --- */
                     prose-strong:text-[#586e75] dark:prose-strong:text-[#eee8d5]
-
                     /* --- HEADINGS --- */
                     prose-headings:font-bold prose-headings:font-maple
                     /* Títulos com mais contraste (base01 no claro, base2 no escuro) */
@@ -79,21 +80,17 @@ const { title, description } = Astro.props;
                     prose-h1:text-lg sm:prose-h1:text-2xl prose-h1:my-4
                     prose-h2:text-base sm:prose-h2:text-xl prose-h2:mt-8 prose-h2:my-3
                     prose-h3:text-sm sm:prose-h3:text-lg prose-h3:mt-6 prose-h3:my-2
-
                     /* --- LINKS --- */
                     prose-a:font-semibold
                     prose-a:no-underline
                     prose-a:text-[#d33682] dark:prose-a:text-[#d33682]
-
                     /* HOVER STATE */
                     [&_a:hover]:underline [&_a:hover]:decoration-1 [&_a:hover]:underline-offset-2
                     [&_a:hover]:text-[#268bd2] dark:[&_a:hover]:text-[#268bd2]
-
                     /* --- CODE BLOCKS --- */
                     prose-pre:!bg-transparent prose-pre:!p-0 prose-pre:!font-normal prose-pre:!border-0 prose-pre:!ring-0
                     prose-code:px-1 prose-code:font-maple prose-code:text-[10px]! sm:prose-code:text-xs!
                     prose-code:text-[#b58900] dark:prose-code:text-[#b58900]
-
                     /* --- BLOCKQUOTES --- */
                     prose-blockquote:bg-[#eee8d5] dark:prose-blockquote:bg-[#073642]
                     prose-blockquote:border-l-4
@@ -101,27 +98,28 @@ const { title, description } = Astro.props;
                     prose-blockquote:italic
                     prose-blockquote:ml-2
                     prose-blockquote:text-[#586e75] dark:prose-blockquote:text-[#93a1a1]
-
                     /* --- IMAGES & LISTS --- */
                     prose-img:my-6 prose-img:mx-auto
-
                     /* Listas */
                     prose-li:text-xs sm:prose-li:text-sm
                     /* Corrigindo a cor das listas no escuro */
                     prose-li:text-[#657b83] dark:prose-li:text-[#93a1a1]
                     prose-li:marker:text-[#93a1a1] dark:prose-li:marker:text-[#586e75]
-
                     /* --- HR INTERNO --- */
                     prose-hr:border-dashed
-                    prose-hr:border-[#93a1a1] dark:prose-hr:border-[#586e75]
-                ">
-                    <slot />
-        </article>
-    </main>
+                    prose-hr:border-[#93a1a1] dark:prose-hr:border-[#586e75]"
+            >
+                <slot />
+            </article>
+        </main>
 
-    <Footer/>
+        <Footer />
 
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-    <ModeWatcher client:load />
-</body>
+        <script
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"
+        ></script>
+        <ModeWatcher client:load />
+    </body>
 </html>
