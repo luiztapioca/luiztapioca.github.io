@@ -2,47 +2,56 @@
 import ThemeToggle from "./svelte/theme-toggle.svelte";
 
 const NAV_LINKS = [
-    { title: "início", link: "/"},
-    { title: "blog", link: "/blog"},
-    { title: "notas", link: "/notes"},
-    { title: "sobre", link: "/sobre"},
-    { title: "portfolio", link: "/portfolio"},
-    { title: "rss", link: "/rss.xml", newTab: true},
+    { title: "início", link: "/" },
+    { title: "blog", link: "/blog" },
+    { title: "notas", link: "/notes" },
+    { title: "sobre", link: "/sobre" },
+    { title: "portfolio", link: "/portfolio" },
+    { title: "rss", link: "/rss.xml", newTab: true },
 ];
 
 const currentPath = Astro.url.pathname;
 ---
-<header class="flex justify-between items-center mt-3 sm:mt-4 mb-1 w-full min-w-0 gap-2">
+
+<header
+    class="flex justify-between items-center mt-3 sm:mt-4 mb-1 w-full min-w-0 gap-2"
+>
     <nav class="flex-1 min-w-0 overflow-x-auto">
-        <ul class="flex flex-nowrap gap-x-2 sm:gap-x-3 text-xs sm:text-base whitespace-nowrap items-center">
-        { NAV_LINKS.map((item, i) => {
-            const isActive = item.link === '/'
-                ? currentPath === '/'
-                : currentPath.startsWith(item.link);
+        <ul
+            class="flex flex-nowrap gap-x-2 sm:gap-x-3 text-xs sm:text-base whitespace-nowrap items-center"
+        >
+            {
+                NAV_LINKS.map((item, i) => {
+                    const isActive =
+                        item.link === "/"
+                            ? currentPath === "/"
+                            : currentPath.startsWith(item.link);
 
-            return (
-                <li class="font-semibold text-[#657b83] dark:text-[#839496] flex gap-1.5 sm:gap-2 items-center">
+                    return (
+                        <li class="font-semibold text-[#657b83] dark:text-[#839496] flex gap-1.5 sm:gap-2 items-center">
+                            {i !== 0 && (
+                                <span class="text-[#6c71c4] text-[0.65rem] sm:text-xs select-none font-bold">
+                                    ::
+                                </span>
+                            )}
 
-                    { i !== 0 && (
-                        <span class="text-[#6c71c4] text-[0.65rem] sm:text-xs select-none font-bold">∘</span>
-                    )}
-
-                    <a
-                        class:list={[
-                            isActive
-                                /* Link ativo usando o Azul Solarized */
-                                ? "text-[#d33682] dark:text-[#d33682]"
-                                /* Efeito hover usando o Magenta Solarized */
-                                : "hover:text-[#268bd2] dark:hover:text-[#268bd2] hover:underline hover:decoration-1 hover:underline-offset-2"
-                        ]}
-                        href={ item.link }
-                        target={ item.newTab ? "_blank" : "_self" }
-                    >
-                        { item.title }
-                    </a>
-                </li>
-            )
-        })}
+                            <a
+                                class:list={[
+                                    isActive
+                                        ? /* Link ativo usando o Azul Solarized */
+                                          "text-[#d33682] dark:text-[#d33682]"
+                                        : /* Efeito hover usando o Magenta Solarized */
+                                          "hover:text-[#268bd2] dark:hover:text-[#268bd2] hover:underline hover:decoration-1 hover:underline-offset-2",
+                                ]}
+                                href={item.link}
+                                target={item.newTab ? "_blank" : "_self"}
+                            >
+                                {item.title}
+                            </a>
+                        </li>
+                    );
+                })
+            }
         </ul>
     </nav>
 
