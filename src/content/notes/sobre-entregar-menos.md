@@ -1,0 +1,12 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: O aprendizado é lento, é chato, é árduo.
+date: 2026-03-20
+draft: false
+---
+
+Semana retrasada comecei a ler o livro do Richard Hamming -- "The Art Of Doing Science And Engeneering". Esse livro não é apenas um "cope" diante de todas as mudanças que andam ocorrendo no mundo durante os últimos 4 anos, é mais uma forma de pensar, uma forma resistente as próprias mudanças do tempo -- sem ser um completo negacionista dessas mesmas mudanças.
+
+> "Believe nothing, no matter where you read it, or who said it, no matter if i have said it, unless it agrees with your own common sense." I say the same to you — you must assume the responsibility for what you believe.
+
+Essa é uma ótima leitura para aqueles que se interessam em algum nível em uma área acadêmica, seja na área da computação ou em qualquer outra. 
