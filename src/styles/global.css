@@ -54,7 +54,6 @@ html {
   color: inherit;
 }
 
-/* ═══ Inline code styling ═══ */
 .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before,
 .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
   content: "" !important;
@@ -66,6 +65,17 @@ html {
 
 .dark .prose :where(code):not(:where(pre *, [class~="not-prose"], [class~="not-prose"] *)) {
   color: #b58900; /* solarized yellow */
+}
+
+
+.prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  padding-right: 2rem;
+  quotes: none;
+}
+
+.prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *))::before,
+.prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
+  content: none !important;
 }
 
 /* ═══ Type signature utility ═══ */
