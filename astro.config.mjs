@@ -40,5 +40,5 @@ export default defineConfig({
     }
   }), icon(), svelte()],
 
-  site: "https://luiztapioca.github.io",
+  site: "https://rosadehiroshima.github.io",
 });
