@@ -80,17 +80,6 @@ html {
   padding-left: 2rem;
 }
 
-.prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
-  content: "--";
-  position: absolute;
-  left: 0.5rem;
-  top: 0.75rem;
-  font-style: normal;
-  font-weight: bold;
-  color: #6c71c4;
-  opacity: 0.6;
-}
-
 .dark .prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
   color: #6c71c4;
   opacity: 0.7;
