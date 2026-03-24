@@ -13,13 +13,4 @@ const posts = defineCollection({
   }),
 });
 
-const notes = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/notes" }),
-  schema: z.object({
-    title: z.string(),
-    draft: z.boolean().default(false),
-    date: z.coerce.date(),
-  })
-})
-
-export const collections = { posts, notes }
+export const collections = { posts }
