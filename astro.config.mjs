@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import icon from "astro-icon";
+// import icon from "astro-icon";
 import expressiveCode from 'astro-expressive-code';
 
 import svelte from '@astrojs/svelte';
@@ -38,7 +38,7 @@ export default defineConfig({
         shadowColor: 'transparent',
       },
     }
-  }), icon(), svelte()],
+  }), svelte()],
 
   site: "https://rosadehiroshima.github.io",
 });
