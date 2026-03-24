@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: O aprendizado é lento, é chato, é árduo.
 date: 2026-03-20
 draft: false

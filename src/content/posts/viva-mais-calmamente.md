@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: Viva mais calmamente
 date: 2026-03-14
 draft: false

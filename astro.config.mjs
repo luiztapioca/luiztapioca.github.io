@@ -32,7 +32,7 @@ export default defineConfig({
       return ':root:not(.dark)'
     },
     styleOverrides: {
-      codeFontFamily: 'Maple Mono NF CN',
+      // codeFontFamily: 'Maple Mono NF CN',
       borderRadius: '0',
       frames: {
         shadowColor: 'transparent',

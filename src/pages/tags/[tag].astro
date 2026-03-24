@@ -27,7 +27,7 @@ const { posts } = Astro.props;
 
 <BaseLayout title={`Tag: #${tag}`} description={`Posts marcados com ${tag}`}>
     <section class="mt-4 sm:mt-8">
-        <h2 class="not-prose text-lg sm:text-xl font-maple mb-6 text-[#657b83] dark:text-[#93a1a1]">
+        <h2 class="not-prose text-lg sm:text-xl mb-6 text-[#657b83] dark:text-[#93a1a1]">
             <span class="text-[#d33682] dark:text-[#d33682]"></span> # {tag}
         </h2>
 
@@ -37,7 +37,7 @@ const { posts } = Astro.props;
                 <span class="text-sm">nenhum post com essa tag...</span>
             </div>
         ) : (
-        <div class="not-prose flex flex-col gap-3 text-xs sm:text-sm font-maple">
+        <div class="not-prose flex flex-col gap-3 text-xs sm:text-sm ">
             {posts.map((post) => (
                 <a
                     href={`/blog/${post.id}/`}

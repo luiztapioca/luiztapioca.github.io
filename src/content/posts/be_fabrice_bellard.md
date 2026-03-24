@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: Be Fabrice Bellard
 date: 2026-03-01
 draft: false

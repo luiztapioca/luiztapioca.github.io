@@ -21,7 +21,7 @@ const posts = (await getCollection("posts", ({ data }) => {
                 <span class="text-sm">nenhum post ainda...</span>
             </div>
         ) : (
-        <div class="not-prose flex flex-col gap-4 text-xs sm:text-sm font-maple">
+        <div class="not-prose flex flex-col gap-4 text-xs sm:text-sm ">
             {posts.map((post) => (
                 <a
                     href={`/blog/${post.id}/`}

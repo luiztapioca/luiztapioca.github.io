@@ -17,7 +17,7 @@ const { title, description, date, tags } = frontmatter || Astro.props;
         </h1>
 
         {date && (
-            <div class="flex items-center gap-1.5 mt-3 text-xs sm:text-sm text-[#93a1a1] dark:text-[#586e75] font-maple flex-wrap">
+            <div class="flex items-center gap-1.5 mt-3 text-xs sm:text-sm text-[#93a1a1] dark:text-[#586e75] flex-wrap">
                 <time datetime={new Date(date).toISOString()} class="italic">
                     {new Date(date).toLocaleDateString('pt-BR', {
                         day: '2-digit',
