@@ -54,7 +54,7 @@ const posts = (await getCollection("posts", ({ data }) => {
                         </time>
                     </div>
                     {post.data.tags && post.data.tags.length > 0 && (
-                        <div class="flex gap-2 pl-5 text-[0.85em] text-[#93a1a1] dark:text-[#586e75]">
+                        <div class="flex gap-2 pl-2 sm:pl-3 text-[0.85em] text-[#93a1a1] dark:text-[#586e75]">
                             {post.data.tags.map((tag) => (
                                 <span class="group-hover:text-[#268bd2] dark:group-hover:text-[#268bd2]">#{tag}</span>
                             ))}
