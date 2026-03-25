@@ -7,7 +7,7 @@
     onclick={toggleMode}
     class="
     group relative
-    flex-shrink-0 flex items-center justify-center
+    shrink-0 flex items-center justify-center
     text-[#657b83] dark:text-[#839496]
     hover:text-[#268bd2] dark:hover:text-[#268bd2]
     active:scale-90
