@@ -5,52 +5,58 @@ import { Star } from "@lucide/astro";
 const { frontmatter } = Astro.props;
 
 const { title, description, date, tags } = frontmatter || Astro.props;
-
 ---
 
 <BaseLayout title={title} description={description}>
-
-    <header class="mb-10">
-
-        <h1 class="text-2xl sm:text-3xl font-bold text-[#586e75] dark:text-[#eee8d5]">
+    <header class="mb-5 sm:mb-10">
+        <h1
+            class="text-2xl sm:text-3xl font-bold text-[#586e75] dark:text-[#eee8d5]"
+        >
             {title}
         </h1>
 
-        {date && (
-            <div class="flex items-center gap-1.5 mt-3 text-xs sm:text-sm text-[#93a1a1] dark:text-[#586e75] flex-wrap">
-                <time datetime={new Date(date).toISOString()} class="italic">
-                    {new Date(date).toLocaleDateString('pt-BR', {
-                        day: '2-digit',
-                        month: 'short',
-                        year: 'numeric',
-                    })}
-                </time>
+        {
+            date && (
+                <div class="flex items-center gap-1.5 mt-1.5 sm:mt-3 text-xs sm:text-sm text-[#93a1a1] dark:text-[#586e75] flex-wrap">
+                    <time
+                        datetime={new Date(date).toISOString()}
+                        class="italic"
+                    >
+                        {new Date(date).toLocaleDateString("pt-BR", {
+                            day: "2-digit",
+                            month: "short",
+                            year: "numeric",
+                        })}
+                    </time>
 
-                {tags && tags.length > 0 && (
-                    <Star height={12} width={12} class="text-[#6c71c4] dark:text-[#6c71c4]"/>
-                )}
+                    {tags && tags.length > 0 && (
+                        <Star
+                            height={12}
+                            width={12}
+                            class="text-[#6c71c4] dark:text-[#6c71c4]"
+                        />
+                    )}
 
-                {tags && tags.length > 0 && (
-                    <div class="flex gap-2 flex-wrap">
-                        {tags.map((tag:string) => (
-                            <a
-                                href={`/tags/${tag}`}
-                                class="
+                    {tags && tags.length > 0 && (
+                        <div class="flex gap-2 flex-wrap">
+                            {tags.map((tag: string) => (
+                                <a
+                                    href={`/tags/${tag}`}
+                                    class="
                                     text-[#d33682] dark:text-[#d33682]
                                     hover:text-[#268bd2] dark:hover:text-[#268bd2]
                                     hover:underline decoration-1 underline-offset-2
                                 "
-                            >
-                                #{tag}
-                            </a>
-                        ))}
-                    </div>
-                )}
-            </div>
-        )}
-
+                                >
+                                    #{tag}
+                                </a>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            )
+        }
     </header>
 
     <slot />
-
 </BaseLayout>
