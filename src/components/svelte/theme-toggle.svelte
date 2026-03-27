@@ -14,6 +14,6 @@
   "
     aria-label="Toggle theme"
 >
-    <span class="block dark:hidden"><strong>luminoso</strong> / <span class="opacity-50">noturno</span></span>
-    <span class="hidden dark:block"><span class="opacity-50">luminoso</span> / <strong>noturno</strong></span>
+    <span class="block dark:hidden"><strong>claro</strong> / <span class="opacity-50">noturno</span></span>
+    <span class="hidden dark:block"><span class="opacity-50">claro</span> / <strong>noturno</strong></span>
 </button>
