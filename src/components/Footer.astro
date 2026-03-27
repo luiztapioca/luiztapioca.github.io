@@ -1,14 +1,32 @@
 ---
-
+import { Rss } from "@lucide/astro";
 ---
 
-<footer class="my-2 sm:my-4 select-none text-center">
+<footer class="my-2 sm:my-4 select-none">
     <div class="flex items-center gap-3 mb-3">
         <span
             class="flex-1 border-t sm:border-t-2 border-dashed border-[#93a1a1] dark:border-[#586e75]"
         ></span>
     </div>
-    <span class="text-[#93a1a1] dark:text-[#586e75] text-sm"
-        >໒꒰ྀིっ˕ -｡꒱ྀི১</span
-    >
+    <div class="flex justify-between items-center gap-4 mb-3">
+        <!-- Left: Kaomoji -->
+        <div class="flex-shrink-0 text-sm text-[#d33682] dark:text-[#d33682]">
+            ໒꒰ྀིっ˕ -｡꒱ྀི१
+        </div>
+
+        <!-- Center: RSS Feed -->
+        <a
+            href="/rss.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-[#d33682] dark:text-[#d33682] hover:text-[#268bd2] dark:hover:text-[#268bd2] transition-colors flex items-center gap-1 flex-shrink-0"
+            title="RSS Feed"
+        >
+            <Rss size={20} />
+            <span class="text-xs sm:text-sm">rss</span>
+        </a>
+
+        <!-- Right: Empty spacer for balance -->
+        <div class="flex-1"></div>
+    </div>
 </footer>

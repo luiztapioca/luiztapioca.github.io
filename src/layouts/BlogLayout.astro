@@ -24,12 +24,12 @@ const posts = (await getCollection("posts", ({ data }) => {
         <div class="not-prose flex flex-col gap-4 text-xs sm:text-sm ">
             {posts.map((post) => (
                 <a
-                    href={`/blog/${post.id}/`}
+                    href={`/${post.id}/`}
                     class="group flex flex-col gap-0.5 [text-decoration:none] hover:[text-decoration:none]"
                 >
                     <div class="flex items-baseline justify-between gap-2 min-w-0">
                         <div class="flex items-baseline gap-1.5 min-w-0">
-                            <span class="text-[#d33682] dark:text-[#d33682] shrink-0">></span>
+                            <span class="text-[#d33682] dark:text-[#d33682] shrink-0 translate-y-[0.1em]">*</span>
                             <span class="
                                 truncate
                                 text-[#657b83] dark:text-[#93a1a1]
