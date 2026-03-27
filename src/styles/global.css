@@ -9,14 +9,14 @@ html {
   transition: background-color 0.2s, color 0.2s;
 }
 
-/* ═══ Selection — violet (FP accent) ═══ */
+/* ═══ Selection — magenta (FP accent) ═══ */
 ::selection {
-  background-color: rgb(108 113 196 / 0.3); /* violet #6c71c4 */
+  background-color: rgb(211 54 130 / 0.3); /* magenta #d33682 */
   color: inherit;
 }
 
 .dark ::selection {
-  background-color: rgb(108 113 196 / 0.35); /* violet #6c71c4 */
+  background-color: rgb(211 54 130 / 0.35); /* magenta #d33682 */
   color: inherit;
 }
 
@@ -36,7 +36,17 @@ html {
 
 .prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   padding-right: 2rem;
+  padding-top: 0.0625rem;
+  padding-bottom: 0.0625rem;
   quotes: none;
+}
+
+@media (max-width: 640px) {
+  .prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    padding-right: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .prose :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *))::before,
