@@ -40,7 +40,7 @@ const { posts } = Astro.props;
         <div class="not-prose flex flex-col gap-3 text-xs sm:text-sm ">
             {posts.map((post) => (
                 <a
-                    href={`/blog/${post.id}/`}
+                    href={`/${post.id}/`}
                     class="group flex items-baseline gap-2 min-w-0 [text-decoration:none] hover:[text-decoration:none]"
                 >
                     <span class="text-[#d33682] dark:text-[#d33682] shrink-0">></span>
