@@ -10,8 +10,8 @@ import { Rss } from "@lucide/astro";
     </div>
     <div class="flex items-center gap-4 mb-3">
         <!-- Left: Site Name and Year Range -->
-        <div class="flex-1 text-sm text-[#d33682] dark:text-[#d33682]">
-            rosa de hiroshima © 2024-{new Date().getFullYear()}
+        <div class="flex-1 text-sm text-[#657b83] dark:text-[#93a1a1] font-medium flex items-center gap-1">
+            rosa de hiroshima <i class="text-[#d33682] dark:text-[#d33682] nf nf-md-lambda text-xs"></i> 2024-{new Date().getFullYear()}
         </div>
 
         <!-- Right: RSS Feed -->
@@ -22,7 +22,7 @@ import { Rss } from "@lucide/astro";
             class="text-[#657b83] dark:text-[#839496] hover:text-[#268bd2] dark:hover:text-[#268bd2] transition-colors flex items-center gap-1 flex-shrink-0"
             title="RSS Feed"
         >
-            <Rss size={20} />
+            <Rss size={16} />
             <span class="text-xs sm:text-sm">rss</span>
         </a>
     </div>

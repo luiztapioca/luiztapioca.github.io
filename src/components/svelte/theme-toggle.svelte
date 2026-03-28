@@ -10,10 +10,9 @@
     focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d33682]
     cursor-pointer
     [-webkit-tap-highlight-color:transparent]
-    text-xs sm:text-sm font-semibold
+    text-lg sm:text-xl
   "
     aria-label="Toggle theme"
 >
-    <span class="block dark:hidden"><strong>claro</strong> / <span class="opacity-50">noturno</span></span>
-    <span class="hidden dark:block"><span class="opacity-50">claro</span> / <strong>noturno</strong></span>
+    <i class="nf nf-md-theme_light_dark"></i>
 </button>
