@@ -9,12 +9,10 @@ import { Rss } from "@lucide/astro";
         ></span>
     </div>
     <div class="flex items-center gap-4 mb-3">
-        <!-- Left: Site Name and Year Range -->
         <div class="flex-1 text-sm text-[#657b83] dark:text-[#93a1a1] font-medium flex items-center gap-1">
-            rosa de hiroshima <i class="text-[#d33682] dark:text-[#d33682] nf nf-md-lambda text-xs"></i> 2024-{new Date().getFullYear()}
+            <i class="text-[#d33682] dark:text-[#d33682] nf nf-md-lambda text-xs"></i> {new Date().getFullYear()}
         </div>
 
-        <!-- Right: RSS Feed -->
         <a
             href="/rss.xml"
             target="_blank"

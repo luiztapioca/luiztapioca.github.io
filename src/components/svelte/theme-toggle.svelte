@@ -1,5 +1,6 @@
 <script lang="ts">
     import { toggleMode } from "mode-watcher";
+    import { SunMoon } from "@lucide/svelte";
 </script>
 
 <button
@@ -14,5 +15,5 @@
   "
     aria-label="Toggle theme"
 >
-    <i class="nf nf-md-theme_light_dark"></i>
+    <SunMoon height={16} width={16}/>
 </button>
