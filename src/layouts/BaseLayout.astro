@@ -61,51 +61,37 @@ const { title, description } = Astro.props;
         <main>
             <article
                 class="prose max-w-none
-                    /* --- TEXTO BASE DO ARTIGO (Forçando a cor) --- */
                     text-[#657b83] dark:text-[#93a1a1]
-                    /* --- PARÁGRAFOS (P) --- */
                     prose-p:text-xs sm:prose-p:text-sm
                     prose-p:leading-relaxed
                     prose-p:hyphens-auto
                     prose-p:text-justify
                     prose-p:break-words
-                    /* Corrigindo a cor dos parágrafos no escuro */
                     prose-p:text-[#657b83] dark:prose-p:text-[#93a1a1]
-                    /* --- TEXTOS EM DESTAQUE (Negrito) --- */
                     prose-strong:text-[#586e75] dark:prose-strong:text-[#eee8d5]
-                    /* --- HEADINGS --- */
                     prose-headings:font-bold
-                    /* Títulos com mais contraste (base01 no claro, base2 no escuro) */
                     prose-headings:text-[#586e75] dark:prose-headings:text-[#eee8d5]
                     prose-h1:text-lg sm:prose-h1:text-2xl prose-h1:my-4
                     prose-h2:text-base sm:prose-h2:text-xl prose-h2:mt-8 prose-h2:my-3
                     prose-h3:text-sm sm:prose-h3:text-lg prose-h3:mt-6 prose-h3:my-2
-                    /* --- LINKS --- */
                     prose-a:font-semibold
                     prose-a:no-underline
                     prose-a:text-[#d33682] dark:prose-a:text-[#d33682]
-                    /* HOVER STATE */
                     [&_a:hover]:underline [&_a:hover]:decoration-1 [&_a:hover]:underline-offset-2
                     [&_a:hover]:text-[#268bd2] dark:[&_a:hover]:text-[#268bd2]
-                    /* --- CODE BLOCKS --- */
                     prose-pre:!bg-transparent prose-pre:!p-0 prose-pre:!font-normal prose-pre:!border-0 prose-pre:!ring-0
                     prose-code:px-1 prose-code:text-[10px]! sm:prose-code:text-xs!
                     prose-code:text-[#b58900] dark:prose-code:text-[#b58900]
-                    /* --- BLOCKQUOTES --- */
                     prose-blockquote:bg-[#eee8d5] dark:prose-blockquote:bg-[#073642]
                     prose-blockquote:border-l-4
                     prose-blockquote:border-[#93a1a1] dark:prose-blockquote:border-[#586e75]
                     prose-blockquote:italic
                     prose-blockquote:ml-2
                     prose-blockquote:text-[#586e75] dark:prose-blockquote:text-[#93a1a1]
-                    /* --- IMAGES & LISTS --- */
                     prose-img:my-6 prose-img:mx-auto
-                    /* Listas */
                     prose-li:text-xs sm:prose-li:text-sm
-                    /* Corrigindo a cor das listas no escuro */
                     prose-li:text-[#657b83] dark:prose-li:text-[#93a1a1]
                     prose-li:marker:text-[#93a1a1] dark:prose-li:marker:text-[#586e75]
-                    /* --- HR INTERNO --- */
                     prose-hr:border-dashed
                     prose-hr:border-[#93a1a1] dark:prose-hr:border-[#586e75]"
             >
