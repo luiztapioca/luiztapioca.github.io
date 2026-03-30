@@ -15,5 +15,5 @@
   "
     aria-label="Toggle theme"
 >
-    <SunMoon class="w-3 h-3 sm:w-5 sm:h-5"/>
+    <SunMoon class="w-4 h-4 sm:w-5 sm:h-5"/>
 </button>
