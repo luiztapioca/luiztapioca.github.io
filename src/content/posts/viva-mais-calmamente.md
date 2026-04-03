@@ -1,5 +1,6 @@
 ---
 title: Viva mais calmamente
+description: Um texto sobre excesso de estímulos, FOMO e a necessidade de viver com mais calma e autonomia em meio à vida online.
 date: 2026-03-14
 draft: false
 ---

@@ -6,6 +6,32 @@ const { frontmatter } = Astro.props;
 
 const { title, description, date, tags } = frontmatter || Astro.props;
 const publishedTime = date ? new Date(date).toISOString() : undefined;
+const postUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    url: postUrl,
+    datePublished: publishedTime,
+    dateModified: publishedTime,
+    author: {
+        "@type": "Person",
+        name: "Luiz Gustavo",
+        url: Astro.site?.toString(),
+    },
+    publisher: {
+        "@type": "Person",
+        name: "Luiz Gustavo",
+        url: Astro.site?.toString(),
+    },
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": postUrl,
+    },
+    keywords: tags,
+    inLanguage: "pt-BR",
+};
 ---
 
 <BaseLayout
@@ -15,6 +41,7 @@ const publishedTime = date ? new Date(date).toISOString() : undefined;
     publishedTime={publishedTime}
     keywords={tags}
 >
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
     <header class="mb-5 sm:mb-10">
         <h1
             class="text-2xl sm:text-3xl font-bold text-[#586e75] dark:text-[#eee8d5]"

@@ -1,5 +1,6 @@
 ---
 title: O aprendizado é lento, é chato, é árduo.
+description: Uma reflexão sobre aprendizado profundo, pensamento crítico e por que evoluir de verdade exige paciência, atrito e responsabilidade intelectual.
 date: 2026-03-20
 draft: false
 ---
