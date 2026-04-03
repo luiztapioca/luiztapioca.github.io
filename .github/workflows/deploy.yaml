@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+      - name: Compile CV PDF
+        run: typst compile public/cv.typ public/cv.pdf
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         # with:
