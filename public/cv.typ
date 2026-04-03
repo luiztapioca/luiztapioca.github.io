@@ -2,10 +2,10 @@
 
 #let name = "Luiz Gustavo"
 #let location = "Brasília, DF"
-#let email = "luiztapioca@icloud.com"
-#let github = "github.com/luiztapioca"
+#let email = "luiz.tapioca@icloud.com"
+#let github = "github.com/rosadehiroshima"
 #let linkedin = "linkedin.com/in/luizgustavosc/"
-#let phone = "+XX (XX) X XXXX-XXXX"
+#let phone = ""
 #let personal-site = "bool.tec.br"
 
 #show: resume.with(
