@@ -1,0 +1,14 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FDF6E3"/>
+  <rect x="36" y="36" width="1128" height="558" rx="18" fill="#EEE8D5" stroke="#93A1A1" stroke-width="2" stroke-dasharray="8 10"/>
+  <circle cx="118" cy="118" r="10" fill="#DC322F"/>
+  <circle cx="154" cy="118" r="10" fill="#B58900"/>
+  <circle cx="190" cy="118" r="10" fill="#2AA198"/>
+  <text x="104" y="214" fill="#D33682" font-family="'New Computer Modern', 'Iosevka Term', 'Menlo', monospace" font-size="94" font-weight="700">λ</text>
+  <text x="104" y="308" fill="#586E75" font-family="'New Computer Modern', 'Iosevka Term', 'Menlo', monospace" font-size="72" font-weight="700">Rosa de Hiroshima</text>
+  <text x="108" y="366" fill="#657B83" font-family="'New Computer Modern', 'Iosevka Term', 'Menlo', monospace" font-size="28">portfolio, blog e pequenas notas na internet</text>
+  <text x="108" y="432" fill="#93A1A1" font-family="'New Computer Modern', 'Iosevka Term', 'Menlo', monospace" font-size="26">posts sobre software, pesquisa, internet e vida calma</text>
+  <line x1="108" y1="488" x2="1092" y2="488" stroke="#93A1A1" stroke-width="2" stroke-dasharray="3 12"/>
+  <text x="108" y="546" fill="#268BD2" font-family="'New Computer Modern', 'Iosevka Term', 'Menlo', monospace" font-size="24">rosadehiroshima.github.io</text>
+  <text x="936" y="546" fill="#93A1A1" font-family="'New Computer Modern', 'Iosevka Term', 'Menlo', monospace" font-size="24">solarized light</text>
+</svg>

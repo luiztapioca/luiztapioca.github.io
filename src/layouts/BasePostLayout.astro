@@ -5,9 +5,16 @@ import { Star } from "@lucide/astro";
 const { frontmatter } = Astro.props;
 
 const { title, description, date, tags } = frontmatter || Astro.props;
+const publishedTime = date ? new Date(date).toISOString() : undefined;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+    title={title}
+    description={description}
+    ogType="article"
+    publishedTime={publishedTime}
+    keywords={tags}
+>
     <header class="mb-5 sm:mb-10">
         <h1
             class="text-2xl sm:text-3xl font-bold text-[#586e75] dark:text-[#eee8d5]"

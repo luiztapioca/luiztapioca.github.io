@@ -4,7 +4,20 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import { ModeWatcher } from "mode-watcher";
 
-const { title, description } = Astro.props;
+const {
+    title,
+    description,
+    canonical = Astro.url,
+    ogType = "website",
+    publishedTime,
+    modifiedTime,
+    keywords = [],
+} = Astro.props;
+
+const canonicalUrl = new URL(canonical, Astro.site);
+const pageTitle = title ? `${title} | Rosa de Hiroshima` : "Rosa de Hiroshima";
+const keywordContent = Array.isArray(keywords) ? keywords.join(", ") : keywords;
+const socialImage = new URL("/og-default.png", Astro.site);
 ---
 
 <!doctype html>
@@ -12,9 +25,36 @@ const { title, description } = Astro.props;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="google-site-verification"
+            content="-LEihFJS4-9OUeuD4e4Hc93rtv5-rGD1a5mZP_d1A8c"
+        />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <title>{title}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={canonicalUrl.toString()} />
+        {keywordContent && <meta name="keywords" content={keywordContent} />}
+
+        <meta property="og:site_name" content="Rosa de Hiroshima" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content={ogType} />
+        <meta property="og:url" content={canonicalUrl.toString()} />
+        <meta property="og:image" content={socialImage.toString()} />
+        <meta property="og:image:alt" content="Rosa de Hiroshima, portfolio, blog e pequenas notas na internet." />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={socialImage.toString()} />
+
+        {publishedTime && (
+            <meta property="article:published_time" content={publishedTime} />
+        )}
+        {modifiedTime && (
+            <meta property="article:modified_time" content={modifiedTime} />
+        )}
         <script is:inline>
             const isBrowser = typeof localStorage !== "undefined";
             const getThemePreference = () => {
