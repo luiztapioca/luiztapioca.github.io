@@ -14,8 +14,9 @@ const {
     keywords = [],
 } = Astro.props;
 
+const siteName = "café com tapioca";
 const canonicalUrl = new URL(canonical, Astro.site);
-const pageTitle = title ? `${title} | Rosa de Hiroshima` : "Rosa de Hiroshima";
+const pageTitle = title ? `${title} | ${siteName}` : siteName;
 const keywordContent = Array.isArray(keywords) ? keywords.join(", ") : keywords;
 ---
 
@@ -35,7 +36,7 @@ const keywordContent = Array.isArray(keywords) ? keywords.join(", ") : keywords;
         <link rel="canonical" href={canonicalUrl.toString()} />
         {keywordContent && <meta name="keywords" content={keywordContent} />}
 
-        <meta property="og:site_name" content="Rosa de Hiroshima" />
+        <meta property="og:site_name" content={siteName} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content={ogType} />
