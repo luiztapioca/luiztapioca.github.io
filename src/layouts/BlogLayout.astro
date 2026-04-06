@@ -2,6 +2,13 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
+const formatDate = (date: Date) =>
+    date.toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    }).replace(/\//g, "-");
+
 const posts = (await getCollection("posts", ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
 })).sort(
@@ -31,7 +38,7 @@ const posts = (await getCollection("posts", ({ data }) => {
                         datetime={post.data.publishDate.toISOString()}
                         class="text-[#93a1a1] dark:text-[#586e75] whitespace-nowrap shrink-0 tabular-nums"
                     >
-                        {post.data.publishDate.toISOString().slice(0, 10)}
+                        {formatDate(post.data.publishDate)}
                     </time>
                     <span class="min-w-0 truncate text-[#657b83] dark:text-[#93a1a1] group-hover:text-[#d33682] dark:group-hover:text-[#d33682]">
                         {post.data.title}

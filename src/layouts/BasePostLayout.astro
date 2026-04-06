@@ -6,6 +6,12 @@ const { frontmatter } = Astro.props;
 const { title, description, date, publishDate, tags } = frontmatter || Astro.props;
 const createdTime = date ? new Date(date).toISOString() : undefined;
 const publishedTime = publishDate ? new Date(publishDate).toISOString() : undefined;
+const formatDate = (value: Date | string) =>
+    new Date(value).toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    }).replace(/\//g, "-");
 const shouldShowBothDates = Boolean(
     date &&
     publishDate &&
@@ -60,11 +66,7 @@ const articleSchema = {
                 {publishDate && !shouldShowBothDates && (
                     <>
                         <time datetime={new Date(publishDate).toISOString()} class="italic">
-                            {new Date(publishDate).toLocaleDateString("pt-BR", {
-                                day: "2-digit",
-                                month: "short",
-                                year: "numeric",
-                            })}
+                            {formatDate(publishDate)}
                         </time>
                     </>
                 )}
@@ -73,11 +75,7 @@ const articleSchema = {
                     <>
                         <span>publicado:</span>
                         <time datetime={new Date(publishDate).toISOString()} class="italic">
-                            {new Date(publishDate).toLocaleDateString("pt-BR", {
-                                day: "2-digit",
-                                month: "short",
-                                year: "numeric",
-                            })}
+                            {formatDate(publishDate)}
                         </time>
                     </>
                 )}
@@ -87,11 +85,7 @@ const articleSchema = {
                         <span class="text-[#6c71c4] dark:text-[#6c71c4]">|</span>
                         <span>criado:</span>
                         <time datetime={new Date(date).toISOString()} class="italic">
-                            {new Date(date).toLocaleDateString("pt-BR", {
-                                day: "2-digit",
-                                month: "short",
-                                year: "numeric",
-                            })}
+                            {formatDate(date)}
                         </time>
                     </>
                 )}
