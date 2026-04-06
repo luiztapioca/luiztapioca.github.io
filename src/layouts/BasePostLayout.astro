@@ -6,6 +6,11 @@ const { frontmatter } = Astro.props;
 const { title, description, date, publishDate, tags } = frontmatter || Astro.props;
 const createdTime = date ? new Date(date).toISOString() : undefined;
 const publishedTime = publishDate ? new Date(publishDate).toISOString() : undefined;
+const shouldShowBothDates = Boolean(
+    date &&
+    publishDate &&
+    new Date(date).getTime() !== new Date(publishDate).getTime(),
+);
 const postUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const articleSchema = {
     "@context": "https://schema.org",
@@ -52,7 +57,19 @@ const articleSchema = {
 
         <div class="mt-1.5 sm:mt-3 text-xs sm:text-sm">
             <div class="flex items-center gap-1.5 text-[#93a1a1] dark:text-[#586e75] flex-wrap">
-                {publishDate && (
+                {publishDate && !shouldShowBothDates && (
+                    <>
+                        <time datetime={new Date(publishDate).toISOString()} class="italic">
+                            {new Date(publishDate).toLocaleDateString("pt-BR", {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric",
+                            })}
+                        </time>
+                    </>
+                )}
+
+                {publishDate && shouldShowBothDates && (
                     <>
                         <span>publicado:</span>
                         <time datetime={new Date(publishDate).toISOString()} class="italic">
@@ -65,12 +82,9 @@ const articleSchema = {
                     </>
                 )}
 
-                {date && publishDate && (
-                    <span class="text-[#6c71c4] dark:text-[#6c71c4]">|</span>
-                )}
-
-                {date && (
+                {date && shouldShowBothDates && (
                     <>
+                        <span class="text-[#6c71c4] dark:text-[#6c71c4]">|</span>
                         <span>criado:</span>
                         <time datetime={new Date(date).toISOString()} class="italic">
                             {new Date(date).toLocaleDateString("pt-BR", {
