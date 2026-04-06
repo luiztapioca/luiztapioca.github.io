@@ -3,7 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
 
-const { title, description, date, publishDate, tags } = frontmatter || Astro.props;
+const { title, description, tldr, date, publishDate, tags } = frontmatter || Astro.props;
 const createdTime = date ? new Date(date).toISOString() : undefined;
 const publishedTime = publishDate ? new Date(publishDate).toISOString() : undefined;
 const formatDate = (value: Date | string) =>
@@ -109,6 +109,15 @@ const articleSchema = {
             )}
         </div>
     </header>
+
+    {tldr && description && (
+        <section class="mb-8 sm:mb-10 -mt-2 sm:-mt-6">
+            <h2 class="text-sm text-[#93a1a1] dark:text-[#586e75]">tldr;</h2>
+            <p class="mt-1 text-sm text-[#657b83] dark:text-[#93a1a1]">
+                {description}
+            </p>
+        </section>
+    )}
 
     <slot />
 </BaseLayout>
