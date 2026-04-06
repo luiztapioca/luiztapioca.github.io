@@ -14,7 +14,7 @@ const {
     keywords = [],
 } = Astro.props;
 
-const siteName = "café com tapioca";
+const siteName = "tapioca com café";
 const canonicalUrl = new URL(canonical, Astro.site);
 const pageTitle = title ? `${title} | ${siteName}` : siteName;
 const keywordContent = Array.isArray(keywords) ? keywords.join(", ") : keywords;

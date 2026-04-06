@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 const posts = (await getCollection("posts", ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
 })).sort(
-    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+    (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 ---
 
@@ -28,10 +28,10 @@ const posts = (await getCollection("posts", ({ data }) => {
                     class="group flex items-baseline gap-2 min-w-0 [text-decoration:none] hover:[text-decoration:none]"
                 >
                     <time
-                        datetime={post.data.date.toISOString()}
+                        datetime={post.data.publishDate.toISOString()}
                         class="text-[#93a1a1] dark:text-[#586e75] whitespace-nowrap shrink-0 tabular-nums"
                     >
-                        {post.data.date.toISOString().slice(0, 10)}
+                        {post.data.publishDate.toISOString().slice(0, 10)}
                     </time>
                     <span class="min-w-0 truncate text-[#657b83] dark:text-[#93a1a1] group-hover:text-[#d33682] dark:group-hover:text-[#d33682]">
                         {post.data.title}

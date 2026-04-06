@@ -23,7 +23,7 @@ export async function GET() {
 
     const postPages = posts.map((post) => ({
         url: `${site}/${post.id}/`,
-        lastmod: post.data.date.toISOString(),
+        lastmod: post.data.publishDate.toISOString(),
     }));
 
     const tagPages = [...tagSet].map((tag) => ({

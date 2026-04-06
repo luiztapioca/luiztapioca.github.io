@@ -2,6 +2,7 @@
 title: Saia das redes o quanto antes.
 description: Um lembrete curto sobre sair das redes sociais, proteger a atenção e parar de viver em função da validação alheia.
 date: 2026-03-23
+publishDate: 2026-03-23
 draft: false
 ---
 

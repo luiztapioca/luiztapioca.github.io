@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import { Star } from "@lucide/astro";
 
 const { frontmatter } = Astro.props;
 
-const { title, description, date, tags } = frontmatter || Astro.props;
-const publishedTime = date ? new Date(date).toISOString() : undefined;
+const { title, description, date, publishDate, tags } = frontmatter || Astro.props;
+const createdTime = date ? new Date(date).toISOString() : undefined;
+const publishedTime = publishDate ? new Date(publishDate).toISOString() : undefined;
 const postUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const articleSchema = {
     "@context": "https://schema.org",
@@ -14,6 +14,7 @@ const articleSchema = {
     description,
     url: postUrl,
     datePublished: publishedTime,
+    dateCreated: createdTime,
     dateModified: publishedTime,
     author: {
         "@type": "Person",
@@ -49,47 +50,56 @@ const articleSchema = {
             {title}
         </h1>
 
-        {
-            date && (
-                <div class="flex items-center gap-1.5 mt-1.5 sm:mt-3 text-xs sm:text-sm text-[#93a1a1] dark:text-[#586e75] flex-wrap">
-                    <time
-                        datetime={new Date(date).toISOString()}
-                        class="italic"
-                    >
-                        {new Date(date).toLocaleDateString("pt-BR", {
-                            day: "2-digit",
-                            month: "short",
-                            year: "numeric",
-                        })}
-                    </time>
+        <div class="mt-1.5 sm:mt-3 text-xs sm:text-sm">
+            <div class="flex items-center gap-1.5 text-[#93a1a1] dark:text-[#586e75] flex-wrap">
+                {publishDate && (
+                    <>
+                        <span>publicado:</span>
+                        <time datetime={new Date(publishDate).toISOString()} class="italic">
+                            {new Date(publishDate).toLocaleDateString("pt-BR", {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric",
+                            })}
+                        </time>
+                    </>
+                )}
 
-                    {tags && tags.length > 0 && (
-                        <Star
-                            height={12}
-                            width={12}
-                            class="text-[#6c71c4] dark:text-[#6c71c4]"
-                        />
-                    )}
+                {date && publishDate && (
+                    <span class="text-[#6c71c4] dark:text-[#6c71c4]">|</span>
+                )}
 
-                    {tags && tags.length > 0 && (
-                        <div class="flex gap-2 flex-wrap">
-                            {tags.map((tag: string) => (
-                                <a
-                                    href={`/tags/${tag}`}
-                                    class="
-                                    text-[#d33682] dark:text-[#d33682]
-                                    hover:text-[#268bd2] dark:hover:text-[#268bd2]
-                                    hover:underline decoration-1 underline-offset-2
-                                "
-                                >
-                                    #{tag}
-                                </a>
-                            ))}
-                        </div>
-                    )}
+                {date && (
+                    <>
+                        <span>criado:</span>
+                        <time datetime={new Date(date).toISOString()} class="italic">
+                            {new Date(date).toLocaleDateString("pt-BR", {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric",
+                            })}
+                        </time>
+                    </>
+                )}
+            </div>
+
+            {tags && tags.length > 0 && (
+                <div class="mt-1 flex gap-2 flex-wrap">
+                    {tags.map((tag: string) => (
+                        <a
+                            href={`/tags/${tag}`}
+                            class="
+                                text-[#d33682] dark:text-[#d33682]
+                                hover:text-[#268bd2] dark:hover:text-[#268bd2]
+                                hover:underline decoration-1 underline-offset-2
+                            "
+                        >
+                            #{tag}
+                        </a>
+                    ))}
                 </div>
-            )
-        }
+            )}
+        </div>
     </header>
 
     <slot />

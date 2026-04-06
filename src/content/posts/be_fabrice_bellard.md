@@ -2,6 +2,7 @@
 title: Be Fabrice Bellard
 description: Uma pequena homenagem ao estilo de engenharia de Fabrice Bellard, marcada por discrição, profundidade técnica e obras improváveis.
 date: 2026-03-01
+publishDate: 2026-03-01
 draft: false
 ---
 

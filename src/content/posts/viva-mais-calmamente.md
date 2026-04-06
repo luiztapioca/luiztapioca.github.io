@@ -2,6 +2,7 @@
 title: Viva mais calmamente
 description: Um texto sobre excesso de estímulos, FOMO e a necessidade de viver com mais calma e autonomia em meio à vida online.
 date: 2026-03-14
+publishDate: 2026-03-14
 draft: false
 ---
 Em um mundo de muitos estímulos, se alienar até certo nível se torna algo necessário para ter o mínimo de sanidade e autonomia sob a própria vida. Em um mundo onde os tempos de tela apenas aumentam, e por consequência, as pessoas se tornam muito binárias — ou você está comigo, ou não está, ou é ou não é — as nuances se tornam cada vez menos importantes, é como se as pessoas estivessem perdendo a capacidade de enxergar a própria humanidade em outras pessoas.   

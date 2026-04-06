@@ -5,13 +5,13 @@ export async function GET(context) {
     const posts = (await getCollection('posts', ({ data }) => {
         return data.draft !== true;
     })).sort(
-        (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+        (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
     );
 
     const recentPosts = posts.slice(0, 20);
 
     return rss({
-        title: 'bool.tec',
+        title: 'tapioca com café',
         description: 'Minha presença digital.',
         site: context.site,
 
@@ -22,7 +22,7 @@ export async function GET(context) {
 
             return {
                 title: post.data.title,
-                pubDate: post.data.date,
+                pubDate: post.data.publishDate,
                 description: post.data.description,
                 link: `/blog/${post.id}/`,
                 customData: categories,

@@ -12,7 +12,7 @@ export async function getStaticPaths() {
     return uniqueTags.map((tag) => {
         const filteredPosts = allPosts
             .filter((post) => post.data.tags?.includes(tag))
-            .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+            .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 
         return {
             params: { tag },
@@ -37,31 +37,29 @@ const { posts } = Astro.props;
                 <span class="text-sm">nenhum post com essa tag...</span>
             </div>
         ) : (
-        <div class="not-prose flex flex-col gap-3 text-xs sm:text-sm ">
+        <div class="not-prose flex flex-col gap-3 text-xs sm:text-sm">
             {posts.map((post) => (
                 <a
                     href={`/${post.id}/`}
                     class="group flex items-baseline gap-2 min-w-0 [text-decoration:none] hover:[text-decoration:none]"
                 >
-                    <span class="text-[#d33682] dark:text-[#d33682] shrink-0">></span>
-                    <span class="
-                        truncate
-                        text-[#657b83] dark:text-[#93a1a1]
-                        group-hover:text-[#d33682] dark:group-hover:text-[#d33682]
-                    ">
+                    <time
+                        datetime={post.data.publishDate.toISOString()}
+                        class="text-[#93a1a1] dark:text-[#586e75] whitespace-nowrap shrink-0 tabular-nums"
+                    >
+                        {post.data.publishDate.toISOString().slice(0, 10)}
+                    </time>
+                    <span class="min-w-0 truncate text-[#657b83] dark:text-[#93a1a1] group-hover:text-[#d33682] dark:group-hover:text-[#d33682]">
                         {post.data.title}
                     </span>
-                    <span class="flex-1 min-w-4 h-px translate-y-[-0.3em] bg-[radial-gradient(circle,_#93a1a140_1.5px,_transparent_1.5px)] dark:bg-[radial-gradient(circle,_#586e7540_1.5px,_transparent_1.5px)] bg-[length:8px_3px]"></span>
-                    <time
-                        datetime={post.data.date.toISOString()}
-                        class="text-[#93a1a1] dark:text-[#586e75] whitespace-nowrap shrink-0"
-                    >
-                        {post.data.date.toLocaleDateString('pt-BR', {
-                            day: '2-digit',
-                            month: 'short',
-                            year: 'numeric',
-                        })}
-                    </time>
+                    {post.data.tags && post.data.tags.length > 0 && (
+                        <span class="shrink-0 text-[0.9em] text-[#93a1a1] dark:text-[#586e75] group-hover:text-[#268bd2] dark:group-hover:text-[#268bd2]">
+                            {post.data.tags.map((tag) => `#${tag}`).join(" ")}
+                        </span>
+                    )}
+                    {post.data.draft && (
+                        <span class="text-[#cb4b16] dark:text-[#cb4b16] shrink-0">[rascunho]</span>
+                    )}
                 </a>
             ))}
         </div>
