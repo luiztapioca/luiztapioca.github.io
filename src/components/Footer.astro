@@ -1,3 +1,12 @@
+---
+const cvCacheBust =
+  process.env.GITHUB_SHA?.slice(0, 8) ??
+  process.env.GITHUB_RUN_ID ??
+  String(Date.now());
+
+const cvHref = `/cv.pdf?v=${cvCacheBust}`;
+---
+
 <footer class="my-2 sm:my-4 select-none">
     <div class="flex items-center gap-3 mb-3">
         <span
@@ -11,7 +20,7 @@
 
         <div class="flex items-center gap-3 text-[#657b83] dark:text-[#839496]">
             <a
-                href="/cv.pdf"
+                href={cvHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="hover:text-[#268bd2] dark:hover:text-[#268bd2] transition-colors"
