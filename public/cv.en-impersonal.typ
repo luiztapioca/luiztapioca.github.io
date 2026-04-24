@@ -15,7 +15,6 @@
 #let phone = ""
 #let personal-site = ""
 
-
 #show: resume.with(
   author: name,
   location: "",
