@@ -1,17 +1,24 @@
 #import "@preview/basic-resume:0.2.9": *
+#import "@preview/scienceicons:0.1.0": github-icon, linkedin-icon, website-icon
 
 #let name = "Luiz Gustavo"
-#let location = "Brasília, DF"
+#let location = "Brasília, Brazil"
 #let email = "luiz.tapioca@icloud.com"
-#let github = "github.com/rosadehiroshima"
-#let linkedin = "linkedin.com/in/luizgustavosc/"
+
+#let github-url = "https://github.com/rosadehiroshima"
+#let linkedin-url = "https://linkedin.com/in/luizgustavosc/"
+#let website-url = "https://bool.tec.br"
+
+// Hide default social fields to avoid long text + separators in the template header.
+#let github = ""
+#let linkedin = ""
 #let phone = ""
-#let personal-site = "bool.tec.br"
+#let personal-site = ""
 
 #show: resume.with(
   author: name,
-  location: location,
-  email: email,
+  location: "",
+  email: "",
   github: github,
   linkedin: linkedin,
   phone: phone,
@@ -23,59 +30,80 @@
   personal-info-position: left,
 )
 
-== Educação
+// Custom contact line (single row): location + email + social icons (no separators).
+#align(left)[
+  #location
+  #h(0.35em)
+  |
+  #h(0.35em)
+  #link("mailto:" + email)[#email]
+  #h(0.35em)
+  |
+  #h(0.35em)
+  #link(github-url)[#github-icon(height: 1.0em)]
+  #h(0.6em)
+  #link(linkedin-url)[#linkedin-icon(height: 1.0em)]
+  #h(0.6em)
+  #link(website-url)[#website-icon(height: 1.0em)]
+]
+
+== Summary
+
+Backend/Data engineer building event-driven microservices (*FastAPI*, *Kafka*) and data pipelines (*PySpark*), with emphasis on reliability, testing, and scalable processing.
+
+== Education
 
 #edu(
   institution: "Universidade do Distrito Federal - Jorge Amaury Maia Nunes",
-  location: "Brasília, DF",
-  dates: dates-helper(start-date: "Jun 2023", end-date: "Presente"),
-  degree: "Bacharelado em Sistemas de Informação",
+  location: "Brasília, Brazil",
+  dates: dates-helper(start-date: "Jun 2023", end-date: "Present"),
+  degree: "B.Sc. in Information Systems",
 )
 
-== Experiência Profissional
+== Experience
 
 #work(
-  title: "Estagiário em Desenvolvimento de Software",
-  location: "Brasília, DF",
+  title: "Software Development Intern",
+  location: "Brasília, Brazil",
   company: "Banco do Brasil",
-  dates: dates-helper(start-date: "Jun 2025", end-date: "Presente"),
+  dates: dates-helper(start-date: "Jun 2025", end-date: "Present"),
 )
-- Desenvolvi uma plataforma interativa orquestrada por múltiplos agentes de IA que auxilia os usuários na criação de indicadores. Construí a "Matriz de Aderência", um painel para altos executivos avaliarem o alinhamento desses indicadores à estratégia do banco.
-- Criei de ponta a ponta um painel executivo com *Flask* e *HTMX* que consome dados via API e é exibido continuamente nas TVs da diretoria, fornecendo o status dos projetos em tempo real para direcionamento de cobranças e prioridades.
-- Construí uma plataforma interna de deploy usando *Python* e *WebSockets* que reduziu o tempo de publicação de aplicações de 1 dia para poucos minutos, sem depender de Docker.
-- Desenvolvi uma biblioteca de acesso unificado a múltiplos bancos de dados (*PostgreSQL*, *DB2*, *SQLite*) e projetei um padrão arquitetural automatizado por uma CLI (*Typer* / *Copier*) que foi adotado por toda a equipe.
+- Technical focal point and hands-on developer for an internal AI-driven KPI design platform used by executives; implemented core features end-to-end and aligned requirements with stakeholders.
+- Built the “Adherence Matrix” (internal): a vector-based scoring model over indicator proposals across capabilities, aspirations, and strategic drivers using DataFrame computations (thousands of calculations per run) and dot-product visualization for decision-making.
+- Delivered the “Hive” view (internal) to model capability hierarchies with time-effective (period-based) factors and approval gates; also built “Pandora” (internal), a *FastAPI* API hub for shared microservices (email + Microsoft Teams notifications).
 
 #work(
-  title: "Pesquisador em Backend e MLOps (Bolsista)",
+  title: "Backend Engineer (Scholarship)",
+  company: "eLattes Platform",
+  location: "Remote",
+  dates: dates-helper(start-date: "Sep 2025", end-date: "Present"),
+)
+- Building an asynchronous microservice pipeline: *FastAPI* receives analysis requests, a coordinator publishes stage messages to *Kafka*, and workers process researcher ZIP/XML inputs into *Parquet* intermediates.
+- Implementing *PySpark* aggregation stages and a finalizer that produces a single JSON artifact per analysis (researchers, publications, advising, patents, inferred connections).
+- Established an agent-assisted TDD workflow with deterministic integration/regression tests (versioned fixtures + repeatable assertions) and a reproducible Docker Compose runtime (*Postgres*, *Kafka*, *Spark*).
+
+#work(
+  title: "Backend & MLOps Researcher (Scholarship)",
   company: "IBICT",
-  location: "Remoto",
-  dates: dates-helper(start-date: "Jan 2025", end-date: "Mar 2026"),
+  location: "Remote",
+  dates: dates-helper(start-date: "Mar 2025", end-date: "Nov 2025"),
 )
-- Criei uma API assíncrona com *Python* (*FastAPI*) e *Redis* para gerenciar filas de processamento de textos em background, garantindo a responsividade do servidor.
-- Integrei um modelo de IA otimizado na placa de vídeo (GPU) capaz de processar cerca de 400 mensagens por minuto e implementei rotinas de recuperação para garantir zero perda de dados em caso de falhas.
-- Configurei a infraestrutura com *Docker* e criei testes de carga automatizados com *K6* para comprovar e garantir a estabilidade do sistema sob alto tráfego.
+- Built an asynchronous *FastAPI* API backed by *Redis* queues, decoupling ingestion from heavy processing to keep the service responsive under load.
+- Implemented Portuguese text normalization (*Enelvo*) and BERT-based hate-speech classification (*Hugging Face Transformers* / *PyTorch*); optimized inference via batching, reaching ~200–400 messages/min on NVIDIA GPU (CUDA).
+- Implemented error queues + retry strategy and graceful shutdown to prevent message loss; validated stability with *Docker* and *K6* load tests.
 
-#work(
-  title: "Desenvolvedor Backend (Bolsista)",
-  company: "Plataforma E-Lattes",
-  location: "Remoto",
-  dates: dates-helper(start-date: "Out 2025", end-date: "Mar 2026"),
-)
-- Conduzi a migração de um sistema monolítico legado de extração de dados escrito em *R* para uma arquitetura de microsserviços em *Python*.
-- Implementei um sistema de filas de prioridade para viabilizar o processamento paralelo massivo de dados e migrei a estrutura do banco para *PostgreSQL*.
-
-== Projetos Pessoais
+== Projects
 
 #project(
-  name: "Rede Neural Artificial em Go",
-  role: "Engenharia de Software / IA",
+  name: "Neural Network from Scratch in Go",
+  role: "Software Engineering / AI",
   dates: " ",
 )
-- Desenvolvi uma rede neural do zero utilizando exclusivamente a linguagem *Go*, construindo toda a lógica matemática e de álgebra linear sem o uso de bibliotecas externas de Inteligência Artificial. Implementei os algoritmos para treinar o modelo a identificar e classificar dígitos manuscritos da base de dados MNIST.
+- Built a neural network from scratch in *Go* (matrix ops, forward pass, backpropagation) and trained it to classify handwritten digits using the MNIST dataset.
 
-== Habilidades Técnicas
+== Technical Skills
 
-- *Linguagens de Programação:* Python, Go, Java, TypeScript, JavaScript, PHP.
-- *Bancos de Dados:* PostgreSQL, MySQL, IBM DB2, Redis, SQLite.
-- *Frameworks e Bibliotecas:* React, Svelte, SvelteKit, Next.js, Flask, FastAPI, Spring Boot, HTMX, TailwindCSS, Bootstrap, Elysia, Drizzle, Better-auth, Jinja.
-- *Infraestrutura e DevOps:* Docker, Nix Flakes, Linux, Windows Server, Git, K6, NGinx.
+- *Languages:* Python, Go, Java, JavaScript/TypeScript, Rust, C.
+- *Backend/Data:* FastAPI, Kafka, PySpark (Spark), SQLAlchemy, Pandas, PostgreSQL, Redis, Docker.
+- *ML:* PyTorch, Transformers (BERT), Enelvo.
+- *Systems/Testing:* Linux, Nix Flakes, Windows Server, K6.
