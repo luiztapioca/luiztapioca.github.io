@@ -5,7 +5,6 @@ const cvCacheBust =
   String(Date.now());
 
 const cvHref = `/cv.pdf?v=${cvCacheBust}`;
-const cvPtBrHref = `/cv-pt-br.pdf?v=${cvCacheBust}`;
 ---
 
 <footer class="my-2 sm:my-4 select-none">
@@ -28,15 +27,6 @@ const cvPtBrHref = `/cv-pt-br.pdf?v=${cvCacheBust}`;
                 title="CV"
             >
                 cv
-            </a>
-            <a
-                href={cvPtBrHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover:text-[#268bd2] dark:hover:text-[#268bd2] transition-colors"
-                title="CV (pt-BR)"
-            >
-                cv (pt-br)
             </a>
             <a
                 href="https://github.com/rosadehiroshima"
